@@ -1,0 +1,59 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix bio:     <http://purl.org/vocab/bio/0.1/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix :        <http://poderopedia.com/vocab/> .
+
+#Entities
+
+foaf:Person a owl:Class.
+
+:Company a owl:Class;
+         rdfs:subClassOf  foaf:Agent;
+         rdfs:label       "Company";
+         rdfs:comment     "A for profit organization";
+         owl:disjointWith foaf:Person, :Organization.
+         
+:Organization a owl:Class;
+              rdfs:subClassOf  foaf:Agent;
+              rdfs:label       "Organization";
+              rdfs:comment     "An organization that is not a company";
+              owl:disjointWith foaf:Person, :Company.
+         
+
+                
+:AcademicConnection rdfs:subClassOf bio:Relationship;
+                    rdfs:label "Academic Connection"@en, "Conexión académica"@es;
+                    rdfs:comment "The connection between a person and an Educational Organization (university, school, etc)"@en, "La relación entre una persona y una organización académica (colegio, universidad, etc)"@es.
+                    
+:EconomicConnection rdfs:subClassOf bio:Relationship;
+                    rdfs:label "Economic Connection"@en, "Conexión económica"@es;
+                    rdfs:comment "The connection between a person and an Educational Organization (university, school, etc)"@en, "La relación entre una persona y una organización académica (colegio, universidad, etc)"@es.              
+             
+
+                    
+:academicOrganization a rdf:Property, owl:ObjectProperty;
+                      rdfs:label "Academic organization"@en, "Organización académica"@es;
+                      rdfs:comment "Indicates which academic organization is associated in a particular academic connection"@en, "Indica qué organización académica está asociada a una conección académica en particular"@es;
+                      rdfs:domain :AcademicConnection;
+                      rdfs:range :Organization.
+                      
+:firstLastName a rdf:Property, owl:DatatypeProperty;
+               rdfs:subPropertyOf foaf:familyName;
+               rdfs:label "First last name"@en, "Primer apellido"@es;
+               rdfs:domain foaf:Person .
+               
+:secondLastName a rdf:Property, owl:DatatypeProperty;
+                rdfs:subPropertyOf foaf:familyName;
+                rdfs:label "Second last name"@en, "Segundo apellido"@es;
+                rdfs:domain foaf:Person .
+
+:alias a rdf:Property, owl:DatatypeProperty;
+         rdfs:subPropertyOf foaf:name, skos:altLabel;
+         rdfs:label "An alias for a person"@en, "Segundo apellido"@es;
+         rdfs:domain foaf:Person .
+                
+
