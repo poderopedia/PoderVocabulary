@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-03-14 22:14:58 +0000</string>
+	<string>2012-03-30 19:07:04 +0000</string>
 	<key>Modifier</key>
 	<string>Alvaro Graves</string>
 	<key>NotesVisible</key>
@@ -1064,12 +1064,8 @@
 								hJiZA5KZkoSb
 								mwKcg4mICD+D
 								iYgIP4OJiAg/
-								AYaSnJKdkp+S
-								hISEF05TTXV0
-								YWJsZVBhcmFn
-								cmFwaFN0eWxl
-								AKGhAACigSAC
-								oxkkhoaXASqG
+								AYaSn5KgkpyS
+								nYaXASqG
 								</data>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf320
@@ -1082,9 +1078,7 @@
 poder: &lt;http://poderopedia.com/vocab/&gt; .\
 foaf : &lt;http://xmlns.com/foaf/0.1/&gt; .\
 dc   : &lt;http://purl.org/dc/terms/&gt; .\
-\pard\pardeftab720\sl500
 \cf3 skos : &lt;http://www.w3.org/2004/02/skos/core#&gt;\
-\pard\pardeftab720\sl500
 \cf2 bio  : &lt;http://purl.org/vocab/bio/0.1/&gt; .\
 }</string>
 							</dict>
@@ -1146,7 +1140,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{185.83467, 647.01825}, {51, 24}}</string>
+					<string>{{185.80685, 646.98633}, {51, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1216,8 +1210,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>261</integer>
 					<key>Points</key>
 					<array>
-						<string>{242.56683, 648.31946}</string>
-						<string>{177.23073, 670.63019}</string>
+						<string>{242.56296, 648.31567}</string>
+						<string>{177.22418, 670.62195}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -1289,7 +1283,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{96.95932, 883.7926}, {51, 24}}</string>
+					<string>{{97.297729, 883.79193}, {51, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1359,8 +1353,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>161</integer>
 					<key>Points</key>
 					<array>
-						<string>{124.44485, 1046.0015}</string>
-						<string>{120.29424, 731.99994}</string>
+						<string>{124.51878, 1046.0011}</string>
+						<string>{120.92103, 731.9989}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -1384,7 +1378,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1075.5647, 328.68127}, {51, 24}}</string>
+					<string>{{1075.5585, 328.68152}, {51, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1455,7 +1449,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<key>Points</key>
 					<array>
 						<string>{1113.9408, 443.59454}</string>
-						<string>{1087.0114, 228.46173}</string>
+						<string>{1087.0112, 228.46173}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -1479,7 +1473,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{340.71133, 563.90637}, {85, 24}}</string>
+					<string>{{340.63809, 563.87634}, {85, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1539,7 +1533,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{594.2702, 552.40912}, {85, 24}}</string>
+					<string>{{594.2713, 552.40747}, {85, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1599,7 +1593,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1112.8064, 318.54767}, {85, 24}}</string>
+					<string>{{1112.8053, 318.54755}, {85, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1659,7 +1653,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{925.04724, 540.27557}, {85, 24}}</string>
+					<string>{{925.04565, 540.27264}, {85, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1730,7 +1724,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<key>Points</key>
 					<array>
 						<string>{1130.4974, 443.99478}</string>
-						<string>{1198.5026, 133.00522}</string>
+						<string>{1198.5026, 133.00519}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -1750,7 +1744,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1145.3403, 549.36206}, {105, 24}}</string>
+					<string>{{1145.3363, 549.3642}, {105, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1810,7 +1804,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1142.2777, 400.92075}, {118, 24}}</string>
+					<string>{{1142.2563, 400.91086}, {118, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1880,8 +1874,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>150</integer>
 					<key>Points</key>
 					<array>
-						<string>{1160.0316, 453.03763}</string>
-						<string>{1234.2407, 380.81067}</string>
+						<string>{1160.0306, 453.03702}</string>
+						<string>{1234.2377, 380.80927}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -1950,7 +1944,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1354.7747, 214.49631}, {50, 24}}</string>
+					<string>{{1354.5601, 214.48517}, {50, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -2020,8 +2014,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>147</integer>
 					<key>Points</key>
 					<array>
-						<string>{1303.0299, 310.04276}</string>
-						<string>{1449.7017, 150.37198}</string>
+						<string>{1302.9803, 310.02307}</string>
+						<string>{1449.3365, 150.36864}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2071,8 +2065,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>145</integer>
 					<key>Points</key>
 					<array>
-						<string>{1162.287, 529.6839}</string>
-						<string>{1229.0696, 589.19696}</string>
+						<string>{1162.2867, 529.68402}</string>
+						<string>{1229.069, 589.19739}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2141,7 +2135,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1359.7793, 526.25696}, {50, 24}}</string>
+					<string>{{1359.2789, 526.22253}, {50, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -2211,8 +2205,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>142</integer>
 					<key>Points</key>
 					<array>
-						<string>{1310.1017, 591.9881}</string>
-						<string>{1452.8228, 489.29919}</string>
+						<string>{1309.9918, 591.92255}</string>
+						<string>{1451.9666, 489.29318}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2262,8 +2256,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>140</integer>
 					<key>Points</key>
 					<array>
-						<string>{1061.1664, 515.25989}</string>
-						<string>{861.22314, 594.30737}</string>
+						<string>{1061.1663, 515.25989}</string>
+						<string>{861.22308, 594.30713}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2379,7 +2373,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{548.37677, 845.75122}, {156, 24}}</string>
+					<string>{{548.36224, 845.73938}, {156, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -2439,7 +2433,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{793.91907, 847.82391}, {157, 24}}</string>
+					<string>{{793.91931, 847.82281}, {157, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -2510,7 +2504,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<key>Points</key>
 					<array>
 						<string>{765.91003, 805.87653}</string>
-						<string>{971.05396, 909.7807}</string>
+						<string>{971.05396, 909.78064}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2540,8 +2534,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>133</integer>
 					<key>Points</key>
 					<array>
-						<string>{666.16278, 812.55341}</string>
-						<string>{597.90521, 890.05151}</string>
+						<string>{666.1618, 812.55322}</string>
+						<string>{597.90363, 890.04974}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2601,7 +2595,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{171.81906, 985.2547}, {93, 24}}</string>
+					<string>{{171.81528, 985.25293}, {93, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -2671,8 +2665,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>129</integer>
 					<key>Points</key>
 					<array>
-						<string>{307.21564, 910.7995}</string>
-						<string>{160.78459, 1053.2006}</string>
+						<string>{307.21558, 910.7995}</string>
+						<string>{160.78436, 1053.2004}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2740,7 +2734,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{576.57898, 689.10516}, {51, 24}}</string>
+					<string>{{554.05273, 689.10931}, {96, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -2793,7 +2787,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs24 \cf0 rdf:type}</string>
+\f0\fs24 \cf0 rdfs:subClassOf}</string>
 					</dict>
 					<key>Wrap</key>
 					<string>NO</string>
@@ -2810,8 +2804,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>126</integer>
 					<key>Points</key>
 					<array>
-						<string>{650.47284, 736.28845}</string>
-						<string>{549.25739, 662.74829}</string>
+						<string>{650.47205, 736.28864}</string>
+						<string>{549.25476, 662.74866}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2835,7 +2829,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{473.98785, 579.67834}, {51, 24}}</string>
+					<string>{{451.43893, 579.68115}, {96, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -2888,7 +2882,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs24 \cf0 rdf:type}</string>
+\f0\fs24 \cf0 rdfs:subClassOf}</string>
 					</dict>
 					<key>Wrap</key>
 					<string>NO</string>
@@ -2905,8 +2899,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>124</integer>
 					<key>Points</key>
 					<array>
-						<string>{485.94995, 562.28424}</string>
-						<string>{514.15704, 623.73602}</string>
+						<string>{485.94739, 562.28442}</string>
+						<string>{514.15057, 623.73633}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2978,7 +2972,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{914.81476, 703.71106}, {51, 24}}</string>
+					<string>{{893.22778, 703.05505}, {96, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -3031,7 +3025,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs24 \cf0 rdf:type}</string>
+\f0\fs24 \cf0 rdfs:subClassOf}</string>
 					</dict>
 					<key>Wrap</key>
 					<string>NO</string>
@@ -3048,8 +3042,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>121</integer>
 					<key>Points</key>
 					<array>
-						<string>{1018.2574, 728.52985}</string>
-						<string>{576.95978, 655.95215}</string>
+						<string>{1018.4335, 728.1767}</string>
+						<string>{581.30804, 653.88409}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3073,7 +3067,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1075.9583, 930.28729}, {105, 24}}</string>
+					<string>{{1075.9574, 930.28735}, {105, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -3133,7 +3127,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1109.4099, 802.01727}, {118, 24}}</string>
+					<string>{{1109.4081, 802.01807}, {118, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -3193,7 +3187,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{333.22272, 432.80164}, {118, 24}}</string>
+					<string>{{333.2218, 432.80197}, {118, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -3253,7 +3247,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{428.91611, 405.32877}, {105, 24}}</string>
+					<string>{{428.91174, 405.32855}, {105, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -3313,7 +3307,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{948.62219, 232.01724}, {51, 24}}</string>
+					<string>{{948.6178, 232.01422}, {51, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -3373,7 +3367,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{839.30731, 233.30846}, {51, 24}}</string>
+					<string>{{839.30688, 233.30785}, {51, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -3433,7 +3427,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{436.18723, 818.06335}, {133, 24}}</string>
+					<string>{{436.1825, 818.05786}, {133, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -3493,7 +3487,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{693.94202, 859.55731}, {118, 24}}</string>
+					<string>{{693.93518, 859.55865}, {118, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -3553,7 +3547,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{634.36902, 928.40021}, {105, 24}}</string>
+					<string>{{634.40863, 928.40155}, {105, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -3613,7 +3607,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{706.13873, 696.98846}, {83, 24}}</string>
+					<string>{{706.12842, 696.98486}, {83, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -3683,8 +3677,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>109</integer>
 					<key>Points</key>
 					<array>
-						<string>{615.92981, 797.47565}</string>
-						<string>{401.61407, 859.13678}</string>
+						<string>{615.92969, 797.47552}</string>
+						<string>{401.61377, 859.13629}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3714,8 +3708,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>108</integer>
 					<key>Points</key>
 					<array>
-						<string>{722.63971, 814.06561}</string>
-						<string>{768.08661, 900.31024}</string>
+						<string>{722.6394, 814.06561}</string>
+						<string>{768.08582, 900.31036}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3784,7 +3778,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{833.52612, 1038.369}, {50, 24}}</string>
+					<string>{{833.27722, 1038.381}, {50, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -3854,8 +3848,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>105</integer>
 					<key>Points</key>
 					<array>
-						<string>{813.4469, 978.80817}</string>
-						<string>{899.60065, 1115.5726}</string>
+						<string>{813.36987, 978.8291}</string>
+						<string>{899.19513, 1115.5764}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3905,8 +3899,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>103</integer>
 					<key>Points</key>
 					<array>
-						<string>{697.45673, 814.9751}</string>
-						<string>{675.27539, 1077.7419}</string>
+						<string>{697.46667, 814.97522}</string>
+						<string>{675.34747, 1077.7446}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3997,7 +3991,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<key>Points</key>
 					<array>
 						<string>{605.3136, 1122.7628}</string>
-						<string>{456.00003, 1123.7233}</string>
+						<string>{456.00003, 1123.7234}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -4047,8 +4041,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>98</integer>
 					<key>Points</key>
 					<array>
-						<string>{730.33636, 732.72559}</string>
-						<string>{793.52405, 645.9787}</string>
+						<string>{730.33582, 732.72546}</string>
+						<string>{793.52258, 645.97778}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -4126,8 +4120,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>94</integer>
 					<key>Points</key>
 					<array>
-						<string>{428.69788, 481.97058}</string>
-						<string>{343.63922, 395.29675}</string>
+						<string>{428.69788, 481.97061}</string>
+						<string>{343.63913, 395.29681}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -4196,7 +4190,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{169.99011, 406.8255}, {50, 24}}</string>
+					<string>{{168.8024, 406.7291}, {50, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -4266,8 +4260,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>91</integer>
 					<key>Points</key>
 					<array>
-						<string>{258.71136, 385.94736}</string>
-						<string>{136.92975, 448.78284}</string>
+						<string>{258.48135, 385.75497}</string>
+						<string>{134.86938, 448.77383}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -4317,8 +4311,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>89</integer>
 					<key>Points</key>
 					<array>
-						<string>{472.82925, 479.06757}</string>
-						<string>{492.186, 339.82611}</string>
+						<string>{472.82919, 479.06757}</string>
+						<string>{492.18564, 339.82608}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -4387,7 +4381,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{265.23096, 198.34952}, {50, 24}}</string>
+					<string>{{265.23331, 198.32405}, {50, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -4457,8 +4451,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>86</integer>
 					<key>Points</key>
 					<array>
-						<string>{444.17773, 275.29428}</string>
-						<string>{149.96049, 151.17433}</string>
+						<string>{444.18253, 275.28943}</string>
+						<string>{149.96066, 151.13008}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -4508,8 +4502,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>84</integer>
 					<key>Points</key>
 					<array>
-						<string>{555.31323, 543.58014}</string>
-						<string>{774.69659, 599.67261}</string>
+						<string>{555.31329, 543.58008}</string>
+						<string>{774.69666, 599.67249}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -4539,8 +4533,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>83</integer>
 					<key>Points</key>
 					<array>
-						<string>{412.37485, 556.75378}</string>
-						<string>{353.03287, 595.59491}</string>
+						<string>{412.3649, 556.75134}</string>
+						<string>{353.01682, 595.58667}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -4618,8 +4612,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>81</integer>
 					<key>Points</key>
 					<array>
-						<string>{1126.5868, 775.52014}</string>
-						<string>{1201.8662, 844.81689}</string>
+						<string>{1126.5867, 775.5202}</string>
+						<string>{1201.866, 844.81702}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -4688,7 +4682,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1341.0797, 809.73688}, {50, 24}}</string>
+					<string>{{1340.5929, 809.35297}, {50, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -4758,8 +4752,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>78</integer>
 					<key>Points</key>
 					<array>
-						<string>{1291.7432, 855.23352}</string>
-						<string>{1433.8123, 791.21606}</string>
+						<string>{1291.5638, 855.06384}</string>
+						<string>{1433.0453, 790.6369}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -4809,8 +4803,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>76</integer>
 					<key>Points</key>
 					<array>
-						<string>{1096.3438, 781.71893}</string>
-						<string>{1156.6715, 1083.3577}</string>
+						<string>{1096.3436, 781.71893}</string>
+						<string>{1156.6715, 1083.3578}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -4889,8 +4883,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>74</integer>
 					<key>Points</key>
 					<array>
-						<string>{905.40283, 266.444}</string>
-						<string>{1049.0474, 219.55624}</string>
+						<string>{905.40277, 266.44397}</string>
+						<string>{1049.047, 219.55609}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -4925,7 +4919,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<key>Points</key>
 					<array>
 						<string>{730.47803, 268.12451}</string>
-						<string>{1043.9718, 214.87549}</string>
+						<string>{1043.9718, 214.87547}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -4997,7 +4991,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1298.1714, 1093.2245}, {50, 24}}</string>
+					<string>{{1298.1429, 1092.7097}, {50, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -5067,8 +5061,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>67</integer>
 					<key>Points</key>
 					<array>
-						<string>{1227.8712, 1117.1395}</string>
-						<string>{1410.0054, 1094.368}</string>
+						<string>{1227.8129, 1116.9409}</string>
+						<string>{1410.0042, 1093.5652}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -5108,7 +5102,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1073.8727, 666.37823}, {68, 24}}</string>
+					<string>{{1073.4685, 666.29956}, {68, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -5168,7 +5162,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{922.15045, 668.84839}, {85, 24}}</string>
+					<string>{{922.15106, 668.84753}, {85, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -5238,8 +5232,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>63</integer>
 					<key>Points</key>
 					<array>
-						<string>{1032.1974, 713.23962}</string>
-						<string>{859.73431, 630.53436}</string>
+						<string>{1032.1973, 713.23962}</string>
+						<string>{859.73438, 630.5343}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -5269,8 +5263,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>62</integer>
 					<key>Points</key>
 					<array>
-						<string>{1101.3129, 698.71918}</string>
-						<string>{1116.519, 651.56744}</string>
+						<string>{1101.0349, 698.68927}</string>
+						<string>{1115.9485, 651.42438}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -5932,7 +5926,7 @@ Fallecimiento}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{486.37231, 168.29405}, {73, 24}}</string>
+					<string>{{486.37189, 168.29407}, {73, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -6405,7 +6399,7 @@ Nacimiento}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{798.43939, 691.76086}, {119, 24}}</string>
+					<string>{{798.43677, 691.76111}, {119, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -6475,8 +6469,8 @@ Nacimiento}</string>
 					<integer>16</integer>
 					<key>Points</key>
 					<array>
-						<string>{835.46588, 650.22736}</string>
-						<string>{878.41156, 752.53894}</string>
+						<string>{835.46582, 650.22742}</string>
+						<string>{878.41144, 752.53894}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -6516,7 +6510,7 @@ Nacimiento}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{759.75702, 472.45605}, {81, 24}}</string>
+					<string>{{759.75977, 472.45599}, {81, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -6587,7 +6581,7 @@ Nacimiento}</string>
 					<key>Points</key>
 					<array>
 						<string>{812.83588, 569.37665}</string>
-						<string>{782.84845, 366.88608}</string>
+						<string>{782.84851, 366.88608}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -6738,7 +6732,7 @@ Nacimiento}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{852.85425, 472.06705}, {171, 24}}</string>
+					<string>{{852.80536, 472.06464}, {171, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -6808,8 +6802,8 @@ Nacimiento}</string>
 					<integer>7</integer>
 					<key>Points</key>
 					<array>
-						<string>{848.96466, 579.13269}</string>
-						<string>{986.10364, 433.28571}</string>
+						<string>{848.95721, 579.12689}</string>
+						<string>{986.03259, 433.2851}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -7030,11 +7024,11 @@ Nacimiento}</string>
 				<key>neatoOverlap</key>
 				<false/>
 				<key>neatoSeparation</key>
-				<real>0.12938262522220612</real>
+				<real>1</real>
 				<key>twopiOverlap</key>
 				<false/>
 				<key>twopiSeparation</key>
-				<real>0.069391511380672455</real>
+				<real>1</real>
 			</dict>
 			<key>Orientation</key>
 			<integer>2</integer>
@@ -8098,12 +8092,8 @@ Nacimiento}</string>
 								hJiZA5KZkoSb
 								mwKcg4mICD+D
 								iYgIP4OJiAg/
-								AYaSnJKdkp+S
-								hISEF05TTXV0
-								YWJsZVBhcmFn
-								cmFwaFN0eWxl
-								AKGhAACigSAC
-								oxkkhoaXASqG
+								AYaSn5KgkpyS
+								nYaXASqG
 								</data>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf320
@@ -8116,9 +8106,7 @@ Nacimiento}</string>
 poder: &lt;http://poderopedia.com/vocab/&gt; .\
 foaf : &lt;http://xmlns.com/foaf/0.1/&gt; .\
 dc   : &lt;http://purl.org/dc/terms/&gt; .\
-\pard\pardeftab720\sl500
 \cf3 skos : &lt;http://www.w3.org/2004/02/skos/core#&gt;\
-\pard\pardeftab720\sl500
 \cf2 bio  : &lt;http://purl.org/vocab/bio/0.1/&gt; .\
 }</string>
 							</dict>
@@ -8131,7 +8119,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{151.04568, 364.42093}, {90, 24}}</string>
+					<string>{{151.04572, 364.42102}, {90, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -8208,8 +8196,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>280</integer>
 					<key>Points</key>
 					<array>
-						<string>{267.45404, 356.21106}</string>
-						<string>{130.98111, 394.83539}</string>
+						<string>{267.45413, 356.21109}</string>
+						<string>{130.98111, 394.83551}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -8256,7 +8244,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{164.2421, 194.11084}, {99, 24}}</string>
+					<string>{{164.24208, 194.11084}, {99, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -8334,7 +8322,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<key>Points</key>
 					<array>
 						<string>{310.59348, 293.66449}</string>
-						<string>{125.49481, 126.33529}</string>
+						<string>{125.4948, 126.33529}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -8381,7 +8369,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{686.71362, 866.31659}, {90, 24}}</string>
+					<string>{{686.71356, 866.31659}, {90, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -8459,7 +8447,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<key>Points</key>
 					<array>
 						<string>{683.26825, 796.8233}</string>
-						<string>{775.85516, 952.57019}</string>
+						<string>{775.8551, 952.57013}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -8584,7 +8572,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<key>Points</key>
 					<array>
 						<string>{646.32306, 797.68024}</string>
-						<string>{599.22852, 952.52161}</string>
+						<string>{599.22845, 952.52161}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -8756,7 +8744,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1141.1631, 856.21436}, {99, 24}}</string>
+					<string>{{1141.163, 856.21436}, {99, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -8834,7 +8822,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<key>Points</key>
 					<array>
 						<string>{1096.2031, 773.35596}</string>
-						<string>{1276.7313, 954.64569}</string>
+						<string>{1276.7312, 954.64569}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -8881,7 +8869,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{205.17207, 585.94348}, {51, 24}}</string>
+					<string>{{205.17194, 585.94342}, {51, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -8958,8 +8946,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>261</integer>
 					<key>Points</key>
 					<array>
-						<string>{302.9765, 563.60577}</string>
-						<string>{151.82895, 635.38647}</string>
+						<string>{302.97638, 563.60577}</string>
+						<string>{151.82878, 635.38635}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -9116,7 +9104,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<key>Points</key>
 					<array>
 						<string>{100, 905.99994}</string>
-						<string>{100.00001, 702.00006}</string>
+						<string>{100, 702.00006}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -9140,7 +9128,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{280.47327, 421.58963}, {151, 24}}</string>
+					<string>{{280.47333, 421.58963}, {151, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -9200,7 +9188,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{468.6554, 419.52765}, {81, 24}}</string>
+					<string>{{468.6554, 419.52759}, {81, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -9320,7 +9308,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{851.02917, 447.58517}, {81, 24}}</string>
+					<string>{{851.02917, 447.58514}, {81, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -9398,7 +9386,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<key>Points</key>
 					<array>
 						<string>{1099.3292, 316.16724}</string>
-						<string>{1268.671, 125.83275}</string>
+						<string>{1268.6709, 125.83272}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -9418,7 +9406,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1171.8187, 339.42697}, {90, 24}}</string>
+					<string>{{1171.8187, 339.42685}, {90, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -9495,8 +9483,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>147</integer>
 					<key>Points</key>
 					<array>
-						<string>{1129.917, 354.57553}</string>
-						<string>{1296.0004, 348.55814}</string>
+						<string>{1129.917, 354.57547}</string>
+						<string>{1296.0004, 348.55795}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -9543,7 +9531,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1127.9418, 443.65677}, {99, 24}}</string>
+					<string>{{1127.9419, 443.65674}, {99, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -9620,8 +9608,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>142</integer>
 					<key>Points</key>
 					<array>
-						<string>{1106.1268, 394.17838}</string>
-						<string>{1242.4211, 511.67352}</string>
+						<string>{1106.1268, 394.17831}</string>
+						<string>{1242.4214, 511.67352}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -9686,7 +9674,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<key>Points</key>
 					<array>
 						<string>{1011.3229, 387.91669}</string>
-						<string>{755.48248, 540.97729}</string>
+						<string>{755.48248, 540.97723}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -9816,7 +9804,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{421.80334, 875.98853}, {156, 24}}</string>
+					<string>{{421.80325, 875.98859}, {156, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -9991,8 +9979,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>133</integer>
 					<key>Points</key>
 					<array>
-						<string>{613.46692, 793.7511}</string>
-						<string>{418.52826, 955.37299}</string>
+						<string>{613.4668, 793.75122}</string>
+						<string>{418.52823, 955.37292}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -10066,7 +10054,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{134.82291, 831.2146}, {151, 24}}</string>
+					<string>{{134.83012, 831.2179}, {151, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -10143,8 +10131,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>129</integer>
 					<key>Points</key>
 					<array>
-						<string>{267.82822, 788.60773}</string>
-						<string>{136.35301, 913.45618}</string>
+						<string>{267.83099, 788.60901}</string>
+						<string>{136.36592, 913.46204}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -10219,7 +10207,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{389.36594, 742.89655}, {133, 24}}</string>
+					<string>{{389.36594, 742.89594}, {133, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -10279,7 +10267,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{639.17145, 672.26044}, {83, 24}}</string>
+					<string>{{639.17133, 672.26044}, {83, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -10356,8 +10344,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>109</integer>
 					<key>Points</key>
 					<array>
-						<string>{554.10028, 755.43018}</string>
-						<string>{368.19556, 754.42029}</string>
+						<string>{554.10028, 755.42981}</string>
+						<string>{368.19556, 754.41943}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -10394,8 +10382,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>98</integer>
 					<key>Points</key>
 					<array>
-						<string>{671.59222, 714.31555}</string>
-						<string>{704.76746, 604.49475}</string>
+						<string>{671.59216, 714.31555}</string>
+						<string>{704.76721, 604.49475}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -10487,8 +10475,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>84</integer>
 					<key>Points</key>
 					<array>
-						<string>{408.68301, 367.4903}</string>
-						<string>{679.27594, 539.95612}</string>
+						<string>{408.68298, 367.49023}</string>
+						<string>{679.276, 539.95612}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -10525,8 +10513,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>83</integer>
 					<key>Points</key>
 					<array>
-						<string>{354.22913, 373.99701}</string>
-						<string>{357.77078, 495.00607}</string>
+						<string>{354.22916, 373.99701}</string>
+						<string>{357.7709, 495.00607}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -10601,7 +10589,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{1041.7469, 643.22052}, {83, 24}}</string>
+					<string>{{1041.7009, 643.21155}, {83, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -10776,8 +10764,8 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<integer>62</integer>
 					<key>Points</key>
 					<array>
-						<string>{1071.7793, 695.56201}</string>
-						<string>{1098.3622, 602.04742}</string>
+						<string>{1071.7554, 695.55969}</string>
+						<string>{1098.287, 602.02979}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -11105,7 +11093,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{805.9234, 162.42235}, {73, 24}}</string>
+					<string>{{805.92334, 162.42233}, {73, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -11183,7 +11171,7 @@ dc   : &lt;http://purl.org/dc/terms/&gt; .\
 					<key>Points</key>
 					<array>
 						<string>{870.75238, 262.16367}</string>
-						<string>{816.61108, 94.475815}</string>
+						<string>{816.61102, 94.4758}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -11309,7 +11297,7 @@ Fallecimiento}</string>
 					<key>Points</key>
 					<array>
 						<string>{904.03467, 264.02621}</string>
-						<string>{1009.3573, 106.41571}</string>
+						<string>{1009.3572, 106.41572}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -11356,7 +11344,7 @@ Fallecimiento}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{784.97894, 376.46143}, {81, 24}}</string>
+					<string>{{784.97888, 376.46143}, {81, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -11434,7 +11422,7 @@ Fallecimiento}</string>
 					<key>Points</key>
 					<array>
 						<string>{739.61005, 527.41284}</string>
-						<string>{861.4198, 330.30255}</string>
+						<string>{861.41974, 330.30255}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -11913,7 +11901,7 @@ Nacimiento}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{510.03455, 587.8338}, {138, 24}}</string>
+					<string>{{510.0343, 587.82739}, {138, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -11990,8 +11978,8 @@ Nacimiento}</string>
 					<integer>19</integer>
 					<key>Points</key>
 					<array>
-						<string>{672.7478, 575.49359}</string>
-						<string>{493.64664, 622.01166}</string>
+						<string>{672.74719, 575.4917}</string>
+						<string>{493.64664, 622.0011}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -12241,7 +12229,7 @@ Nacimiento}</string>
 					<key>Points</key>
 					<array>
 						<string>{716.44501, 522.00299}</string>
-						<string>{714.271, 357.49997}</string>
+						<string>{714.27094, 357.49997}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -12288,7 +12276,7 @@ Nacimiento}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{520.49988, 530.86664}, {161, 24}}</string>
+					<string>{{520.49316, 531.04553}, {161, 24}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -12365,8 +12353,8 @@ Nacimiento}</string>
 					<integer>10</integer>
 					<key>Points</key>
 					<array>
-						<string>{671.88477, 555.78076}</string>
-						<string>{545.4118, 532.73938}</string>
+						<string>{671.87012, 555.84814}</string>
+						<string>{545.41132, 533.00574}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -12683,7 +12671,7 @@ Nacimiento}</string>
 				<key>neatoOverlap</key>
 				<false/>
 				<key>neatoSeparation</key>
-				<real>0.14424543082714081</real>
+				<real>1</real>
 				<key>twopiOverlap</key>
 				<false/>
 				<key>twopiSeparation</key>
@@ -13688,7 +13676,7 @@ Nacimiento}</string>
 			</dict>
 		</array>
 		<key>Frame</key>
-		<string>{{57, 0}, {1228, 778}}</string>
+		<string>{{2, 0}, {1228, 778}}</string>
 		<key>ListView</key>
 		<true/>
 		<key>OutlineWidth</key>
@@ -13702,7 +13690,7 @@ Nacimiento}</string>
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{0, 130.35715}, {1951.7858, 1112.5}}</string>
+		<string>{{60.714287, 0}, {1951.7858, 1112.5}}</string>
 		<key>Zoom</key>
 		<real>0.56000000238418579</real>
 		<key>ZoomValues</key>

@@ -507,3 +507,67 @@ bio:witness
 
 
 
+:hasFather
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 100
+     ] .
+
+:hasMother
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 100
+     ] .
+
+:hasBrother
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 99
+     ] .
+
+:hasSister
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 99
+     ] .
+
+:hasAunt
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 98
+     ] .
+
+:hasUncle
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 98
+     ] .
+
+:hasFemaleCousin
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 97
+     ] .
+
+:hasMaleCousin
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 98
+     ] .
+
