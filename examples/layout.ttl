@@ -31,6 +31,12 @@
         a layout:LayoutParameterSet
     ] .
 
+:hasRut
+    layout:hasLayoutParameterSet [
+        layout:position 15 ;
+        layout:uriRelated foaf:Person ;
+        a layout:LayoutParameterSet
+    ] .
 #foaf:aimChatID
 #    layout:hasLayoutParameterSet [
 #        layout:display false;
@@ -52,12 +58,12 @@
         a layout:LayoutParameterSet
    ] .
 
-:hasAddress
-    layout:hasLayoutParameterSet [
-        layout:uriRelated foaf:Person, vocab:Company ;
-        layout:htmlElement "textarea";
-        a layout:LayoutParameterSet
-    ] .
+#:hasAddress
+#    layout:hasLayoutParameterSet [
+#        layout:uriRelated foaf:Person, vocab:Company ;
+#        layout:htmlElement "textarea";
+#        a layout:LayoutParameterSet
+#    ] .
 #
 #bio:biography
 #    layout:hasLayoutParameterSet [
@@ -514,67 +520,67 @@ foaf:firstName
 #
 #
 #
-#:hasFather
-#     layout:hasLayoutParameterSet [
-#          a layout:LayoutParameterSet ;
-#          layout:uriRelated foaf:Person;
-#          layout:display true;
-#          layout:position 100
-#     ] .
-#
-#:hasMother
-#     layout:hasLayoutParameterSet [
-#          a layout:LayoutParameterSet ;
-#          layout:uriRelated foaf:Person;
-#          layout:display true;
-#          layout:position 100
-#     ] .
-#
-#:hasBrother
-#     layout:hasLayoutParameterSet [
-#          a layout:LayoutParameterSet ;
-#          layout:uriRelated foaf:Person;
-#          layout:display true;
-#          layout:position 99
-#     ] .
-#
-#:hasSister
-#     layout:hasLayoutParameterSet [
-#          a layout:LayoutParameterSet ;
-#          layout:uriRelated foaf:Person;
-#          layout:display true;
-#          layout:position 99
-#     ] .
-#
-#:hasAunt
-#     layout:hasLayoutParameterSet [
-#          a layout:LayoutParameterSet ;
-#          layout:uriRelated foaf:Person;
-#          layout:display true;
-#          layout:position 98
-#     ] .
-#
-#:hasUncle
-#     layout:hasLayoutParameterSet [
-#          a layout:LayoutParameterSet ;
-#          layout:uriRelated foaf:Person;
-#          layout:display true;
-#          layout:position 98
-#     ] .
-#
-#:hasFemaleCousin
-#     layout:hasLayoutParameterSet [
-#          a layout:LayoutParameterSet ;
-#          layout:uriRelated foaf:Person;
-#          layout:display true;
-#          layout:position 97
-#     ] .
-#
-#:hasMaleCousin
-#     layout:hasLayoutParameterSet [
-#          a layout:LayoutParameterSet ;
-#          layout:uriRelated foaf:Person;
-#          layout:display true;
-#          layout:position 98
-#     ] .
-#
+:hasFather
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 100
+     ] .
+
+:hasMother
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 100
+     ] .
+
+:hasBrother
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 99
+     ] .
+
+:hasSister
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 99
+     ] .
+
+:hasAunt
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 98
+     ] .
+
+:hasUncle
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 98
+     ] .
+
+:hasFemaleCousin
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 97
+     ] .
+
+:hasMaleCousin
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Person;
+          layout:display true;
+          layout:position 98
+     ] .
+
