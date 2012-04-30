@@ -16,7 +16,7 @@
 @prefix layout: <http://graves.cl/layout/> .
 @prefix vocab: <http://poderopedia.com/vocab/> .       
 
-
+#
 :firstLastName
     layout:hasLayoutParameterSet [
         layout:position 19 ;
@@ -31,543 +31,550 @@
         a layout:LayoutParameterSet
     ] .
 
-foaf:aimChatID
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-].
-foaf:knows
-    layout:hasLayoutParameterSet [
-        layout:position 1 ;
-        layout:uriRelated foaf:Person ;
-        a layout:LayoutParameterSet
-].
-
-
+#foaf:aimChatID
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#].
+#foaf:knows
+#    layout:hasLayoutParameterSet [
+#        layout:position 1 ;
+#        layout:uriRelated foaf:Person ;
+#        a layout:LayoutParameterSet
+#].
+#
+#
 :alias
     layout:hasLayoutParameterSet [
         layout:position 16 ;
         layout:uriRelated foaf:Person, vocab:Company ;
         a layout:LayoutParameterSet
-    ] .
+   ] .
 
-bio:biography
+:hasAddress
     layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person ;
+        layout:uriRelated foaf:Person, vocab:Company ;
+        layout:htmlElement "textarea";
         a layout:LayoutParameterSet
     ] .
-
-bio:keywords
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person ;
-        a layout:LayoutParameterSet
-    ] .
-
-bio:olb
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person ;
-        a layout:LayoutParameterSet
-    ] .
-
-bio:relationship
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person ;
-        a layout:LayoutParameterSet
-    ] .
-
-rdfs:comment
-    layout:hasLayoutParameterSet [
-        layout:position 99998 ;
-        layout:uriRelated foaf:Person ;
-        a layout:LayoutParameterSet
-    ] .
-
-rdfs:label
-    layout:hasLayoutParameterSet [
-        layout:position 99999 ;
-        layout:uriRelated foaf:Person ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:account
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:holdsAccount
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:age
-    layout:hasLayoutParameterSet [
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        layout:display false;
-        a layout:LayoutParameterSet
-    ] .
-
-
-foaf:based_near
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:birthday
-    layout:hasLayoutParameterSet [
-        layout:display false ;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:currentProject
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:family_name
-    layout:hasLayoutParameterSet [
-        layout:uriRelated foaf:Person ;
-        layout:display false;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:geekcode
-    layout:hasLayoutParameterSet [
-        layout:uriRelated foaf:Person ;
-        layout:display false;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:lastName
-    layout:hasLayoutParameterSet [
-        layout:uriRelated foaf:Person ;
-        layout:display false;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:surname
-    layout:hasLayoutParameterSet [
-        layout:uriRelated foaf:Person ;
-        layout:display false;
-        a layout:LayoutParameterSet
-    ] .
-
+#
+#bio:biography
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#bio:keywords
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#bio:olb
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#bio:relationship
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#rdfs:comment
+#    layout:hasLayoutParameterSet [
+#        layout:position 99998 ;
+#        layout:uriRelated foaf:Person ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#rdfs:label
+#    layout:hasLayoutParameterSet [
+#        layout:position 99999 ;
+#        layout:uriRelated foaf:Person ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:account
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:holdsAccount
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:age
+#    layout:hasLayoutParameterSet [
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        layout:display false;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#
+#foaf:based_near
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:birthday
+#    layout:hasLayoutParameterSet [
+#        layout:display false ;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:currentProject
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:family_name
+#    layout:hasLayoutParameterSet [
+#        layout:uriRelated foaf:Person ;
+#        layout:display false;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:geekcode
+#    layout:hasLayoutParameterSet [
+#        layout:uriRelated foaf:Person ;
+#        layout:display false;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:lastName
+#    layout:hasLayoutParameterSet [
+#        layout:uriRelated foaf:Person ;
+#        layout:display false;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:surname
+#    layout:hasLayoutParameterSet [
+#        layout:uriRelated foaf:Person ;
+#        layout:display false;
+#        a layout:LayoutParameterSet
+#    ] .
+#
 foaf:firstName
     layout:hasLayoutParameterSet [
         layout:position 20 ;
-        layout:uriRelated foaf:Person ;
+       layout:uriRelated foaf:Person ;
         a layout:LayoutParameterSet
     ] .
-
-
-foaf:gender
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:holdsAccount
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:icqChatID
-    layout:hasLayoutParameterSet [
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        layout:display false ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:interest
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:jabberID
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-
-foaf:made
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:mbox
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:mbox_sha1sum
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:msnChatID
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:myersBriggs
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:openid
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:pastProject
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:plan
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:publications
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:schoolHomepage
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:skypeID
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:status
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:surname
-    layout:hasLayoutParameterSet [
-        layout:uriRelated foaf:Person ;
-        layout:display false;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:tipjar
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:topic_interest
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ], [
-        layout:display false;
-        layout:uriRelated foaf:Person ;
-        a layout:LayoutParameterSet
-    ] .
-
-
-foaf:workInfoHomepage
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:workplaceHomepage
-    layout:hasLayoutParameterSet [
-        layout:display false;
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        a layout:LayoutParameterSet
-    ] .
-
-foaf:yahooChatID
-    layout:hasLayoutParameterSet [
-        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
-        layout:display false;
-        a layout:LayoutParameterSet
-    ] .
-
-
-bio:interval
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated vocab:AcademicConnection, vocab:EconomicConnection;
-          layout:hasClass "disabled blank" ;
-          layout:position 10
-     ] .
-
-:academicOrganizationParticipant
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated vocab:AcademicConnection;
-          layout:position 2
-     ] .
-
-:humanParticipant
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated vocab:AcademicConnection, vocab:EconomicConnection;
-          layout:position 20
-     ] .
-
-
-:companyParticipant
-     layout:hasLayoutParameterSet [
-	  a layout:LayoutParameterSet ;
-	  layout:uriRelated vocab:EconomicConnection;
-	  layout:position 22
-     ] .
-
-
-:declarationOfPatrimony
-     layout:hasLayoutParameterSet [
-	  a layout:LayoutParameterSet ;
-	  layout:uriRelated vocab:EconomicConnection;
-	  layout:position 2
-     ] .
-
-:declarationOfInterests
-     layout:hasLayoutParameterSet [
-	  a layout:LayoutParameterSet ;
-	  layout:uriRelated vocab:EconomicConnection;
-	  layout:position 2
-     ] .
-
-foaf:weblog
-     layout:hasLayoutParameterSet [
-	  a layout:LayoutParameterSet ;
-	  layout:uriRelated foaf:Person, vocab:Company;
-          layout:display false 
-     ] .
-
-bio:birth
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated vocab:Company;
-          layout:display false
-     ] .
-
-bio:death
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated vocab:Company;
-          layout:display false
-     ] .
-
-bio:relationship
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated vocab:Company;
-          layout:display false
-     ] .
-
-bio:concurrentEvent 
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated bio:Birth, bio:Death;
-          layout:display false
-     ] .
-
-bio:employer
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated bio:Birth, bio:Death;
-          layout:display false
-     ] .
-
-bio:eventInterval
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated bio:Birth, bio:Death;
-          layout:display false
-     ] .
-
-bio:immediatelyFollowingEvent
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated bio:Birth, bio:Death;
-          layout:display false
-     ] .
-
-bio:immediatelyPrecedingEvent
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated bio:Birth, bio:Death;
-          layout:display false
-     ] .
-
-bio:officiator
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated bio:Birth, bio:Death;
-          layout:display false
-     ] .
-
-bio:organization
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated bio:Birth, bio:Death;
-          layout:display false
-     ] .
-
-bio:parent
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated bio:Birth, bio:Death;
-          layout:display false
-     ] .
-
-bio:partner
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated bio:Birth, bio:Death;
-          layout:display false
-     ] .
-
-bio:state
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated bio:Birth, bio:Death;
-          layout:display false
-     ] .
-
-bio:position
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated bio:Birth, bio:Death;
-          layout:display false
-     ] .
-
-bio:principal
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated bio:Birth, bio:Death;
-          layout:display false
-     ] .
-
-bio:witness
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated bio:Birth, bio:Death;
-          layout:display false
-     ] .
-
-
-
-:hasFather
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated foaf:Person;
-          layout:display true;
-          layout:position 100
-     ] .
-
-:hasMother
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated foaf:Person;
-          layout:display true;
-          layout:position 100
-     ] .
-
-:hasBrother
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated foaf:Person;
-          layout:display true;
-          layout:position 99
-     ] .
-
-:hasSister
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated foaf:Person;
-          layout:display true;
-          layout:position 99
-     ] .
-
-:hasAunt
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated foaf:Person;
-          layout:display true;
-          layout:position 98
-     ] .
-
-:hasUncle
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated foaf:Person;
-          layout:display true;
-          layout:position 98
-     ] .
-
-:hasFemaleCousin
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated foaf:Person;
-          layout:display true;
-          layout:position 97
-     ] .
-
-:hasMaleCousin
-     layout:hasLayoutParameterSet [
-          a layout:LayoutParameterSet ;
-          layout:uriRelated foaf:Person;
-          layout:display true;
-          layout:position 98
-     ] .
-
+#
+#
+#foaf:gender
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:holdsAccount
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:icqChatID
+#    layout:hasLayoutParameterSet [
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        layout:display false ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:interest
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:jabberID
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#
+#foaf:made
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:mbox
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:mbox_sha1sum
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:msnChatID
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:myersBriggs
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:openid
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:pastProject
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:plan
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:publications
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:schoolHomepage
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:skypeID
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:status
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:surname
+#    layout:hasLayoutParameterSet [
+#        layout:uriRelated foaf:Person ;
+#        layout:display false;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:tipjar
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:topic_interest
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ], [
+#        layout:display false;
+#        layout:uriRelated foaf:Person ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#
+#foaf:workInfoHomepage
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:workplaceHomepage
+#    layout:hasLayoutParameterSet [
+#        layout:display false;
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#foaf:yahooChatID
+#    layout:hasLayoutParameterSet [
+#        layout:uriRelated foaf:Person, vocab:Company, vocab:Organization ;
+#        layout:display false;
+#        a layout:LayoutParameterSet
+#    ] .
+#
+#
+#bio:interval
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated vocab:AcademicConnection, vocab:EconomicConnection;
+#          layout:htmlClass "disabled blank" ;
+#          layout:position 10
+#     ] .
+#
+#:academicOrganizationParticipant
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated vocab:AcademicConnection;
+#          layout:position 2
+#     ] .
+#
+#:humanParticipant
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated vocab:AcademicConnection, vocab:EconomicConnection;
+#          layout:position 20
+#     ] .
+#
+#
+#:companyParticipant
+#     layout:hasLayoutParameterSet [
+#	  a layout:LayoutParameterSet ;
+#	  layout:uriRelated vocab:EconomicConnection;
+#	  layout:position 22
+#     ] .
+#
+#
+#:declarationOfPatrimony
+#     layout:hasLayoutParameterSet [
+#	  a layout:LayoutParameterSet ;
+#	  layout:uriRelated vocab:EconomicConnection;
+#	  layout:position 2
+#     ] .
+#
+#:declarationOfInterests
+#     layout:hasLayoutParameterSet [
+#	  a layout:LayoutParameterSet ;
+#	  layout:uriRelated vocab:EconomicConnection;
+#	  layout:position 2
+#     ] .
+#
+#foaf:weblog
+#     layout:hasLayoutParameterSet [
+#	  a layout:LayoutParameterSet ;
+#	  layout:uriRelated foaf:Person, vocab:Company;
+#          layout:display false 
+#     ] .
+#
+#bio:birth
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated vocab:Company;
+#          layout:display false
+#     ] .
+#
+#bio:death
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated vocab:Company;
+#          layout:display false
+#     ] .
+#
+#bio:relationship
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated vocab:Company;
+#          layout:display false
+#     ] .
+#
+#bio:concurrentEvent 
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated bio:Birth, bio:Death;
+#          layout:display false
+#     ] .
+#
+#bio:employer
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated bio:Birth, bio:Death;
+#          layout:display false
+#     ] .
+#
+#bio:eventInterval
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated bio:Birth, bio:Death;
+#          layout:display false
+#     ] .
+#
+#bio:immediatelyFollowingEvent
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated bio:Birth, bio:Death;
+#          layout:display false
+#     ] .
+#
+#bio:immediatelyPrecedingEvent
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated bio:Birth, bio:Death;
+#          layout:display false
+#     ] .
+#
+#bio:officiator
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated bio:Birth, bio:Death;
+#          layout:display false
+#     ] .
+#
+#bio:organization
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated bio:Birth, bio:Death;
+#          layout:display false
+#     ] .
+#
+#bio:parent
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated bio:Birth, bio:Death;
+#          layout:display false
+#     ] .
+#
+#bio:partner
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated bio:Birth, bio:Death;
+#          layout:display false
+#     ] .
+#
+#bio:state
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated bio:Birth, bio:Death;
+#          layout:display false
+#     ] .
+#
+#bio:position
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated bio:Birth, bio:Death;
+#          layout:display false
+#     ] .
+#
+#bio:principal
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated bio:Birth, bio:Death;
+#          layout:display false
+#     ] .
+#
+#bio:witness
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated bio:Birth, bio:Death;
+#          layout:display false
+#     ] .
+#
+#
+#
+#:hasFather
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated foaf:Person;
+#          layout:display true;
+#          layout:position 100
+#     ] .
+#
+#:hasMother
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated foaf:Person;
+#          layout:display true;
+#          layout:position 100
+#     ] .
+#
+#:hasBrother
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated foaf:Person;
+#          layout:display true;
+#          layout:position 99
+#     ] .
+#
+#:hasSister
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated foaf:Person;
+#          layout:display true;
+#          layout:position 99
+#     ] .
+#
+#:hasAunt
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated foaf:Person;
+#          layout:display true;
+#          layout:position 98
+#     ] .
+#
+#:hasUncle
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated foaf:Person;
+#          layout:display true;
+#          layout:position 98
+#     ] .
+#
+#:hasFemaleCousin
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated foaf:Person;
+#          layout:display true;
+#          layout:position 97
+#     ] .
+#
+#:hasMaleCousin
+#     layout:hasLayoutParameterSet [
+#          a layout:LayoutParameterSet ;
+#          layout:uriRelated foaf:Person;
+#          layout:display true;
+#          layout:position 98
+#     ] .
+#
