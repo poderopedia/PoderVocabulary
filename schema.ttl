@@ -42,25 +42,33 @@
               
 ####################################### People & Orgnizations #######################################               
 foaf:Person a owl:Class;
+            rdfs:label "Person"@en, "Persona"@es;
+            rdfs:comment "A person"@en, "Una persona"@es;
             rdfs:subClassOf foaf:Agent.
             
+foaf:Agent a owl:Class;
+           rdfs:label "Agent"@en, "Agente"@es;
+           rdfs:comment "Un agente (humano o no)"@es, "An agent (human or not)"@en.
+
 foaf:firstName
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "The first name of a person."@en ;
+    rdfs:comment "The first name of a person."@en, "El primer nombre de una persona"@es ;
     rdfs:domain foaf:Person ;
     rdfs:label "firstName"@en, "Primer nombre"@es ;
     rdfs:range rdfs:Literal .
 
 foaf:givenName
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "The given name of some person." ;
+    rdfs:comment "The given name of some person."@en, "El nombre dado a una persona"@es ;
     rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
     rdfs:label "Given name"@en, "Otro nombre"@es .
 foaf:Organization a owl:Class;
+            rdfs:label "Organization"@en, "Organización"@es;
             rdfs:subClassOf foaf:Agent.
             
 :Gender a owl:Class;
-        rdfs:label "Gender"@en, "Sexo"@es.
+        rdfs:label "Gender"@en, "Sexo"@es;
+        rdfs:comment "Gender of a person"@en, "Sexo de una persona"@es.
 
 ########## Relations for foaf:Person
 
@@ -179,7 +187,9 @@ foaf:Organization a owl:Class;
 
 :Company a owl:Class;
          rdfs:subClassOf  foaf:Organization;
-         rdfs:label       "Company";
+         rdfs:label       "Company"@en;
+         rdfs:label       "Empresa"@es;
+         rdfs:comment     "Una organización con fines de lucro"@es;
          rdfs:comment     "A for profit organization".
 
 ########## Relations for :Company
