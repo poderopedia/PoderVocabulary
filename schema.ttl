@@ -15,10 +15,10 @@
 
 :schema rdf:type owl:Ontology ;
         dcterms:title "PoderVocab: A vocabulary for Poderopedia"@en, "PoderVocab: Un vocabulario para Poderopedia"@es ;
-        dcterms:date "2012-03-30"^^xsd:date ;
+        rdfs:label "PoderVocab: A vocabulary for Poderopedia"@en, "PoderVocab: Un vocabulario para Poderopedia"@es ;
+        dcterms:date "2012-05-04"^^xsd:date ;
         dcterms:abstract "This document describes a vocabulary to express information about people and their relations with Organizations, Companies, etc."@en,
-                         "Este documento describe un vocabulario para expresar información acerca de personas, y sus relaciones con organizaciones y empresas"@es;
-        owl:imports <http://purl.org/vocab/bio/0.1/>.
+                         "Este documento describe un vocabulario para expresar información acerca de personas, y sus relaciones con organizaciones y empresas"@es.
 
 
 
@@ -32,11 +32,13 @@
 
 :AnualProfit a owl:Class;
              rdfs:subClassOf :FinancialReport;
+             rdfs:comment "Describes the profit for a certain year"@en, "Describe las utilidades para cierto año"@es;
              rdfs:label "Anual Profit"@en, "Utilidades anuales"@es.
 
              
 :AnualRevenue a owl:Class;
               rdfs:subClassOf :FinancialReport;
+              rdfs:comment "Revenues for a specific year"@en, "Ingresos en un año particular"@es;
               rdfs:label "Anual Revenue"@en, "Ingresos anuales"@es.
 
               
@@ -152,37 +154,37 @@ foaf:Organization a owl:Class;
          
 :AcademicOrganization a owl:Class;
               rdfs:subClassOf  foaf:Organization;
-              rdfs:label       "Academic Organization"@en, "Organización académica";
+              rdfs:label       "Academic Organization"@en, "Organización académica"@es;
               rdfs:comment     "An educational organization, such a school or university"@en, "Una organización educational, como una escuela o una universidad"@es.
 
 :NonGovernmentalOrganization a owl:Class;
               rdfs:subClassOf  foaf:Organization;
-              rdfs:label       "Non Governmental Organization"@en, "Organización no gubernamental";
+              rdfs:label       "Non Governmental Organization"@en, "Organización no gubernamental"@es;
               rdfs:comment     "An non-governmental organization (NGO)"@en, "Una organización no gubernamental (ONG)"@es.
 
 :InternationalOrganization a owl:Class;
               rdfs:subClassOf  foaf:Organization;
-              rdfs:label       "International Organization"@en, "Organización internacional";
+              rdfs:label       "International Organization"@en, "Organización internacional"@es;
               rdfs:comment     "An international organization, like UN, UNESCO, etc."@en, "Una organización internacional, como NU, UNESCO, etc."@es.
               
 :RestrictedAccessOrganization a owl:Class;
               rdfs:subClassOf  foaf:Organization;
-              rdfs:label       "Restricted access organization"@en, "Organización de acceso restringido";
+              rdfs:label       "Restricted access organization"@en, "Organización de acceso restringido"@es;
               rdfs:comment     "A restricted access organization, like social clubs, golf clubs, etc."@en, "Una organización de acceso restringod, como clubes sociales, de golf, etc."@es.
 
 :ReligiousOrganization a owl:Class;
               rdfs:subClassOf  foaf:Organization;
-              rdfs:label       "Religious Organization"@en, "Organización religiosa";
+              rdfs:label       "Religious Organization"@en, "Organización religiosa"@es;
               rdfs:comment     "An religious organization, like Opus Dei, Catholic church, etc."@en, "Una organización religiosa, como Opus Dei, Iglesia católica, etc."@es.
    
 :ProgrammaticOrganization a owl:Class;
               rdfs:subClassOf  foaf:Organization;
-              rdfs:label       "Programmatic Organization"@en, "Organización programática";
+              rdfs:label       "Programmatic Organization"@en, "Organización programática"@es;
               rdfs:comment     "An programmatic organization, like think tanks."@en, "Una organización programática, como los think tanks, etc."@es.
 
 :PoliticalOrganization a owl:Class;
               rdfs:subClassOf  foaf:Organization;
-              rdfs:label       "Political Organization"@en, "Organización política";
+              rdfs:label       "Political Organization"@en, "Organización política"@es;
               rdfs:comment     "An Political organization, like parties."@en, "Una organización política, como partidos políticos."@es.
 
 :Company a owl:Class;
@@ -301,7 +303,7 @@ foaf:Organization a owl:Class;
 
                           
 :politicalParticipant a rdf:Property, owl:ObjectProperty;
-             rdfs:subPropertyOf :particpant ;
+             rdfs:subPropertyOf :participant ;
              rdfs:label "Political Organizacion participant"@en, "Organización política participante"@es;
              rdfs:comment "A political organization who is part of this connection"@en, "Una organización política que participa de esta conexión"@es;
              rdfs:domain :PoliticalConnection;
@@ -310,13 +312,13 @@ foaf:Organization a owl:Class;
  ####################################### AcademicConnections #######################################               
             
               
-:AcademicConnection a rdfs:Class;
+:AcademicConnection a owl:Class;
                     rdfs:subClassOf :Connection;
                     rdfs:label "Academic Connection"@en, "Conexión académica"@es;
                     rdfs:comment "The connection between a person and an Educational Organization (university, school, etc)"@en, "La relación entre una persona y una organización académica (colegio, universidad, etc)"@es.
                                  
 :academicParticipant a rdf:Property, owl:ObjectProperty;
-                     rdfs:subPropertyOf :particpant ;
+                     rdfs:subPropertyOf :participant ;
                      rdfs:label "Academic organization participant"@en, "Organización académica participante"@es;
                      rdfs:comment "An academic organization (school, university) who is part of this connection"@en, "Una organización académica (escuela, universidad) que participa de esta conexión"@es;
                      rdfs:domain :AcademicConnection;
@@ -325,7 +327,7 @@ foaf:Organization a owl:Class;
                      
 ####################################### BelongingConnections #######################################               
 
-:BelongingConnection a rdfs:Class;
+:BelongingConnection a owl:Class;
                      rdfs:subClassOf :Connection;
                      rdfs:label "Belonging Connection"@en, "Conexión de pertenencia"@es;
                      rdfs:comment "The connection between an entity and a Organization (Opus Dei, a Think Tank) without been affiliated to it necessarily"@en, "La relación entre una entidad y una organización (Opus Dei, un Think Tank) sin necesariamente estar afiliado"@es.              
@@ -358,7 +360,7 @@ foaf:Organization a owl:Class;
 :hasReportDate a rdf:Property;
             rdfs:label "Report date"@en, "Fecha del reporte"@es;
             rdfs:domain :FinancialReport;
-		    rdfs:range xsd:date .
+            rdfs:range xsd:date .
 
 :hasReportAmount a rdf:Property;
             rdfs:label "Report amount"@en, "Cantidad reportada"@es;
@@ -393,18 +395,18 @@ foaf:Organization a owl:Class;
                 
 ##NewsEvent
 
-:NewsEvent a rdfs:Class;
+:NewsEvent a owl:Class;
            rdfs:subClassOf bio:Event;
            rdfs:label "News event"@en, "Evento noticioso"@es;
            rdfs:comment "An event relevant from the point of view of journalism"@en, "Un evento de relevancia periodística"@es.
            
-:NewsEventConnection a rdfs:Class;
+:NewsEventConnection a owl:Class;
                      rdfs:subClassOf :Connection;
                      rdfs:label "News event connection"@en, "Conexión con evento noticioso"@es;
                      rdfs:comment "Describes the relation of a person with a news event during a specific period of time"@en, "Describe la relación de una persona con un evento noticioso durante un período de tiempo"@es.
                      
 :newsEventParticipant a rdf:Property, owl:ObjectProperty;
-                     rdfs:subPropertyOf :particpant ;
+                     rdfs:subPropertyOf :participant ;
                      rdfs:label "A news event participant in this connection"@en, "Evento noticioso participante"@es;
                      rdfs:comment "A news event which is part of this connection"@en, "Un evento noticioso que participa de esta conexión"@es;
                      rdfs:domain :NewsEventConnection;
