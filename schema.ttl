@@ -211,7 +211,7 @@ foaf:Organization a owl:Class;
                      rdfs:range  :Company .
 
 
-:hasSocialReason a rdf:Property, owl:ObjectProperty;
+:hasSocialReason a rdf:Property, owl:DatatypeProperty;
          rdfs:subPropertyOf dcterms:title;
          rdfs:label "Name"@en, "Razón social"@es;
          rdfs:comment "An alias for a person"@en, "Un alias de una persona"@es;
