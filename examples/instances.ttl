@@ -1,22 +1,1150 @@
-@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl:      <http://www.w3.org/2002/07/owl#> .
-@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
-@prefix bio:      <http://purl.org/vocab/bio/0.1/> .
-@prefix rel:      <http://purl.org/vocab/relationship/> .
-@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
-@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dcterms:  <http://purl.org/dc/terms/> .
-@prefix label: <http://purl.org/net/vocab/2004/03/label#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix :         <http://poderopedia.com/vocab/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://poderopedia.com/instances/> .
+@prefix vocab: <http://poderopedia.com/vocab/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+##Countries
+:Afghanistan
+    a vocab:Country ;
+    rdfs:label "Afghanistan"@en .
+
+:Albania
+    a vocab:Country ;
+    rdfs:label "Albania"@en .
+
+:Algeria
+    a vocab:Country ;
+    rdfs:label "Algeria"@en .
+
+:American_Samoa
+    a vocab:Country ;
+    rdfs:label "American Samoa"@en .
+
+:Andorra
+    a vocab:Country ;
+    rdfs:label "Andorra"@en .
+
+:Angola
+    a vocab:Country ;
+    rdfs:label "Angola"@en .
+
+:Anguilla
+    a vocab:Country ;
+    rdfs:label "Anguilla"@en .
+
+:Antarctica
+    a vocab:Country ;
+    rdfs:label "Antarctica"@en .
+
+:Antigua_and_Barbuda
+    a vocab:Country ;
+    rdfs:label "Antigua and Barbuda"@en .
+
+:Argentina
+    a vocab:Country ;
+    rdfs:label "Argentina"@en .
+
+:Armenia
+    a vocab:Country ;
+    rdfs:label "Armenia"@en .
+
+:Aruba
+    a vocab:Country ;
+    rdfs:label "Aruba"@en .
+
+:Australia
+    a vocab:Country ;
+    rdfs:label "Australia"@en .
+
+:Austria
+    a vocab:Country ;
+    rdfs:label "Austria"@en .
+
+:Azerbaijan
+    a vocab:Country ;
+    rdfs:label "Azerbaijan"@en .
+
+:Bahamas
+    a vocab:Country ;
+    rdfs:label "Bahamas"@en .
+
+:Bahrain
+    a vocab:Country ;
+    rdfs:label "Bahrain"@en .
+
+:Bangladesh
+    a vocab:Country ;
+    rdfs:label "Bangladesh"@en .
+
+:Barbados
+    a vocab:Country ;
+    rdfs:label "Barbados"@en .
+
+:Belarus
+    a vocab:Country ;
+    rdfs:label "Belarus"@en .
+
+:Belgium
+    a vocab:Country ;
+    rdfs:label "Belgium"@en .
+
+:Belize
+    a vocab:Country ;
+    rdfs:label "Belize"@en .
+
+:Benin
+    a vocab:Country ;
+    rdfs:label "Benin"@en .
+
+:Bermuda
+    a vocab:Country ;
+    rdfs:label "Bermuda"@en .
+
+:Bhutan
+    a vocab:Country ;
+    rdfs:label "Bhutan"@en .
+
+:Bolivia
+    a vocab:Country ;
+    rdfs:label "Bolivia"@en .
+
+:Bosnia_and_Herzegovina
+    a vocab:Country ;
+    rdfs:label "Bosnia and Herzegovina"@en .
+
+:Botswana
+    a vocab:Country ;
+    rdfs:label "Botswana"@en .
+
+:Bouvet_Island
+    a vocab:Country ;
+    rdfs:label "Bouvet Island"@en .
+
+:Brazil
+    a vocab:Country ;
+    rdfs:label "Brazil"@en .
+
+:British_Indian_Ocean_Territory
+    a vocab:Country ;
+    rdfs:label "British Indian Ocean Territory"@en .
+
+:Brunei_Darussalam
+    a vocab:Country ;
+    rdfs:label "Brunei Darussalam"@en .
+
+:Bulgaria
+    a vocab:Country ;
+    rdfs:label "Bulgaria"@en .
+
+:Burkina_Faso
+    a vocab:Country ;
+    rdfs:label "Burkina Faso"@en .
+
+:Burundi
+    a vocab:Country ;
+    rdfs:label "Burundi"@en .
+
+:Cambodia
+    a vocab:Country ;
+    rdfs:label "Cambodia"@en .
+
+:Cameroon
+    a vocab:Country ;
+    rdfs:label "Cameroon"@en .
+
+:Canada
+    a vocab:Country ;
+    rdfs:label "Canada"@en .
+
+:Cape_Verde
+    a vocab:Country ;
+    rdfs:label "Cape Verde"@en .
+
+:Cayman_Islands
+    a vocab:Country ;
+    rdfs:label "Cayman Islands"@en .
+
+:Central_African_Republic
+    a vocab:Country ;
+    rdfs:label "Central African Republic"@en .
+
+:Chad
+    a vocab:Country ;
+    rdfs:label "Chad"@en .
+
+:Chile
+    a vocab:Country ;
+    rdfs:label "Chile"@en .
+
+:China
+    a vocab:Country ;
+    rdfs:label "China"@en .
+
+:Christmas_Island
+    a vocab:Country ;
+    rdfs:label "Christmas Island"@en .
+
+:Cocos_Islands
+    a vocab:Country ;
+    rdfs:label "Cocos Islands"@en .
+
+:Colombia
+    a vocab:Country ;
+    rdfs:label "Colombia"@en .
+
+:Comoros
+    a vocab:Country ;
+    rdfs:label "Comoros"@en .
+
+:Congo
+    a vocab:Country ;
+    rdfs:label "Congo"@en .
+
+:Cook_Islands
+    a vocab:Country ;
+    rdfs:label "Cook Islands"@en .
+
+:Costa_Rica
+    a vocab:Country ;
+    rdfs:label "Costa Rica"@en .
+
+:Croatia
+    a vocab:Country ;
+    rdfs:label "Croatia"@en .
+
+:Cuba
+    a vocab:Country ;
+    rdfs:label "Cuba"@en .
+
+:Cyprus
+    a vocab:Country ;
+    rdfs:label "Cyprus"@en .
+
+:Czech_Republic
+    a vocab:Country ;
+    rdfs:label "Czech Republic"@en .
+
+:Denmark
+    a vocab:Country ;
+    rdfs:label "Denmark"@en .
+
+:Djibouti
+    a vocab:Country ;
+    rdfs:label "Djibouti"@en .
+
+:Dominica
+    a vocab:Country ;
+    rdfs:label "Dominica"@en .
+
+:Dominican_Republic
+    a vocab:Country ;
+    rdfs:label "Dominican Republic"@en .
+
+:Ecuador
+    a vocab:Country ;
+    rdfs:label "Ecuador"@en .
+
+:Egypt
+    a vocab:Country ;
+    rdfs:label "Egypt"@en .
+
+:El_Salvador
+    a vocab:Country ;
+    rdfs:label "El Salvador"@en .
+
+:Equatorial_Guinea
+    a vocab:Country ;
+    rdfs:label "Equatorial Guinea"@en .
+
+:Eritrea
+    a vocab:Country ;
+    rdfs:label "Eritrea"@en .
+
+:Estonia
+    a vocab:Country ;
+    rdfs:label "Estonia"@en .
+
+:Ethiopia
+    a vocab:Country ;
+    rdfs:label "Ethiopia"@en .
+
+:Falkland_Islands
+    a vocab:Country ;
+    rdfs:label "Falkland Islands"@en .
+
+:Faroe_Islands
+    a vocab:Country ;
+    rdfs:label "Faroe Islands"@en .
+
+:Fiji
+    a vocab:Country ;
+    rdfs:label "Fiji"@en .
+
+:Finland
+    a vocab:Country ;
+    rdfs:label "Finland"@en .
+
+:France
+    a vocab:Country ;
+    rdfs:label "France"@en .
+
+:French_Guiana
+    a vocab:Country ;
+    rdfs:label "French Guiana"@en .
+
+:French_Polynesia
+    a vocab:Country ;
+    rdfs:label "French Polynesia"@en .
+
+:Gabon
+    a vocab:Country ;
+    rdfs:label "Gabon"@en .
+
+:Gambia
+    a vocab:Country ;
+    rdfs:label "Gambia"@en .
+
+:Georgia
+    a vocab:Country ;
+    rdfs:label "Georgia"@en .
+
+:Germany
+    a vocab:Country ;
+    rdfs:label "Germany"@en .
+
+:Ghana
+    a vocab:Country ;
+    rdfs:label "Ghana"@en .
+
+:Gibraltar
+    a vocab:Country ;
+    rdfs:label "Gibraltar"@en .
+
+:Greece
+    a vocab:Country ;
+    rdfs:label "Greece"@en .
+
+:Greenland
+    a vocab:Country ;
+    rdfs:label "Greenland"@en .
+
+:Grenada
+    a vocab:Country ;
+    rdfs:label "Grenada"@en .
+
+:Guadeloupe
+    a vocab:Country ;
+    rdfs:label "Guadeloupe"@en .
+
+:Guam
+    a vocab:Country ;
+    rdfs:label "Guam"@en .
+
+:Guatemala
+    a vocab:Country ;
+    rdfs:label "Guatemala"@en .
+
+:Guinea
+    a vocab:Country ;
+    rdfs:label "Guinea"@en .
+
+:Guinea-Bissau
+    a vocab:Country ;
+    rdfs:label "Guinea-Bissau"@en .
+
+:Guyana
+    a vocab:Country ;
+    rdfs:label "Guyana"@en .
+
+:Haiti
+    a vocab:Country ;
+    rdfs:label "Haiti"@en .
+
+:Heard_Island_and_McDonald_Islands
+    a vocab:Country ;
+    rdfs:label "Heard Island and McDonald Islands"@en .
+
+:Honduras
+    a vocab:Country ;
+    rdfs:label "Honduras"@en .
+
+:Hong_Kong
+    a vocab:Country ;
+    rdfs:label "Hong Kong"@en .
+
+:Hungary
+    a vocab:Country ;
+    rdfs:label "Hungary"@en .
+
+:Iceland
+    a vocab:Country ;
+    rdfs:label "Iceland"@en .
+
+:India
+    a vocab:Country ;
+    rdfs:label "India"@en .
+
+:Indonesia
+    a vocab:Country ;
+    rdfs:label "Indonesia"@en .
+
+:Iran
+    a vocab:Country ;
+    rdfs:label "Iran"@en .
+
+:Iraq
+    a vocab:Country ;
+    rdfs:label "Iraq"@en .
+
+:Ireland
+    a vocab:Country ;
+    rdfs:label "Ireland"@en .
+
+:Israel
+    a vocab:Country ;
+    rdfs:label "Israel"@en .
+
+:Italy
+    a vocab:Country ;
+    rdfs:label "Italy"@en .
+
+:Jamaica
+    a vocab:Country ;
+    rdfs:label "Jamaica"@en .
+
+:Japan
+    a vocab:Country ;
+    rdfs:label "Japan"@en .
+
+:Jordan
+    a vocab:Country ;
+    rdfs:label "Jordan"@en .
+
+:Kazakhstan
+    a vocab:Country ;
+    rdfs:label "Kazakhstan"@en .
+
+:Kenya
+    a vocab:Country ;
+    rdfs:label "Kenya"@en .
+
+:Kiribati
+    a vocab:Country ;
+    rdfs:label "Kiribati"@en .
+
+:Kuwait
+    a vocab:Country ;
+    rdfs:label "Kuwait"@en .
+
+:Kyrgyzstan
+    a vocab:Country ;
+    rdfs:label "Kyrgyzstan"@en .
+
+:Laos
+    a vocab:Country ;
+    rdfs:label "Laos"@en .
+
+:Latvia
+    a vocab:Country ;
+    rdfs:label "Latvia"@en .
+
+:Lebanon
+    a vocab:Country ;
+    rdfs:label "Lebanon"@en .
+
+:Lesotho
+    a vocab:Country ;
+    rdfs:label "Lesotho"@en .
+
+:Liberia
+    a vocab:Country ;
+    rdfs:label "Liberia"@en .
+
+:Libya
+    a vocab:Country ;
+    rdfs:label "Libya"@en .
+
+:Liechtenstein
+    a vocab:Country ;
+    rdfs:label "Liechtenstein"@en .
+
+:Lithuania
+    a vocab:Country ;
+    rdfs:label "Lithuania"@en .
+
+:Luxembourg
+    a vocab:Country ;
+    rdfs:label "Luxembourg"@en .
+
+:Macao
+    a vocab:Country ;
+    rdfs:label "Macao"@en .
+
+:Madagascar
+    a vocab:Country ;
+    rdfs:label "Madagascar"@en .
+
+:Malawi
+    a vocab:Country ;
+    rdfs:label "Malawi"@en .
+
+:Malaysia
+    a vocab:Country ;
+    rdfs:label "Malaysia"@en .
+
+:Maldives
+    a vocab:Country ;
+    rdfs:label "Maldives"@en .
+
+:Mali
+    a vocab:Country ;
+    rdfs:label "Mali"@en .
+
+:Malta
+    a vocab:Country ;
+    rdfs:label "Malta"@en .
+
+:Marshall_Islands
+    a vocab:Country ;
+    rdfs:label "Marshall Islands"@en .
+
+:Martinique
+    a vocab:Country ;
+    rdfs:label "Martinique"@en .
+
+:Mauritania
+    a vocab:Country ;
+    rdfs:label "Mauritania"@en .
+
+:Mauritius
+    a vocab:Country ;
+    rdfs:label "Mauritius"@en .
+
+:Mayotte
+    a vocab:Country ;
+    rdfs:label "Mayotte"@en .
+
+:Mexico
+    a vocab:Country ;
+    rdfs:label "Mexico"@en .
+
+:Micronesia
+    a vocab:Country ;
+    rdfs:label "Micronesia"@en .
+
+:Moldova
+    a vocab:Country ;
+    rdfs:label "Moldova"@en .
+
+:Monaco
+    a vocab:Country ;
+    rdfs:label "Monaco"@en .
+
+:Mongolia
+    a vocab:Country ;
+    rdfs:label "Mongolia"@en .
+
+:Montenegro
+    a vocab:Country ;
+    rdfs:label "Montenegro"@en .
+
+:Montserrat
+    a vocab:Country ;
+    rdfs:label "Montserrat"@en .
+
+:Morocco
+    a vocab:Country ;
+    rdfs:label "Morocco"@en .
+
+:Mozambique
+    a vocab:Country ;
+    rdfs:label "Mozambique"@en .
+
+:Myanmar
+    a vocab:Country ;
+    rdfs:label "Myanmar"@en .
+
+:Namibia
+    a vocab:Country ;
+    rdfs:label "Namibia"@en .
+
+:Nauru
+    a vocab:Country ;
+    rdfs:label "Nauru"@en .
+
+:Nepal
+    a vocab:Country ;
+    rdfs:label "Nepal"@en .
+
+:Netherlands
+    a vocab:Country ;
+    rdfs:label "Netherlands"@en .
+
+:Netherlands_Antilles
+    a vocab:Country ;
+    rdfs:label "Netherlands Antilles"@en .
+
+:New_Caledonia
+    a vocab:Country ;
+    rdfs:label "New Caledonia"@en .
+
+:New_Zealand
+    a vocab:Country ;
+    rdfs:label "New Zealand"@en .
+
+:Nicaragua
+    a vocab:Country ;
+    rdfs:label "Nicaragua"@en .
+
+:Niger
+    a vocab:Country ;
+    rdfs:label "Niger"@en .
+
+:Nigeria
+    a vocab:Country ;
+    rdfs:label "Nigeria"@en .
+
+:Norfolk_Island
+    a vocab:Country ;
+    rdfs:label "Norfolk Island"@en .
+
+:North_Korea
+    a vocab:Country ;
+    rdfs:label "North Korea"@en .
+
+:Norway
+    a vocab:Country ;
+    rdfs:label "Norway"@en .
+
+:Oman
+    a vocab:Country ;
+    rdfs:label "Oman"@en .
+
+:Pakistan
+    a vocab:Country ;
+    rdfs:label "Pakistan"@en .
+
+:Palau
+    a vocab:Country ;
+    rdfs:label "Palau"@en .
+
+:Palestinian_Territory
+    a vocab:Country ;
+    rdfs:label "Palestinian Territory"@en .
+
+:Panama
+    a vocab:Country ;
+    rdfs:label "Panama"@en .
+
+:Papua_New_Guinea
+    a vocab:Country ;
+    rdfs:label "Papua New Guinea"@en .
+
+:Paraguay
+    a vocab:Country ;
+    rdfs:label "Paraguay"@en .
+
+:Peru
+    a vocab:Country ;
+    rdfs:label "Peru"@en .
+
+:Philippines
+    a vocab:Country ;
+    rdfs:label "Philippines"@en .
+
+:Pitcairn
+    a vocab:Country ;
+    rdfs:label "Pitcairn"@en .
+
+:Poland
+    a vocab:Country ;
+    rdfs:label "Poland"@en .
+
+:Portugal
+    a vocab:Country ;
+    rdfs:label "Portugal"@en .
+
+:Puerto_Rico
+    a vocab:Country ;
+    rdfs:label "Puerto Rico"@en .
+
+:Qatar
+    a vocab:Country ;
+    rdfs:label "Qatar"@en .
+
+:Romania
+    a vocab:Country ;
+    rdfs:label "Romania"@en .
+
+:Russian_Federation
+    a vocab:Country ;
+    rdfs:label "Russian Federation"@en .
+
+:Rwanda
+    a vocab:Country ;
+    rdfs:label "Rwanda"@en .
+
+:Saint_Helena
+    a vocab:Country ;
+    rdfs:label "Saint Helena"@en .
+
+:Saint_Kitts_and_Nevis
+    a vocab:Country ;
+    rdfs:label "Saint Kitts and Nevis"@en .
+
+:Saint_Lucia
+    a vocab:Country ;
+    rdfs:label "Saint Lucia"@en .
+
+:Saint_Pierre_and_Miquelon
+    a vocab:Country ;
+    rdfs:label "Saint Pierre and Miquelon"@en .
+
+:Saint_Vincent_and_the_Grenadines
+    a vocab:Country ;
+    rdfs:label "Saint Vincent and the Grenadines"@en .
+
+:Samoa
+    a vocab:Country ;
+    rdfs:label "Samoa"@en .
+
+:San_Marino
+    a vocab:Country ;
+    rdfs:label "San Marino"@en .
+
+:Sao_Tome_and_Principe
+    a vocab:Country ;
+    rdfs:label "Sao Tome and Principe"@en .
+
+:Saudi_Arabia
+    a vocab:Country ;
+    rdfs:label "Saudi Arabia"@en .
+
+:Senegal
+    a vocab:Country ;
+    rdfs:label "Senegal"@en .
+
+:Serbia
+    a vocab:Country ;
+    rdfs:label "Serbia"@en .
+
+:Seychelles
+    a vocab:Country ;
+    rdfs:label "Seychelles"@en .
+
+:Sierra_Leone
+    a vocab:Country ;
+    rdfs:label "Sierra Leone"@en .
+
+:Singapore
+    a vocab:Country ;
+    rdfs:label "Singapore"@en .
+
+:Slovakia
+    a vocab:Country ;
+    rdfs:label "Slovakia"@en .
+
+:Slovenia
+    a vocab:Country ;
+    rdfs:label "Slovenia"@en .
+
+:Solomon_Islands
+    a vocab:Country ;
+    rdfs:label "Solomon Islands"@en .
+
+:Somalia
+    a vocab:Country ;
+    rdfs:label "Somalia"@en .
+
+:South_Africa
+    a vocab:Country ;
+    rdfs:label "South Africa"@en .
+
+:South_Georgia
+    a vocab:Country ;
+    rdfs:label "South Georgia"@en .
+
+:South_Korea
+    a vocab:Country ;
+    rdfs:label "South Korea"@en .
+
+:Spain
+    a vocab:Country ;
+    rdfs:label "Spain"@en .
+
+:Sri_Lanka
+    a vocab:Country ;
+    rdfs:label "Sri Lanka"@en .
+
+:Sudan
+    a vocab:Country ;
+    rdfs:label "Sudan"@en .
+
+:Suriname
+    a vocab:Country ;
+    rdfs:label "Suriname"@en .
+
+:Svalbard_and_Jan_Mayen
+    a vocab:Country ;
+    rdfs:label "Svalbard and Jan Mayen"@en .
+
+:Swaziland
+    a vocab:Country ;
+    rdfs:label "Swaziland"@en .
+
+:Sweden
+    a vocab:Country ;
+    rdfs:label "Sweden"@en .
+
+:Switzerland
+    a vocab:Country ;
+    rdfs:label "Switzerland"@en .
+
+:Syrian_Arab_Republic
+    a vocab:Country ;
+    rdfs:label "Syrian Arab Republic"@en .
+
+:Taiwan
+    a vocab:Country ;
+    rdfs:label "Taiwan"@en .
+
+:Tajikistan
+    a vocab:Country ;
+    rdfs:label "Tajikistan"@en .
+
+:Tanzania
+    a vocab:Country ;
+    rdfs:label "Tanzania"@en .
+
+:Thailand
+    a vocab:Country ;
+    rdfs:label "Thailand"@en .
+
+:The_Former_Yugoslav_Republic_of_Macedonia
+    a vocab:Country ;
+    rdfs:label "The Former Yugoslav Republic of Macedonia"@en .
+
+:Timor-Leste
+    a vocab:Country ;
+    rdfs:label "Timor-Leste"@en .
+
+:Togo
+    a vocab:Country ;
+    rdfs:label "Togo"@en .
+
+:Tokelau
+    a vocab:Country ;
+    rdfs:label "Tokelau"@en .
+
+:Tonga
+    a vocab:Country ;
+    rdfs:label "Tonga"@en .
+
+:Trinidad_and_Tobago
+    a vocab:Country ;
+    rdfs:label "Trinidad and Tobago"@en .
+
+:Tunisia
+    a vocab:Country ;
+    rdfs:label "Tunisia"@en .
+
+:Turkey
+    a vocab:Country ;
+    rdfs:label "Turkey"@en .
+
+:Turkmenistan
+    a vocab:Country ;
+    rdfs:label "Turkmenistan"@en .
+
+:Tuvalu
+    a vocab:Country ;
+    rdfs:label "Tuvalu"@en .
+
+:Uganda
+    a vocab:Country ;
+    rdfs:label "Uganda"@en .
+
+:Ukraine
+    a vocab:Country ;
+    rdfs:label "Ukraine"@en .
+
+:United_Arab_Emirates
+    a vocab:Country ;
+    rdfs:label "United Arab Emirates"@en .
+
+:United_Kingdom
+    a vocab:Country ;
+    rdfs:label "United Kingdom"@en .
+
+:United_States
+    a vocab:Country ;
+    rdfs:label "United States"@en .
+
+:United_States_Minor_Outlying_Islands
+    a vocab:Country ;
+    rdfs:label "United States Minor Outlying Islands"@en .
+
+:Uruguay
+    a vocab:Country ;
+    rdfs:label "Uruguay"@en .
+
+:Uzbekistan
+    a vocab:Country ;
+    rdfs:label "Uzbekistan"@en .
+
+:Vanuatu
+    a vocab:Country ;
+    rdfs:label "Vanuatu"@en .
+
+:Vatican_City
+    a vocab:Country ;
+    rdfs:label "Vatican City"@en .
+
+:Venezuela
+    a vocab:Country ;
+    rdfs:label "Venezuela"@en .
+
+:Vietnam
+    a vocab:Country ;
+    rdfs:label "Vietnam"@en .
+
+:Wallis_and_Futuna
+    a vocab:Country ;
+    rdfs:label "Wallis and Futuna"@en .
+
+:Western_Sahara
+    a vocab:Country ;
+    rdfs:label "Western Sahara"@en .
+
+:Yemen
+    a vocab:Country ;
+    rdfs:label "Yemen"@en .
+
+:Zambia
+    a vocab:Country ;
+    rdfs:label "Zambia"@en .
+
+:Zimbabwe
+    a vocab:Country ;
+    rdfs:label "Zimbabwe"@en .
+
+<http://poderopedia.com/instances/Congo,_Democratic_Republic_of_the>
+    a vocab:Country ;
+    rdfs:label "Congo, Democratic Republic of the"@en .
+
+<http://poderopedia.com/instances/Cote_d'Ivoire>
+    a vocab:Country ;
+    rdfs:label "Cote d'Ivoire"@en .
+
+<http://poderopedia.com/instances/Virgin_Islands,_British>
+    a vocab:Country ;
+    rdfs:label "Virgin Islands, British"@en .
+
+<http://poderopedia.com/instances/Virgin_Islands,_U.S.>
+    a vocab:Country ;
+    rdfs:label "Virgin Islands, U.S."@en .
 
 
-:male a :Gender;
-   rdfs:label "Male"@en, "Masculino"@es .
-   
-:female a :Gender;
-   rdfs:label "Female"@en, "Femenino"@es .
 
-:other a :Gender;
-   rdfs:label "Other"@en, "Otro"@es .   
+## Gender
+
+:Male
+    a vocab:Gender ;
+    rdfs:label "male"@en, "masculino"@es .
+
+:Female
+    a vocab:Gender ;
+    rdfs:label "female"@en, "femenino"@es .
+    
+    
+    
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://poderopedia.com/instances/> .
+@prefix vocab: <http://poderopedia.com/vocab/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://poderopedia.com/instances/:Mercado_Com\u00FAn_del_Sur>
+    dcterms:identifier "MERCOSUR" ;
+    a vocab:NgoSector ;
+    rdfs:label "Mercado_Común_del_Sur"@en .
+
+<http://poderopedia.com/instances/:Organizaci\u00F3n_Internacional_del_Trabajo>
+    dcterms:identifier "OIT" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización_Internacional_del_Trabajo"@en .
+
+<http://poderopedia.com/instances/:Organizaci\u00F3n_Mundial_de_Comercio>
+    dcterms:identifier "OMC" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización_Mundial_de_Comercio"@en .
+
+<http://poderopedia.com/instances/:Organizaci\u00F3n_Mundial_de_la_Salud>
+    dcterms:identifier "OMS" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización_Mundial_de_la_Salud"@en .
+
+<http://poderopedia.com/instances/:Organizaci\u00F3n_de_Pa\u00EDses_Exportadores_de_Petr\u00F3leo>
+    dcterms:identifier "OPEP" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización_de_Países_Exportadores_de_Petróleo"@en .
+
+<http://poderopedia.com/instances/:Organizaci\u00F3n_del_Tratado_del_Atl\u00E1ntico_Norte>
+    dcterms:identifier "OTAN" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización_del_Tratado_del_Atlántico_Norte"@en .
+
+<http://poderopedia.com/instances/:Organizaci\u00F3n_para_la_Cooperaci\u00F3n_y_el_Desarrollo_Econ\u00F3mico>
+    dcterms:identifier "OCDE" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización_para_la_Cooperación_y_el_Desarrollo_Económico"@en .
+
+    
+    
+##NgoSectors
+
+:APEC
+    dcterms:identifier "APEC" ;
+    a vocab:NgoSector ;
+    rdfs:label "Cooperación Económica Asia Pacífico"@en .
+
+:Banco_Mundial
+    a vocab:NgoSector ;
+    rdfs:label "Banco Mundial"@en .
+
+:CEPAL
+    dcterms:identifier "CEPAL" ;
+    a vocab:NgoSector ;
+    rdfs:label "Comisión Económica para América Latina y el Caribe"@en .
+
+:FAO
+    dcterms:identifier "FAO" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización de las Naciones Unidas para la Agricultura y la Alimentación"@en .
+
+:FMI
+    dcterms:identifier "FMI" ;
+    a vocab:NgoSector ;
+    rdfs:label "Fondo Monetario Internacional"@en .
+
+:MERCOSUR
+    dcterms:identifier "MERCOSUR" ;
+    a vocab:NgoSector ;
+    rdfs:label "Mercado Común del Sur"@en .
+
+:OCDE
+    dcterms:identifier "OCDE" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización para la Cooperación y el Desarrollo Económico"@en .
+
+:OEA
+    dcterms:identifier "OEA" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización de los Estados Americanos"@en .
+
+:OIT
+    dcterms:identifier "OIT" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización Internacional del Trabajo"@en .
+
+:OMC
+    dcterms:identifier "OMC" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización Mundial de Comercio"@en .
+
+:OMS
+    dcterms:identifier "OMS" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización Mundial de la Salud"@en .
+
+:ONU
+    dcterms:identifier "ONU" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización de las Naciones Unidas"@en .
+
+:OPEP
+    dcterms:identifier "OPEP" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización de Países Exportadores de Petróleo"@en .
+
+:OTAN
+    dcterms:identifier "OTAN" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización del Tratado del Atlántico Norte"@en .
+
+:Otro
+    a vocab:NgoSector ;
+    rdfs:label "Otro"@en .
+
+:UNESCO
+    dcterms:identifier "UNESCO" ;
+    a vocab:NgoSector ;
+    rdfs:label "Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura"@en .
+
+:UNICEF
+    dcterms:identifier "UNICEF" ;
+    a vocab:NgoSector ;
+    rdfs:label "Fondo de las Naciones Unidas para la Infancia"@en .
+
+<http://poderopedia.com/instances/sector/Agrícola> a vocab:Sector; rdfs:label "Agrícola"@es.
+<http://poderopedia.com/instances/sector/Vitivinícola> a vocab:Sector; rdfs:label "Vitivinícola"@es.
+<http://poderopedia.com/instances/sector/Ganadero> a vocab:Sector; rdfs:label "Ganadero"@es.
+<http://poderopedia.com/instances/sector/Agroindustrial> a vocab:Sector; rdfs:label "Agroindustrial"@es.
+<http://poderopedia.com/instances/sector/Forestal_y_Papelero> a vocab:Sector; rdfs:label "Forestal y Papelero"@es.
+<http://poderopedia.com/instances/sector/Pesquero> a vocab:Sector; rdfs:label "Pesquero"@es.
+<http://poderopedia.com/instances/sector/Salmonero> a vocab:Sector; rdfs:label "Salmonero"@es.
+<http://poderopedia.com/instances/sector/Minería> a vocab:Sector; rdfs:label "Minería"@es.
+<http://poderopedia.com/instances/sector/Bebidas_y_alimentos> a vocab:Sector; rdfs:label "Bebidas y alimentos"@es.
+<http://poderopedia.com/instances/sector/Metalúrgico_y_Siderúrgico> a vocab:Sector; rdfs:label "Metalúrgico y Siderúrgico"@es.
+<http://poderopedia.com/instances/sector/Textil> a vocab:Sector; rdfs:label "Textil"@es.
+<http://poderopedia.com/instances/sector/Petroquímico> a vocab:Sector; rdfs:label "Petroquímico"@es.
+<http://poderopedia.com/instances/sector/Cementeras> a vocab:Sector; rdfs:label "Cementeras"@es.
+<http://poderopedia.com/instances/sector/Industrias_químicas> a vocab:Sector; rdfs:label "Industrias químicas"@es.
+<http://poderopedia.com/instances/sector/Energía> a vocab:Sector; rdfs:label "Energía"@es.
+<http://poderopedia.com/instances/sector/Combustibles> a vocab:Sector; rdfs:label "Combustibles"@es.
+<http://poderopedia.com/instances/sector/Construcción_e_Inmobiliario> a vocab:Sector; rdfs:label "Construcción e Inmobiliario"@es.
+<http://poderopedia.com/instances/sector/Transportes> a vocab:Sector; rdfs:label "Transportes"@es.
+<http://poderopedia.com/instances/sector/Aerolíneas_(Aéreo)> a vocab:Sector; rdfs:label "Aerolíneas (Aéreo)"@es.
+<http://poderopedia.com/instances/sector/Transporte_terrestre> a vocab:Sector; rdfs:label "Transporte terrestre"@es.
+<http://poderopedia.com/instances/sector/Transporte_marítimo> a vocab:Sector; rdfs:label "Transporte marítimo"@es.
+<http://poderopedia.com/instances/sector/Industria_naviera> a vocab:Sector; rdfs:label "Industria naviera"@es.
+<http://poderopedia.com/instances/sector/Telecomunicaciones> a vocab:Sector; rdfs:label "Telecomunicaciones"@es.
+<http://poderopedia.com/instances/sector/Retail> a vocab:Sector; rdfs:label "Retail"@es.
+<http://poderopedia.com/instances/sector/Supermercados> a vocab:Sector; rdfs:label "Supermercados"@es.
+<http://poderopedia.com/instances/sector/Farmacias> a vocab:Sector; rdfs:label "Farmacias"@es.
+<http://poderopedia.com/instances/sector/Tiendas_por_departamento> a vocab:Sector; rdfs:label "Tiendas por departamento"@es.
+<http://poderopedia.com/instances/sector/Hogar_y_construcción> a vocab:Sector; rdfs:label "Hogar y construcción"@es.
+<http://poderopedia.com/instances/sector/Automotriz> a vocab:Sector; rdfs:label "Automotriz"@es.
+<http://poderopedia.com/instances/sector/Turístico_y_Hotelero> a vocab:Sector; rdfs:label "Turístico y Hotelero"@es.
+<http://poderopedia.com/instances/sector/Salud> a vocab:Sector; rdfs:label "Salud"@es.
+<http://poderopedia.com/instances/sector/Clínicas> a vocab:Sector; rdfs:label "Clínicas"@es.
+<http://poderopedia.com/instances/sector/Laboratorios> a vocab:Sector; rdfs:label "Laboratorios"@es.
+<http://poderopedia.com/instances/sector/Seguridad_social> a vocab:Sector; rdfs:label "Seguridad social"@es.
+<http://poderopedia.com/instances/sector/Isapres> a vocab:Sector; rdfs:label "Isapres"@es.
+<http://poderopedia.com/instances/sector/AFP> a vocab:Sector; rdfs:label "AFP"@es.
+<http://poderopedia.com/instances/sector/Caja_de_Compensación> a vocab:Sector; rdfs:label "Caja de Compensación"@es.
+<http://poderopedia.com/instances/sector/Compañía_de_seguros> a vocab:Sector; rdfs:label "Compañía de seguros"@es.
+<http://poderopedia.com/instances/sector/Educación> a vocab:Sector; rdfs:label "Educación"@es.
+<http://poderopedia.com/instances/sector/Educación_primaria> a vocab:Sector; rdfs:label "Educación primaria"@es.
+<http://poderopedia.com/instances/sector/Educación_secundaria> a vocab:Sector; rdfs:label "Educación secundaria"@es.
+<http://poderopedia.com/instances/sector/Educación_superior> a vocab:Sector; rdfs:label "Educación superior"@es.
+<http://poderopedia.com/instances/sector/Bancos_y_entidades_financiera> a vocab:Sector; rdfs:label "Bancos y entidades financiera"@es.
+<http://poderopedia.com/instances/sector/Bancos> a vocab:Sector; rdfs:label "Bancos"@es.
+<http://poderopedia.com/instances/sector/Financieras> a vocab:Sector; rdfs:label "Financieras"@es.
+<http://poderopedia.com/instances/sector/Tarjetas_de_créditos> a vocab:Sector; rdfs:label "Tarjetas de créditos"@es.
+<http://poderopedia.com/instances/sector/Seguros> a vocab:Sector; rdfs:label "Seguros"@es.
+<http://poderopedia.com/instances/sector/Comercio_internacional> a vocab:Sector; rdfs:label "Comercio internacional"@es.
+<http://poderopedia.com/instances/sector/Importación> a vocab:Sector; rdfs:label "Importación"@es.
+<http://poderopedia.com/instances/sector/Exportación> a vocab:Sector; rdfs:label "Exportación"@es.
+<http://poderopedia.com/instances/sector/Defensa> a vocab:Sector; rdfs:label "Defensa"@es.
+<http://poderopedia.com/instances/sector/Tabaco> a vocab:Sector; rdfs:label "Tabaco"@es.
+<http://poderopedia.com/instances/sector/Publicidad> a vocab:Sector; rdfs:label "Publicidad"@es.
+<http://poderopedia.com/instances/sector/Medios_de_comunicación> a vocab:Sector; rdfs:label "Medios de comunicación"@es.
+<http://poderopedia.com/instances/sector/Consultoras> a vocab:Sector; rdfs:label "Consultoras"@es.
+<http://poderopedia.com/instances/sector/Sociedades_deportivas> a vocab:Sector; rdfs:label "Sociedades deportivas"@es.
+<http://poderopedia.com/instances/sector/Gestión_cultural> a vocab:Sector; rdfs:label "Gestión cultural"@es.
+<http://poderopedia.com/instances/sector/Tecnología> a vocab:Sector; rdfs:label "Tecnología"@es.
+<http://poderopedia.com/instances/sector/Sanitario> a vocab:Sector; rdfs:label "Sanitario"@es.
+<http://poderopedia.com/instances/sector/Hípico> a vocab:Sector; rdfs:label "Hípico"@es.
+<http://poderopedia.com/instances/sector/Diversificado> a vocab:Sector; rdfs:label "Diversificado"@es.

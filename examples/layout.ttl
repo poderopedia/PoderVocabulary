@@ -16,6 +16,12 @@
 @prefix layout: <http://graves.cl/layout/> .
 @prefix vocab: <http://poderopedia.com/vocab/> .       
 
+
+:hasUrl layout:hasLayoutParameterSet [
+        layout:position 95 ;
+        layout:uriRelated foaf:Person ;
+       a layout:LayoutParameterSet
+    ] .
 #
 :firstLastName
     layout:hasLayoutParameterSet [
@@ -584,3 +590,49 @@ foaf:firstName
           layout:position 98
      ] .
 
+
+
+### Organizations
+
+:hasSocialReason 
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display true;
+          layout:position 100
+     ] .
+     
+:hasHeadquartersIn 
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display true;
+          layout:htmlElement "select";
+          layout:position 99
+     ] .
+     
+:hasNgoSector
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated vocab:NonGovernmentalOrganization;
+          layout:display true;
+          layout:htmlElement "select";
+          layout:position 98
+     ] .
+     
+:hasAnotherNgoSector
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated vocab:NonGovernmentalOrganization;
+          layout:display true;
+          layout:position 97
+     ] .
+     
+:hasMainSector 
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated vocab:NonGovernmentalOrganization;
+          layout:display true;
+          layout:htmlElement "select";
+          layout:position 96
+     ] .

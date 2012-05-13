@@ -52,6 +52,13 @@ foaf:Agent a owl:Class;
            rdfs:label "Agent"@en, "Agente"@es;
            rdfs:comment "Un agente (humano o no)"@es, "An agent (human or not)"@en.
 
+           
+:hasUrl a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "URL related to this agent."@en, "URL relacionada con este agente"@es ;
+    rdfs:domain foaf:Agent ;
+    rdfs:label "URL"@en, "URL"@es ;
+    rdfs:range xsd:anyURI .
+
 foaf:firstName
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "The first name of a person."@en, "El primer nombre de una persona"@es ;
@@ -72,6 +79,9 @@ foaf:Organization a owl:Class;
         rdfs:label "Gender"@en, "Sexo"@es;
         rdfs:comment "Gender of a person"@en, "Sexo de una persona"@es.
 
+:Country a owl:Class;
+        rdfs:label "Country"@en, "País"@es;
+        rdfs:comment "A region legally defined as a distinct entity in political geography"@en, "Área geográfica y una entidad políticamente independiente con su propio gobierno, administración, etc."@es.
 ########## Relations for foaf:Person
 
                     
@@ -92,13 +102,6 @@ foaf:Organization a owl:Class;
         rdfs:comment "Gender of this person"@en, "Sexo de esta persona"@es;
         rdfs:domain foaf:Person;
         rdfs:range :Gender .
-
-## Define now _at_least_ male and female
-:male a :Gender;
-      rdfs:label "male"@en, "masculino"@es .
-
-:female a :Gender;
-        rdfs:label "female"@en, "femenino"@es .
 
 
 :hasFather a rdf:Property, owl:ObjectProperty;
@@ -194,6 +197,37 @@ foaf:Organization a owl:Class;
          rdfs:comment     "Una organización con fines de lucro"@es;
          rdfs:comment     "A for profit organization".
 
+         
+         
+########## Relations for :Organizations
+
+:hasHeadquartersIn a rdf:Property, owl:ObjectProperty;
+                     rdfs:label "Has headquarters"@en, "País de headquarters"@es;
+                     rdfs:comment "Country where the organization's headquarters are located"@en, "Ubicación de los headquarters"@es;
+                     rdfs:domain foaf:Organization;
+                     rdfs:range  :Country .
+
+                     
+:hasMainSector a rdf:Property, owl:ObjectProperty;
+                     rdfs:label "Has main sector"@en, "Sector principal"@es;
+                     rdfs:comment "Main sector related to the organization"@en, "Sector principal relacionado con la organización"@es;
+                     rdfs:domain foaf:Organization;
+                     rdfs:range  :Sector .
+                     
+                     
+########## Relations for :NonGovernmentalOrganization
+:hasNgoSector a rdf:Property, owl:ObjectProperty;
+                     rdfs:label "Has Non Government Organization Sector"@en, "Tiene Sectores Org No Gubernamentales]"@es;
+                     rdfs:comment "Sectors related to NGOs"@en, "Sectores relationados a ONGs"@es;
+                     rdfs:domain :NonGovernmentalOrganization;
+                     rdfs:range  :NgoSector .
+
+:hasAnotherNgoSector a rdf:Property, owl:DatatypeProperty;
+                     rdfs:label "Has another Non Government Organization Sector"@en, "Tiene otro Sector Org No Gubernamentales]"@es;
+                     rdfs:comment "Sectors related to NGOs not lister previously"@en, "Sectores relationados a ONGs no listados"@es;
+                     rdfs:domain :NonGovernmentalOrganization;
+                     rdfs:range  rdfs:Literal .
+                     
 ########## Relations for :Company
 
 
