@@ -6,9 +6,11 @@
 @prefix foaf:     <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix label: <http://purl.org/net/vocab/2004/03/label#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bcnbio: <http://datos.bcn.cl/ontologies/bcn-biographies#> .
 @prefix :         <http://poderopedia.com/vocab/> .
 
 
@@ -16,48 +18,32 @@
 :schema rdf:type owl:Ontology ;
         dcterms:title "PoderVocab: A vocabulary for Poderopedia"@en, "PoderVocab: Un vocabulario para Poderopedia"@es ;
         rdfs:label "PoderVocab: A vocabulary for Poderopedia"@en, "PoderVocab: Un vocabulario para Poderopedia"@es ;
-        dcterms:date "2012-05-04"^^xsd:date ;
+        dcterms:date "2012-05-17"^^xsd:date ;
         dcterms:abstract "This document describes a vocabulary to express information about people and their relations with Organizations, Companies, etc."@en,
-                         "Este documento describe un vocabulario para expresar información acerca de personas, y sus relaciones con organizaciones y empresas"@es.
+                         "Este documento describe un vocabulario para expresar información acerca de personas, y sus relaciones con organizaciones y empresas"@es;
+        owl:versionInfo "0.8".
 
 
 
 
 #Classes
-
-# Financial classes          
-
-:FinancialReport a owl:Class;
-                 rdfs:label "Financial Report"@en, "Reporte financiero"@es.
-
-:AnualProfit a owl:Class;
-             rdfs:subClassOf :FinancialReport;
-             rdfs:comment "Describes the profit for a certain year"@en, "Describe las utilidades para cierto año"@es;
-             rdfs:label "Anual Profit"@en, "Utilidades anuales"@es.
-
-             
-:AnualRevenue a owl:Class;
-              rdfs:subClassOf :FinancialReport;
-              rdfs:comment "Revenues for a specific year"@en, "Ingresos en un año particular"@es;
-              rdfs:label "Anual Revenue"@en, "Ingresos anuales"@es.
-
               
-####################################### People & Orgnizations #######################################               
-foaf:Person a owl:Class;
-            rdfs:label "Person"@en, "Persona"@es;
-            rdfs:comment "A person"@en, "Una persona"@es;
-            rdfs:subClassOf foaf:Agent.
             
 foaf:Agent a owl:Class;
            rdfs:label "Agent"@en, "Agente"@es;
            rdfs:comment "Un agente (humano o no)"@es, "An agent (human or not)"@en.
 
-           
-:hasUrl a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "URL related to this agent."@en, "URL relacionada con este agente"@es ;
-    rdfs:domain foaf:Agent ;
-    rdfs:label "URL"@en, "URL"@es ;
-    rdfs:range xsd:anyURI .
+foaf:Person a owl:Class;
+            rdfs:label "Person"@en, "Persona"@es;
+            rdfs:comment "A person"@en, "Una persona"@es;
+            rdfs:subClassOf foaf:Agent.
+
+foaf:Organization a owl:Class;
+            rdfs:label "Organization"@en, "Organización"@es;
+            rdfs:subClassOf foaf:Agent.
+
+
+### People
 
 foaf:firstName
     a rdf:Property, owl:DatatypeProperty ;
@@ -66,44 +52,186 @@ foaf:firstName
     rdfs:label "firstName"@en, "Primer nombre"@es ;
     rdfs:range rdfs:Literal .
 
-foaf:givenName
-    a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "The given name of some person."@en, "El nombre dado a una persona"@es ;
-    rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
-    rdfs:label "Given name"@en, "Otro nombre"@es .
-foaf:Organization a owl:Class;
-            rdfs:label "Organization"@en, "Organización"@es;
-            rdfs:subClassOf foaf:Agent.
-            
-:Gender a owl:Class;
-        rdfs:label "Gender"@en, "Sexo"@es;
-        rdfs:comment "Gender of a person"@en, "Sexo de una persona"@es.
-
-:Country a owl:Class;
-        rdfs:label "Country"@en, "País"@es;
-        rdfs:comment "A region legally defined as a distinct entity in political geography"@en, "Área geográfica y una entidad políticamente independiente con su propio gobierno, administración, etc."@es.
-########## Relations for foaf:Person
-
-                    
 :firstLastName a rdf:Property, owl:DatatypeProperty;
                rdfs:subPropertyOf foaf:familyName;
                rdfs:label "First last name"@en, "Primer apellido"@es;
                rdfs:domain foaf:Person ;
                rdfs:range rdfs:Literal .
                
-:secondLastName a rdf:Property, owl:DatatypeProperty;
+:otherLastName a rdf:Property, owl:DatatypeProperty;
                 rdfs:subPropertyOf foaf:familyName;
-                rdfs:label "Second last name"@en, "Segundo apellido"@es;
+                rdfs:label "Other last name"@en, "Otro apellido"@es;
+                rdfs:comment "Other last name, different from the first one"@en, "Otro apellido, que no es el primero"@es;
                 rdfs:domain foaf:Person ;
                 rdfs:range rdfs:Literal .
+                
+rdfs:comment
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "A description of the subject resource." ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:label "comment" ;
+    rdfs:range rdfs:Literal .
 
+foaf:based_near
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "A location that something is based near, for some broadly human notion of near." ;
+    rdfs:domain <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+    rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+    rdfs:label "based near" ;
+    rdfs:range <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>.
+    
+:countryOfResidence a rdf:Property, owl:ObjectProperty;
+                     rdfs:subPropertyOf foaf:based_near;
+                     rdfs:label "Country of residence"@en, "País de residencia"@es;
+                     rdfs:comment "Country where the organization's headquarters are located"@en, "Ubicación de los headquarters"@es;
+                     rdfs:domain foaf:Agent, <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>;
+                     rdfs:range  :Country.
+                     
+:hasUrl a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "URL related to this agent."@en, "URL relacionada con este agente"@es ;
+    rdfs:domain foaf:Agent ;
+    rdfs:label "URL"@en, "URL"@es ;
+    rdfs:range xsd:anyURI .
+
+
+
+foaf:givenName
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "The given name of some person."@en, "El nombre dado a una persona"@es ;
+    rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+    rdfs:label "Given name"@en, "Otro nombre"@es .
+            
+:Gender a owl:Class;
+        rdfs:label "Gender"@en, "Sexo"@es;
+        rdfs:comment "Gender of a person"@en, "Sexo de una persona"@es.
+
+
+:MaritalStatus a owl:Class;
+               rdfs:label "Marital Status"@en, "Estado civil"@es;
+               rdfs:comment "Class of possible marital status a person can be"@en, "Clase de los estados civiles en los que puede estar una persona"@es .
+               
+:Country a owl:Class;
+        rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>;
+        rdfs:label "Country"@en, "País"@es;
+        rdfs:comment "A region legally defined as a distinct entity in political geography"@en, "Área geográfica y una entidad políticamente independiente con su propio gobierno, administración, etc."@es.
+
+        
+bio:Birth rdf:type owl:Class ;
+          rdfs:label "Birth"@en ;
+          rdfs:comment "The event of a person entering into life."@en ;
+          rdfs:subClassOf bio:IndividualEvent ;
+          rdfs:isDefinedBy <http://purl.org/vocab/bio/0.1/> .
+
+bio:Death rdf:type owl:Class ;
+          rdfs:label "Death"@en ;
+          rdfs:comment "The event of a person's life ending."@en ;
+          rdfs:subClassOf bio:IndividualEvent ;    
+          rdfs:isDefinedBy <http://purl.org/vocab/bio/0.1/> .
+
+bio:IndividualEvent rdf:type owl:Class ;
+                    rdfs:label "Individual Event"@en ;
+                    rdfs:comment "A type of event that is principally about a single person, group or organization. Other agents may be involved but the event is most significant for the principal agent."@en ;
+                    rdfs:subClassOf bio:Event , [rdf:type owl:Restriction ;
+                                                 owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                                                 owl:onProperty bio:principal
+                                                ] ;
+                    rdfs:isDefinedBy <http://purl.org/vocab/bio/0.1/> .
+
+bio:Event rdf:type owl:Class ;
+          rdfs:label "Event"@en, "Evento"@es ;
+          rdfs:comment "An event is an occurrence that brings about a change in the state of affairs for one or more people and/or other agents. Events are assumed to occur over a period of time and may not have precise start and end points."@en,
+                       "Suceso importante en la vida de una persona, grupo u organización"@es;
+          rdfs:isDefinedBy <http://purl.org/vocab/bio/0.1/> .
+
+
+          
+########## Relations for foaf:Agent
+
+               
+:hasMainSector a rdf:Property, owl:ObjectProperty;
+                     rdfs:label "Has main sector"@en, "Sector principal"@es;
+                     rdfs:comment "Main sector related to the organization"@en, "Sector principal relacionado con la organización"@es;
+                     rdfs:domain foaf:Agent;
+                     rdfs:range  :Sector .
+
+:hasAlternativeMainSector a rdf:Property, owl:DatatypeProperty;
+                     rdfs:label "Has other main sector"@en, "Otro sector principal"@es;
+                     rdfs:comment "Main sector not listed in hasMainSector"@en, "Sector principal no listado en hasMainSector"@es;
+                     rdfs:domain foaf:Agent;
+                     rdfs:range  rdfs:Literal .
+                     
+:hasOtherSector a rdf:Property, owl:ObjectProperty;
+                     rdfs:label "Secondary sector"@en, "Sector secundario"@es;
+                     rdfs:comment "Other sector related to the organization"@en, "Otros sectores relacionados con la organización"@es;
+                     rdfs:domain foaf:Agent;
+                     rdfs:range  :Sector .
+
+:hasAlternativeOtherSector a rdf:Property, owl:DatatypeProperty;
+                     rdfs:label "Has other main sector"@en, "Otro sector secundario"@es;
+                     rdfs:comment "Other sector not listed in hasOtherSector"@en, "Otro sector no listado en hasOtherSector"@es;
+                     rdfs:domain foaf:Agent;
+                     rdfs:range  rdfs:Literal .
+
+########## Relations for bio:Event and subclasses
+
+bio:birth rdf:type rdf:Property ,
+                   owl:ObjectProperty ;
+          rdfs:subPropertyOf bio:event ,
+                             owl:differentFrom ;
+          rdfs:label "Birth Event"@en, "Nacimiento"@es ;
+          rdfs:comment "An birth event associated with a person, group or organization."@en, "El evento del nacimiento de una persona, grupo u organización"@es ;
+          rdfs:domain foaf:Agent ;
+          rdfs:range bio:Birth ;
+          rdfs:isDefinedBy <http://purl.org/vocab/bio/0.1/> .
+
+          
+bio:death rdf:type rdf:Property ,
+                   owl:ObjectProperty ;
+          rdfs:subPropertyOf bio:event ,
+                             owl:differentFrom ;
+          rdfs:label "Death Event"@en, "Muerte"@es ;
+          rdfs:comment "An death event associated with a person, group or organization."@en, "El evento de la muerte de una persona, grupo u organización"@es ;
+          rdfs:domain foaf:Agent ;
+          rdfs:range bio:Death ;
+          rdfs:isDefinedBy <http://purl.org/vocab/bio/0.1/> .
+          
+bio:date rdf:type rdf:Property ;
+         rdfs:label "Date"@en, "Fecha" ;
+         rdfs:comment "The date at which an event occurred."@en, "La fecha cuando un evento ocurrió"@es ;
+         rdfs:domain bio:Event ;
+         rdfs:subPropertyOf dc:date ;
+         rdfs:isDefinedBy <http://purl.org/vocab/bio/0.1/> .
+         
+bio:place rdf:type rdf:Property ;
+          rdfs:label "Place"@en, "Lugar" ;
+          rdfs:comment "The place at which an event occurred."@en, "Lugar donde ocurre un evento"@es ;
+          rdfs:domain bio:Event ;
+          rdfs:range <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>.
+          
+
+########## Relations for foaf:Person
+
+                    
+bio:olb rdf:type rdf:Property ,
+                 owl:DatatypeProperty ;
+        rdfs:label "One-line bio"@en, "Descripción en una línea"@es ;
+        rdfs:comment "A one-line biography of the person."@en, "Resúmen en una línea"@es ;
+        rdfs:domain foaf:Person ;
+        rdfs:range rdfs:Literal .
+
+          
 :hasGender a rdf:Property, owl:ObjectProperty;
         rdfs:label "Gender"@en, "Sexo"@es;
         rdfs:comment "Gender of this person"@en, "Sexo de esta persona"@es;
         rdfs:domain foaf:Person;
         rdfs:range :Gender .
 
-
+:hasMaritalStatus a rdfs:Property, owl:DatatypeProperty;
+                  rdfs:label "Marital status"@en, "Estado civil"@es;
+                  rdfs:comment "Current marital status"@en, "Estado civil actual"@es;
+                  rdfs:domain foaf:Person;
+                  rdfs:range :MaritalStatus .
+                  
 :hasFather a rdf:Property, owl:ObjectProperty;
            rdfs:label "Has Father"@en, "Padre"@es;
            rdfs:comment "Describes relation where a person (object) is the male parent of this person"@en, "Describe la relación donde una persona (objeto) es el padre de esta personl"@es;
@@ -201,19 +329,12 @@ foaf:Organization a owl:Class;
          
 ########## Relations for :Organizations
 
-:hasHeadquartersIn a rdf:Property, owl:ObjectProperty;
-                     rdfs:label "Has headquarters"@en, "País de headquarters"@es;
-                     rdfs:comment "Country where the organization's headquarters are located"@en, "Ubicación de los headquarters"@es;
+                           
+:hasLogo  a rdf:Property, owl:DatatypeProperty;
+                     rdfs:label "Logo"@en, "Logo"@es;
+                     rdfs:comment "Logo of the organization"@en, "Logo de la organización"@es;
                      rdfs:domain foaf:Organization;
-                     rdfs:range  :Country .
-
-                     
-:hasMainSector a rdf:Property, owl:ObjectProperty;
-                     rdfs:label "Has main sector"@en, "Sector principal"@es;
-                     rdfs:comment "Main sector related to the organization"@en, "Sector principal relacionado con la organización"@es;
-                     rdfs:domain foaf:Organization;
-                     rdfs:range  :Sector .
-                     
+                     rdfs:range  xsd:anyUri .
                      
 ########## Relations for :NonGovernmentalOrganization
 :hasNgoSector a rdf:Property, owl:ObjectProperty;
@@ -305,29 +426,83 @@ foaf:Organization a owl:Class;
           
 ####################################### Connections #######################################               
 
+bio:Relationship rdf:type owl:Class ;
+                 rdfs:label "Agent Relationship"@en ;
+                 rdfs:comment "A particular type of connection existing between people, groups or organizations related to or having dealings with each other."@en ;
+                 rdfs:isDefinedBy <http://purl.org/vocab/bio/0.1/> .
 
 :Connection  a owl:Class;
+             rdfs:subClassOf bio:Relationship;
              rdfs:label "Generic connection"@en, "Conexión genérica"@es;
              rdfs:comment "A generic connection between two or more entities during a certain period of time"@en, "Una conexión genérica entre dos o más entidades durante un cierto período de tiempo"@es .
 
 ########## Relations for :Connection
 
-:participant a rdf:Property, owl:ObjectProperty;
-             rdfs:label "Participant"@en, "Participante"@es;
-             rdfs:comment "An agent who is part of this connection"@en, "Un agente que participa de esta conexión"@es;
-             rdfs:domain :Connection;
-             rdfs:range foaf:Agent .
+bio:participant rdf:type rdf:Property ,
+                         owl:ObjectProperty ;
+                rdfs:label "Participant"@en ;
+                rdfs:comment "A person, group or organization that participates in a relationship for some time."@en ;
+                rdfs:domain bio:Relationship ;
+                rdfs:range foaf:Agent ;
+                rdfs:isDefinedBy <http://purl.org/vocab/bio/0.1/> ;
+                rdfs:subPropertyOf owl:differentFrom ;
+                owl:inverseOf bio:relationship .
 
-:connectionStartDate a rdf:Property, owl:DatatypeProperty;
+bio:relationship rdf:type rdf:Property ,
+                          owl:ObjectProperty ;
+                 rdfs:label "Relationship"@en ;
+                 rdfs:comment "A relationship that a person, group or organization participates in for some time."@en ;
+                 rdfs:domain foaf:Agent ;
+                 rdfs:range bio:Relationship ;
+                 rdfs:isDefinedBy <http://purl.org/vocab/bio/0.1/> ;
+                 owl:inverseOf bio:participant .
+                 
+
+bio:initiatingEvent rdf:type rdf:Property ,
+                             owl:ObjectProperty ;
+                    rdfs:label "Initiating Event"@en, "Evento inicial"@es ;
+                    rdfs:comment "An event that marks the start of an interval and/or relationship. The event contributes to and/or causes of the state of affairs that hold during the interval. For example a period of study may be initiated by an Enrolment event."@en,
+                                 "Un evento que indica el comienzo de un intervalo o relación"@es;
+                    rdfs:range bio:Event ;
+                    rdfs:isDefinedBy <http://purl.org/vocab/bio/0.1/> .
+                                    
+bio:concludingEvent rdf:type rdf:Property ,
+                             owl:ObjectProperty ;
+                    rdfs:label "Concluding Event"@en, "Evento final"@es ;
+                    rdfs:comment "An event that marks the end of an interval and/or relationship. The event changes of the state of affairs that held during the interval. For example a period of study may be concluded by a Graduation event."@en,
+                                 "Un evento que marca el final de un intervalo o relación"@es;
+                    rdfs:range bio:Event ;
+                    rdfs:isDefinedBy <http://purl.org/vocab/bio/0.1/> .
+                    
+:connectionStartDate a rdf:Property, owl:ObjectProperty;
+                     rdfs:subClassOf bio:initiatingEvent;
                      rdfs:label "Connection start date"@en, "Fecha de inicio de connección"@es;
                      rdfs:comment "Date when connection between entities started"@en, "Fecha cuando comenzó la conexión entre entidades"@es ;
                      rdfs:domain :Connection .
 
-:connectionEndDate a rdf:Property, owl:DatatypeProperty;
+:connectionEndDate a rdf:Property, owl:ObjectProperty;
+                   rdfs:subClassOf bio:concludingEvent;
                    rdfs:label "Connection end date"@en, "Fecha de fin de connección"@es;
                    rdfs:comment "Date when connection between entities ended"@en, "Fecha cuando temrinó la conexión entre entidades"@es ;
                    rdfs:domain :Connection .
 
+
+   
+####################################### SocialConnections #######################################               
+       
+:SocialConnection a owl:Class;
+                          rdfs:subClassOf :Connection;
+                          rdfs:label "Social connection"@en, "Conexión social"@es;
+                          rdfs:comment "Connection between a two people, like friendship, acquaintances, etc."@en, "Relación entre dos personas descritas con un contexto (amistad, conocidos, etc)"@es .
+
+:connectedVia a rdf:Property, owl:ObjectProperty;
+                     rdfs:label "Connected via"@en, "Conectados via"@es;
+                     rdfs:comment "Entity from where two persons know each other (school, college, church, etc.)"@en, "Entidad por la cual 2 personas se conocen (colegio, universidad, iglesia, etc.)"@es ;
+                     rdfs:domain :SocialConnection ;
+                     rdfs:range foaf:Agent.
+
+
+                   
 ####################################### PoliticalConnections #######################################               
        
 :PoliticalConnection a owl:Class;
@@ -337,7 +512,7 @@ foaf:Organization a owl:Class;
 
                           
 :politicalParticipant a rdf:Property, owl:ObjectProperty;
-             rdfs:subPropertyOf :participant ;
+             rdfs:subPropertyOf bio:participant ;
              rdfs:label "Political Organizacion participant"@en, "Organización política participante"@es;
              rdfs:comment "A political organization who is part of this connection"@en, "Una organización política que participa de esta conexión"@es;
              rdfs:domain :PoliticalConnection;
@@ -352,7 +527,7 @@ foaf:Organization a owl:Class;
                     rdfs:comment "The connection between a person and an Educational Organization (university, school, etc)"@en, "La relación entre una persona y una organización académica (colegio, universidad, etc)"@es.
                                  
 :academicParticipant a rdf:Property, owl:ObjectProperty;
-                     rdfs:subPropertyOf :participant ;
+                     rdfs:subPropertyOf bio:participant ;
                      rdfs:label "Academic organization participant"@en, "Organización académica participante"@es;
                      rdfs:comment "An academic organization (school, university) who is part of this connection"@en, "Una organización académica (escuela, universidad) que participa de esta conexión"@es;
                      rdfs:domain :AcademicConnection;
@@ -369,9 +544,9 @@ foaf:Organization a owl:Class;
                      
 ##Entities
 
-:hasRut a rdf:Property, owl:DatatypeProperty;
+:hasTaxId a rdf:Property, owl:DatatypeProperty;
      rdfs:subPropertyOf dcterms:identifier;
-     rdfs:label "Unique Tributary Role (RUT)"@en, "Rol Único Tributario (RUT)"@es;
+     rdfs:label "Unique Tributary Role"@en, "Rol Único Tributario (RUT)"@es;
      rdfs:domain foaf:Agent ;
      rdfs:range rdfs:Literal .
      
@@ -407,7 +582,7 @@ foaf:Organization a owl:Class;
          
           
 ## EconomicConnection
-:EconomicConnection rdfs:subClassOf bio:Relationship;
+:EconomicConnection rdfs:subClassOf :Connection;
                     rdfs:label "Economic Connection"@en, "Conexión económica"@es;
                     rdfs:comment "The connection between an entity and an Educational Organization (university, school, etc)"@en, "La relación entre una persona y una organización académica (colegio, universidad, etc)"@es.              
 
@@ -415,15 +590,15 @@ foaf:Organization a owl:Class;
 ### EconomicConnection relations
                  
 
-:declarationOfPatrimony a rdf:Property, owl:ObjectProperty;
+:declarationOfPatrimony a rdf:Property, owl:DatatypeProperty;
                         rdfs:label "Declaration of Patrimony"@en, "Declaración de Patrimonio"@es;
                         rdfs:domain :EconomicConnection;
-                        rdfs:range rdfs:Resource.
+                        rdfs:range xsd:anyUri.
                         
-:declarationOfInterests a rdf:Property, owl:ObjectProperty;
+:declarationOfInterests a rdf:Property, owl:DatatypeProperty;
                         rdfs:label "Declaration of interests"@en, "Declaración de intereses"@es;
                         rdfs:domain :EconomicConnection;
-                        rdfs:range rdfs:Resource.
+                        rdfs:range xsd:anyUri.
               
 
                 
@@ -440,17 +615,13 @@ foaf:Organization a owl:Class;
                      rdfs:comment "Describes the relation of a person with a news event during a specific period of time"@en, "Describe la relación de una persona con un evento noticioso durante un período de tiempo"@es.
                      
 :newsEventParticipant a rdf:Property, owl:ObjectProperty;
-                     rdfs:subPropertyOf :participant ;
+                     rdfs:subPropertyOf bio:participant ;
                      rdfs:label "A news event participant in this connection"@en, "Evento noticioso participante"@es;
                      rdfs:comment "A news event which is part of this connection"@en, "Un evento noticioso que participa de esta conexión"@es;
                      rdfs:domain :NewsEventConnection;
                      rdfs:range :NewsEvent.                  
                       
                       
-                      
-                      
-                      
-                      
-                      
-                      
-      
+dcterms:source a rdf:Property, owl:DatatypeProperty;
+               rdfs:label "Source"@en, "Fuente"@es;
+               rdfs:comment "A related resource from which the described resource is derived."@en, "Un recurso relacionado de donde  resource from which the described resource is derived."@es.
