@@ -501,8 +501,46 @@ bio:concludingEvent rdf:type rdf:Property ,
                      rdfs:domain :SocialConnection ;
                      rdfs:range foaf:Agent.
 
+####################################### EducationalConnections #######################################               
+       
+:EducationalConnection a owl:Class;
+                          rdfs:subClassOf :Connection;
+                          rdfs:label "Educational connection"@en, "Conexión educacional (estudios)"@es;
+                          rdfs:comment "These connections reflects that a person studied (at least for some time) in an academic organization."@en, "Esta relación indica que una persona estudió (al menos por un tiempo) en una institución académica"@es .
 
-                   
+:hasStudent a rdf:Property, owl:ObjectProperty;
+         rdfs:subPropertyOf bio:participant;
+         rdfs:label "Student"@en, "Estudiante"@es;
+         rdfs:comment "Entity from where two persons know each other (school, college, church, etc.)"@en, "Entidad por la cual 2 personas se conocen (colegio, universidad, iglesia, etc.)"@es ;
+         rdfs:domain :EducationalConnection ;
+         rdfs:range foaf:Person.
+
+:hasAcademicOrganization a rdf:Property, owl:ObjectProperty;
+         rdfs:subPropertyOf bio:participant;
+         rdfs:label "Academic organization"@en, "Organización académica"@es;
+         rdfs:comment "Entity from where two persons know each other (school, college, church, etc.)"@en, "Entidad por la cual 2 personas se conocen (colegio, universidad, iglesia, etc.)"@es ;
+         rdfs:domain :EducationalConnection ;
+         rdfs:range :AcademicOrganization.
+
+:hasAcademicStatus a rdf:Property, owl:ObjectProperty;
+                   rdfs:label "Academic status"@en, "Estátus académico"@es;
+                   rdfs:comment "The current or final academic status of the person ('alumni', 'student', etc)"@en, "El estado académico actual o final de la persona (exalumno, estudiante, etc.)"@es;
+                   rdfs:domain :EducationalConnection;
+                   rdfs:range :EducationalStatus.
+
+:EducationalStatus a owl:Class, rdfs:Class;
+                   rdfs:label "Educational status"@en, "Estado educacional"@es;
+                   rdfs:comment "Academic status of a peson"@en, "Estado académico de una persona"@es.
+
+:student a :EducationalStatus;
+         rdfs:label "Student"@en, "Estudiante"@es.
+
+:alumni a :EducationalStatus;
+         rdfs:label "Alumni"@en, "Ex-alumno"@es.
+         
+:graduate a :EducationalStatus;
+         rdfs:label "Graduate"@en, "Titulado"@es.
+         
 ####################################### PoliticalConnections #######################################               
        
 :PoliticalConnection a owl:Class;
@@ -600,8 +638,22 @@ bio:concludingEvent rdf:type rdf:Property ,
                         rdfs:domain :EconomicConnection;
                         rdfs:range xsd:anyUri.
               
+:workRole a rdf:Property, owl:ObjectProperty;
+          rdfs:label "Work role"@en, "Relación laboral"@es;
+          rdfs:comment "Position or role of the person in this economic connection"@en, "Puesto o rol de la persona en esta connexión económica"@es;
+          rdfs:domain :EconomicConnection;
+          rdfs:range :WorkRole.
+          
+:WorkRole a owl:Class, rdfs:Class;
+          rdfs:label "Work role"@en, "Puesto de trabajo"@es.
 
-                
+:ceo a :WorkRole;
+     rdfs:label "CEO"@en, "Gerente General"@es.
+
+:cto a :WorkRole;
+     rdfs:label "CTO"@en, "Gerente de Tecnología"@es.
+     
+     
 ##NewsEvent
 
 :NewsEvent a owl:Class;
