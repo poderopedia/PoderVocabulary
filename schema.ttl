@@ -42,7 +42,12 @@ foaf:Organization a owl:Class;
             rdfs:label "Organization"@en, "Organización"@es;
             rdfs:subClassOf foaf:Agent.
 
-
+:depiction a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "A depiction of some organization or person."@en, "Una representación visual de una persona u organización"@es ;
+    rdfs:domain foaf:Agent ;
+    rdfs:label "depiction"@en, "imagen"@es ;
+    rdfs:range xsd:anyURI .
+    
 ### People
 
 foaf:firstName
@@ -79,7 +84,16 @@ foaf:based_near
     rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
     rdfs:label "based near" ;
     rdfs:range <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>.
-    
+
+
+:alias a rdf:Property, owl:DatatypeProperty;
+         rdfs:subPropertyOf foaf:name, skos:altLabel;
+         rdfs:label "Alias"@en, "Alias"@es;
+         rdfs:comment "An alias for a person"@en, "Un alias de una persona"@es;
+         rdfs:domain foaf:Agent ;
+         rdfs:range rdfs:Literal .
+         
+         
 :countryOfResidence a rdf:Property, owl:ObjectProperty;
                      rdfs:subPropertyOf foaf:based_near;
                      rdfs:label "Country of residence"@en, "País de residencia"@es;
@@ -313,10 +327,10 @@ bio:olb rdf:type rdf:Property ,
               rdfs:label       "Programmatic Organization"@en, "Organización programática"@es;
               rdfs:comment     "An programmatic organization, like think tanks."@en, "Una organización programática, como los think tanks, etc."@es.
 
-:PoliticalOrganization a owl:Class;
-              rdfs:subClassOf  foaf:Organization;
-              rdfs:label       "Political Organization"@en, "Organización política"@es;
-              rdfs:comment     "An Political organization, like parties."@en, "Una organización política, como partidos políticos."@es.
+#:PoliticalOrganization a owl:Class;
+#              rdfs:subClassOf  foaf:Organization;
+#              rdfs:label       "Political Organization"@en, "Organización política"@es;
+#              rdfs:comment     "An Political organization, like parties."@en, "Una organización política, como partidos políticos."@es.
 
 :Company a owl:Class;
          rdfs:subClassOf  foaf:Organization;
@@ -475,13 +489,13 @@ bio:concludingEvent rdf:type rdf:Property ,
                     rdfs:isDefinedBy <http://purl.org/vocab/bio/0.1/> .
                     
 :connectionStartDate a rdf:Property, owl:ObjectProperty;
-                     rdfs:subClassOf bio:initiatingEvent;
+                     rdfs:subPropertyOf bio:initiatingEvent;
                      rdfs:label "Connection start date"@en, "Fecha de inicio de connección"@es;
                      rdfs:comment "Date when connection between entities started"@en, "Fecha cuando comenzó la conexión entre entidades"@es ;
                      rdfs:domain :Connection .
 
 :connectionEndDate a rdf:Property, owl:ObjectProperty;
-                   rdfs:subClassOf bio:concludingEvent;
+                   rdfs:subPropertyOf bio:concludingEvent;
                    rdfs:label "Connection end date"@en, "Fecha de fin de connección"@es;
                    rdfs:comment "Date when connection between entities ended"@en, "Fecha cuando temrinó la conexión entre entidades"@es ;
                    rdfs:domain :Connection .
@@ -543,18 +557,18 @@ bio:concludingEvent rdf:type rdf:Property ,
          
 ####################################### PoliticalConnections #######################################               
        
-:PoliticalConnection a owl:Class;
-                          rdfs:subClassOf :Connection;
-                          rdfs:label "Political connection"@en, "Conexión política"@es;
-                          rdfs:comment "Connection between a political organization and other entities"@en, "Relación entre una organización política y otra entidad"@es .
-
-                          
-:politicalParticipant a rdf:Property, owl:ObjectProperty;
-             rdfs:subPropertyOf bio:participant ;
-             rdfs:label "Political Organizacion participant"@en, "Organización política participante"@es;
-             rdfs:comment "A political organization who is part of this connection"@en, "Una organización política que participa de esta conexión"@es;
-             rdfs:domain :PoliticalConnection;
-             rdfs:range :PoliticalOrganization.
+#:PoliticalConnection a owl:Class;
+#                          rdfs:subClassOf :Connection;
+#                          rdfs:label "Political connection"@en, "Conexión política"@es;
+#                          rdfs:comment "Connection between a political organization and other entities"@en, "Relación entre una organización política y otra entidad"@es .
+#
+#                          
+#:politicalParticipant a rdf:Property, owl:ObjectProperty;
+#             rdfs:subPropertyOf bio:participant ;
+#             rdfs:label "Political Organizacion participant"@en, "Organización política participante"@es;
+#             rdfs:comment "A political organization who is part of this connection"@en, "Una organización política que participa de esta conexión"@es;
+#             rdfs:domain :PoliticalConnection;
+#             rdfs:range :PoliticalOrganization.
 
  ####################################### AcademicConnections #######################################               
             
@@ -572,47 +586,70 @@ bio:concludingEvent rdf:type rdf:Property ,
                      rdfs:range :AcademicOrganization.             
 
                      
-####################################### BelongingConnections #######################################               
+####################################### MembershipConnections #######################################               
 
-:BelongingConnection a owl:Class;
+:MembershipConnection a owl:Class;
                      rdfs:subClassOf :Connection;
-                     rdfs:label "Belonging Connection"@en, "Conexión de pertenencia"@es;
+                     rdfs:label "Membership Connection"@en, "Conexión de pertenencia"@es;
                      rdfs:comment "The connection between an entity and a Organization (Opus Dei, a Think Tank) without been affiliated to it necessarily"@en, "La relación entre una entidad y una organización (Opus Dei, un Think Tank) sin necesariamente estar afiliado"@es.              
                      
-                     
+:memberParticipant a rdf:Property, owl:ObjectProperty;
+                     rdfs:subPropertyOf bio:participant ;
+                     rdfs:label "Member"@en, "Miembro"@es;
+                     rdfs:comment "A a member of an organization"@en, "Un miembro de una organización"@es;
+                     rdfs:domain :MembershipConnection;
+                     rdfs:range foaf:Person.  
+
+:organizationParticipant a rdf:Property, owl:ObjectProperty;
+                     rdfs:subPropertyOf bio:participant ;
+                     rdfs:label "Participant organization"@en, "Organización participante"@es;
+                     rdfs:comment "An academic organization (school, university) who is part of this connection"@en, "Una organización académica (escuela, universidad) que participa de esta conexión"@es;
+                     rdfs:domain :MembershipConnection;
+                     rdfs:range foaf:Organization.
+
+:hasMembershipType a rdf:Property, owl:ObjectProperty;
+                   rdfs:label "Membership type"@en, "Tipo de membresía"@es;
+                   rdfs:comment "Identifies a certain role for this membership connection"@en, "Identifica un cierto rol para esta conneción de membresía"@es;
+                   rdfs:domain :MembershipConnection;
+                   rdfs:range :MembershipType .
+                   
+:MembershipType a owl:Class;
+                rdfs:label "Membership type"@en, "Tipo de membresía"@es;
+                rdfs:comment "Class of types of memberships of a person with an organization (member, financer, etc)"@en, "Clase de tipos de membresía de una persona con una organización (miembro, financista, etc.)"@es.
+
+:member a :MembershipType;
+        rdfs:label "Member"@en, "Miembro"@es.
+
+:sympathizer a :MembershipType;
+        rdfs:label "Sympathizer"@en, "Simpatizante"@es.
+
+:financier a :MembershipType;
+        rdfs:label "Financier"@en, "Financista"@es.
+
+:otherMemberType a :MembershipType;
+        rdfs:label "Other"@en, "Otro"@es.
+        
 ##Entities
 
-:hasTaxId a rdf:Property, owl:DatatypeProperty;
-     rdfs:subPropertyOf dcterms:identifier;
-     rdfs:label "Unique Tributary Role"@en, "Rol Único Tributario (RUT)"@es;
-     rdfs:domain foaf:Agent ;
-     rdfs:range rdfs:Literal .
-     
-:hasAddress a rdf:Property, owl:DatatypeProperty;
-     rdfs:label "Address"@en, "Dirección"@es;
-     rdfs:domain foaf:Agent ;
-     rdfs:range rdfs:Literal .
-
-
-:alias a rdf:Property, owl:DatatypeProperty;
-         rdfs:subPropertyOf foaf:name, skos:altLabel;
-         rdfs:label "Alias"@en, "Alias"@es;
-         rdfs:comment "An alias for a person"@en, "Un alias de una persona"@es;
-         rdfs:domain foaf:Agent ;
-         rdfs:range rdfs:Literal .
-         
-          
-          
-              
-:hasReportDate a rdf:Property;
-            rdfs:label "Report date"@en, "Fecha del reporte"@es;
-            rdfs:domain :FinancialReport;
-            rdfs:range xsd:date .
-
-:hasReportAmount a rdf:Property;
-            rdfs:label "Report amount"@en, "Cantidad reportada"@es;
-            rdfs:domain :FinancialReport;
-            rdfs:range xsd:date .            
+#:hasTaxId a rdf:Property, owl:DatatypeProperty;
+#     rdfs:subPropertyOf dcterms:identifier;
+#     rdfs:label "Unique Tributary Role"@en, "Rol Único Tributario (RUT)"@es;
+#     rdfs:domain foaf:Agent ;
+#     rdfs:range rdfs:Literal .
+#     
+#:hasAddress a rdf:Property, owl:DatatypeProperty;
+#     rdfs:label "Address"@en, "Dirección"@es;
+#     rdfs:domain foaf:Agent ;
+#     rdfs:range rdfs:Literal .              
+#:hasReportDate a rdf:Property;
+#            rdfs:label "Report date"@en, "Fecha del reporte"@es;
+#            rdfs:domain :FinancialReport;
+#            rdfs:range xsd:date .
+#
+#:hasReportAmount a rdf:Property;
+#            rdfs:label "Report amount"@en, "Cantidad reportada"@es;
+#            rdfs:domain :FinancialReport;
+#            rdfs:range xsd:date .            
 
 
 
