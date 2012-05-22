@@ -554,7 +554,9 @@ bio:concludingEvent rdf:type rdf:Property ,
             
 :acquaintance a :socialConnectionType;
             rdfs:label "Acquaintance"@en, "Conocidos"@es.
-            
+
+:classmate a :socialConnectionType;
+           rdfs:label "Classmate"@en, "Compañero de curso o clases"@es.
 
 ####################################### EducationalConnections #######################################               
        
@@ -698,7 +700,8 @@ bio:concludingEvent rdf:type rdf:Property ,
          
           
 ## EconomicConnection
-:EconomicConnection rdfs:subClassOf :Connection;
+:EconomicConnection a owl:Class;
+                    rdfs:subClassOf :Connection;
                     rdfs:label "Economic Connection"@en, "Conexión económica"@es;
                     rdfs:comment "The connection between an entity and an Educational Organization (university, school, etc)"@en, "La relación entre una persona y una organización académica (colegio, universidad, etc)"@es.              
 
