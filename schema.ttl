@@ -550,10 +550,10 @@ bio:concludingEvent rdf:type rdf:Property ,
                       rdfs:label "Class of types of social connection"@en, "Clase de tipos de conexión social"@es.
 
 :friendship a :socialConnectionType;
-            rdfs:label "Friendship".
+            rdfs:label "Friendship"@en, "Amistad"@es.
             
 :acquaintance a :socialConnectionType;
-            rdfs:label "Acquaintance".
+            rdfs:label "Acquaintance"@en, "Conocidos"@es.
             
 
 ####################################### EducationalConnections #######################################               
@@ -566,7 +566,7 @@ bio:concludingEvent rdf:type rdf:Property ,
 :hasStudent a rdf:Property, owl:ObjectProperty;
          rdfs:subPropertyOf bio:participant;
          rdfs:label "Student"@en, "Estudiante"@es;
-         rdfs:comment "Entity from where two persons know each other (school, college, church, etc.)"@en, "Entidad por la cual 2 personas se conocen (colegio, universidad, iglesia, etc.)"@es ;
+         rdfs:comment "Person involved in an Education Connection"@en, "Persona en una conexión educacional"@es ;
          rdfs:domain :EducationalConnection ;
          rdfs:range foaf:Person.
 
