@@ -120,9 +120,6 @@ foaf:givenName
         rdfs:comment "Gender of a person"@en, "Sexo de una persona"@es.
 
 
-:MaritalStatus a owl:Class;
-               rdfs:label "Marital Status"@en, "Estado civil"@es;
-               rdfs:comment "Class of possible marital status a person can be"@en, "Clase de los estados civiles en los que puede estar una persona"@es .
                
 :Country a owl:Class;
         rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>;
@@ -488,7 +485,42 @@ bio:concludingEvent rdf:type rdf:Property ,
 
    
 ####################################### SocialConnections #######################################               
-       
+
+:SentimentalRelationshipConnection a owl:Class;
+               rdfs:subClassOf :Connection;
+               rdfs:label "Marital Status"@en, "Estado civil"@es;
+               rdfs:comment "Class of possible marital status a person can be"@en, "Clase de los estados civiles en los que puede estar una persona"@es .
+
+:hasSpouse a rdf:Property, owl:ObjectProperty;
+           rdfs:label "Spouse"@en, "Cónyuge"@es;
+           rdfs:subPropertyOf bio:participant;
+           rdfs:comment "Connection between two people that establishes a marriage, domestic partnership, civil union, sentimental relationship, etc."@en, "Connexión entre dos personas que establece un matrimonio, convivencia, unión civil, relación sentimental, etc."@es;
+           rdfs:domain :SentimentalRelationshipConnection;
+           rdfs:range foaf:Person .
+
+:hasSentimentalRelationshipType a rdf:Property, owl:ObjectProperty;
+                                 rdfs:label "Relationship type"@en, "Tipo de relación"@es;
+                                 rdfs:comment "Defines the type of sentimental relationship (marriage, civil union, etc.)"@en, "Define el tipo de relación sentimental"@es;
+                                 rdfs:domain :SentimentalRelationshipConnection;
+                                 rdfs:range :SentimentalRelationshipType .
+
+:SentimentalRelationshipType a owl:Class;
+                             rdfs:label "Sentimental relationship type"@en, "Tipo de relación sentimental"@es;
+                             rdfs:comment "Class of sentimental relationship types"@en, "Clase de los tipos de relaciones sentimentales"@es.
+                             
+:marriage a :SentimentalRelationshipType;
+          rdfs:label "Marriage"@en, "Matrimonio"@es .
+          
+:civilUnion a :SentimentalRelationshipType;
+          rdfs:label "Civil union"@en, "Unión civil"@es .
+          
+:domesticPartnership a :SentimentalRelationshipType;
+          rdfs:label "Domestic partnership"@en, "Pareja de hecho"@es .
+          
+:dating a :SentimentalRelationshipType;
+          rdfs:label "Dating"@en, "Noviazgo"@es .
+          
+
 :SocialConnection a owl:Class;
                           rdfs:subClassOf :Connection;
                           rdfs:label "Social connection"@en, "Conexión social"@es;
