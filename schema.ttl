@@ -246,51 +246,36 @@ bio:olb rdf:type rdf:Property ,
                   rdfs:domain foaf:Person;
                   rdfs:range :MaritalStatus .
                   
-:hasFather a rdf:Property, owl:ObjectProperty;
-           rdfs:label "Has Father"@en, "Padre"@es;
-           rdfs:comment "Describes relation where a person (object) is the male parent of this person"@en, "Describe la relación donde una persona (objeto) es el padre de esta personl"@es;
+:hasParent a rdf:Property, owl:ObjectProperty;
+           rdfs:label "Has Parent"@en, "Padre/Madre"@es;
+           rdfs:comment "Describes relation where a person (object) is a parent of this person"@en, "Describe la relación donde una persona (objeto) es el padre o madre de esta persona"@es;
+           owl:inverseOf :hasChild;
            rdfs:domain foaf:Person;
            rdfs:range foaf:Person.
 
-:hasMother a rdf:Property, owl:ObjectProperty;
-           rdfs:label "Has Mother"@en, "Madre"@es;
-           rdfs:comment "Describes relation where a person (object) is the female parent of this person"@en, "Describe la relación donde una persona (objeto) es la madre de esta personl"@es;
+:hasChild  a rdf:Property, owl:ObjectProperty;
+           rdfs:label "Has Parent"@en, "Padre/Madre"@es;
+           rdfs:comment "Describes relation where a person (object) is a parent of this person"@en, "Describe la relación donde una persona (objeto) es el padre o madre de esta persona"@es;
+           owl:inverseOf :hasParent;
+           rdfs:domain foaf:Person;
+           rdfs:range foaf:Person.
+           
+           
+:hasSibling a rdf:Property, owl:ObjectProperty, owl:TransitiveProperty, owl:SymmetricProperty;
+           rdfs:label "Has sibling"@en, "Hermano/a"@es;
+           rdfs:comment "Describes relation where a person (object) is the sibling (i.e., they have at least one parent in common) of this person"@en, "Describe la relación donde una persona (objeto) es el hermano o hermana (i.e, tienen al menos un padre en común) de esta persona"@es;
            rdfs:domain foaf:Person;
            rdfs:range foaf:Person.
 
-:hasBrother a rdf:Property, owl:ObjectProperty;
-            rdfs:label "Has brother"@en, "Hermano"@es;
-            rdfs:comment "Describes relation where a male person (object) is the brother (i.e., they have at least one parent in common) of this person"@en, "Describe la relación donde un hombre (objeto) es el hermano (i.e, tienen al menos un padre en común) de esta persona"@es;
+:hasAuntOrUncle a rdf:Property, owl:ObjectProperty;
+           rdfs:label "Has Aunt or Uncle"@en, "Tío/a"@es;
+           rdfs:comment "Describes relation where a person (object) is the sibling of one of the parents of this person"@en, "Describe la relación donde una persona (objeto) es el/la hermano/a de uno de los padres de esta persona"@es;
            rdfs:domain foaf:Person;
            rdfs:range foaf:Person.
 
-:hasSister a rdf:Property, owl:ObjectProperty;
-            rdfs:label "Has Sister"@en, "Hermana"@es;
-            rdfs:comment "Describes relation where a female person (object) is the sibling (i.e., have at least one parent in common) of this person"@en, "Describe la relación donde una mujer (objeto) es la hermana (i.e, tienen al menos un padre en común) de esta persona"@es;
-           rdfs:domain foaf:Person;
-           rdfs:range foaf:Person.
-
-:hasAunt a rdf:Property, owl:ObjectProperty;
-           rdfs:label "Has Aunt"@en, "Tía"@es;
-           rdfs:comment "Describes relation where a person (object) is the female sibling of one of the parents of this person"@en, "Describe la relación donde una persona (objeto) es la hermana de uno de los padres de esta persona"@es;
-           rdfs:domain foaf:Person;
-           rdfs:range foaf:Person.
-
-:hasUncle a rdf:Property, owl:ObjectProperty;
-           rdfs:label "Has Uncle"@en, "Tío"@es;
-           rdfs:comment "Describes relation where a person (object) is the male sibling of one of the parents of this person"@en, "Describe la relación donde una persona es el hermano de uno de los padres de esta persona"@es;
-           rdfs:domain foaf:Person;
-           rdfs:range foaf:Person.
-
-:hasFemaleCousin a rdf:Property, owl:ObjectProperty;
-           rdfs:label "Has female cousin"@en, "Prima"@es;
-           rdfs:comment "Describes relation where a female person (object) is the female cousin (their parents are siblings) of this person"@en, "Describe la relación donde una persona (objeto) es prima de esta persona"@es;
-           rdfs:domain foaf:Person;
-           rdfs:range foaf:Person.
-
-:hasMaleCousin a rdf:Property, owl:ObjectProperty;
-           rdfs:label "Has Male Cousin"@en, "Primo"@es;
-           rdfs:comment "Describes relation where a male person (object) is the cousin (their parents are siblings) of this person"@en, "Describe la relación donde una persona (objeto) es prima de esta persona"@es;
+:hasCousin a rdf:Property, owl:ObjectProperty, owl:SymmetricProperty;
+           rdfs:label "Has cousin"@en, "Primo/a"@es;
+           rdfs:comment "Describes relation where a person (object) is the cousin (their parents are siblings) of this person"@en, "Describe la relación donde una persona (objeto) es primo o prima de esta persona"@es;
            rdfs:domain foaf:Person;
            rdfs:range foaf:Person.
 
@@ -327,10 +312,10 @@ bio:olb rdf:type rdf:Property ,
               rdfs:label       "Programmatic Organization"@en, "Organización programática"@es;
               rdfs:comment     "An programmatic organization, like think tanks."@en, "Una organización programática, como los think tanks, etc."@es.
 
-#:PoliticalOrganization a owl:Class;
-#              rdfs:subClassOf  foaf:Organization;
-#              rdfs:label       "Political Organization"@en, "Organización política"@es;
-#              rdfs:comment     "An Political organization, like parties."@en, "Una organización política, como partidos políticos."@es.
+:PoliticalOrganization a owl:Class;
+              rdfs:subClassOf foaf:Organization;
+              rdfs:label       "Political Organization"@en, "Organización política"@es;
+              rdfs:comment     "An Political organization, like parties."@en, "Una organización política, como partidos políticos."@es.
 
 :Company a owl:Class;
          rdfs:subClassOf  foaf:Organization;
@@ -557,18 +542,18 @@ bio:concludingEvent rdf:type rdf:Property ,
          
 ####################################### PoliticalConnections #######################################               
        
-#:PoliticalConnection a owl:Class;
-#                          rdfs:subClassOf :Connection;
-#                          rdfs:label "Political connection"@en, "Conexión política"@es;
-#                          rdfs:comment "Connection between a political organization and other entities"@en, "Relación entre una organización política y otra entidad"@es .
-#
-#                          
-#:politicalParticipant a rdf:Property, owl:ObjectProperty;
-#             rdfs:subPropertyOf bio:participant ;
-#             rdfs:label "Political Organizacion participant"@en, "Organización política participante"@es;
-#             rdfs:comment "A political organization who is part of this connection"@en, "Una organización política que participa de esta conexión"@es;
-#             rdfs:domain :PoliticalConnection;
-#             rdfs:range :PoliticalOrganization.
+:PoliticalConnection a owl:Class;
+                     rdfs:subClassOf :MembershipConnection;
+                     rdfs:label "Political connection"@en, "Conexión política"@es;
+                     rdfs:comment "Connection between a political organization and other entities"@en, "Relación entre una organización política y otra entidad"@es .
+
+                          
+:politicalParticipant a rdf:Property, owl:ObjectProperty;
+             rdfs:subPropertyOf :organizationParticipant;
+             rdfs:label "Political Organizacion participant"@en, "Organización política participante"@es;
+             rdfs:comment "A political organization who is part of this connection"@en, "Una organización política que participa de esta conexión"@es;
+             rdfs:domain :PoliticalConnection;
+             rdfs:range :PoliticalOrganization.
 
  ####################################### AcademicConnections #######################################               
             
@@ -593,9 +578,9 @@ bio:concludingEvent rdf:type rdf:Property ,
                      rdfs:label "Membership Connection"@en, "Conexión de pertenencia"@es;
                      rdfs:comment "The connection between an entity and a Organization (Opus Dei, a Think Tank) without been affiliated to it necessarily"@en, "La relación entre una entidad y una organización (Opus Dei, un Think Tank) sin necesariamente estar afiliado"@es.              
                      
-:memberParticipant a rdf:Property, owl:ObjectProperty;
+:personParticipant a rdf:Property, owl:ObjectProperty;
                      rdfs:subPropertyOf bio:participant ;
-                     rdfs:label "Member"@en, "Miembro"@es;
+                     rdfs:label "Member person"@en, "Persona miembro"@es;
                      rdfs:comment "A a member of an organization"@en, "Un miembro de una organización"@es;
                      rdfs:domain :MembershipConnection;
                      rdfs:range foaf:Person.  
