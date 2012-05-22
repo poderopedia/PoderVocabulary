@@ -98,7 +98,7 @@ foaf:based_near
                      rdfs:subPropertyOf foaf:based_near;
                      rdfs:label "Country of residence"@en, "País de residencia"@es;
                      rdfs:comment "Country where the organization's headquarters are located"@en, "Ubicación de los headquarters"@es;
-                     rdfs:domain foaf:Agent, <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>;
+                     rdfs:domain foaf:Agent;
                      rdfs:range  :Country.
                      
 :hasUrl a rdf:Property, owl:DatatypeProperty ;
@@ -183,6 +183,11 @@ bio:Event rdf:type owl:Class ;
                      rdfs:domain foaf:Agent;
                      rdfs:range  rdfs:Literal .
 
+:Sector a owl:Class;
+        rdfs:label "Sector"@en, "Sector"@es;
+        rdfs:comment "Productive sector related to an agent"@en, "Sector productivo relacionado con una persona"@es.
+        
+        
 ########## Relations for bio:Event and subclasses
 
 bio:birth rdf:type rdf:Property ,
@@ -237,11 +242,6 @@ bio:olb rdf:type rdf:Property ,
         rdfs:domain foaf:Person;
         rdfs:range :Gender .
 
-:hasMaritalStatus a rdfs:Property, owl:DatatypeProperty;
-                  rdfs:label "Marital status"@en, "Estado civil"@es;
-                  rdfs:comment "Current marital status"@en, "Estado civil actual"@es;
-                  rdfs:domain foaf:Person;
-                  rdfs:range :MaritalStatus .
                   
 :hasParent a rdf:Property, owl:ObjectProperty;
            rdfs:label "Has Parent"@en, "Padre/Madre"@es;
@@ -434,6 +434,13 @@ bio:Relationship rdf:type owl:Class ;
 
 ########## Relations for :Connection
 
+:hasSource a rdf:Property, owl:DatatypeProperty;
+           rdfs:subPropertyOf dcterms:source;
+             rdfs:label "Source"@en, "Fuente"@es;
+           rdfs:comment "Source where the information about a connection was obtained"@en, "Fuente de donde se obtuvo la información acerca de una conexión"@es;
+           rdfs:domain :Connection;
+           rdfs:range xsd:anyUri .
+           
 bio:participant rdf:type rdf:Property ,
                          owl:ObjectProperty ;
                 rdfs:label "Participant"@en ;
