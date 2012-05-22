@@ -544,9 +544,9 @@ bio:concludingEvent rdf:type rdf:Property ,
                      rdfs:label "Type of social connection"@en, "Tipo de conexión social"@es;
                      rdfs:comment "Friends, acquintances, etc."@en, "Amigo, conocido, etc"@es ;
                      rdfs:domain :SocialConnection ;
-                     rdfs:range :socialConnectionType.
+                     rdfs:range :SocialConnectionType.
                      
-:socialConnectionType a owl:Class;
+:SocialConnectionType a owl:Class;
                       rdfs:label "Class of types of social connection"@en, "Clase de tipos de conexión social"@es.
 
 :friendship a :socialConnectionType;
