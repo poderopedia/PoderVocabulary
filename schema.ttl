@@ -158,7 +158,32 @@ bio:Event rdf:type owl:Class ;
           
 ########## Relations for foaf:Agent
 
+:Biography a owl:Class;
+           rdfs:subClassOf :SourcedEntity;
+           rdfs:label "Generic biography"@en, "Biografía genérica"@es.
+           
+:ShortBiography a owl:Class;
+                owl:disjointWith :LongBiography;
+                rdfs:subClassOf :Biography;
+                rdfs:label "Short biography"@en, "Biografía corta"@es;
+                rdfs:comment "Short description of a person, organization, etc"@en, "Descripción abreviada de una persona, organización, etc"@es.
+
+:LongBiography  a owl:Class;
+                owl:disjointWith :ShortBiography;
+                rdfs:subClassOf :Biography;
+                rdfs:label "Long biography"@en, "Biografía larga"@es;
+                rdfs:comment "Long description of a person, organization, etc"@en, "Descripción extendida de una persona, organización, etc"@es.
                
+:hasShortBiography a rdfs:Predicate, owl:ObjectProperty;
+                   rdfs:label "Short biography"@en, "Biografía corta"@es;
+                   rdfs:domain foaf:Agent;
+                   rdfs:range :ShortBiography .
+                   
+:hasLongBiography a rdfs:Predicate, owl:ObjectProperty;
+                   rdfs:label "Long biography"@en, "Biografía larga"@es;
+                   rdfs:domain foaf:Agent;
+                   rdfs:range :LongBiography .
+                                   
 :hasMainSector a rdf:Property, owl:ObjectProperty;
                      rdfs:label "Has main sector"@en, "Sector principal"@es;
                      rdfs:comment "Main sector related to the organization"@en, "Sector principal relacionado con la organización"@es;
@@ -226,14 +251,6 @@ bio:place rdf:type rdf:Property ;
           
 
 ########## Relations for foaf:Person
-
-                    
-bio:olb rdf:type rdf:Property ,
-                 owl:DatatypeProperty ;
-        rdfs:label "One-line bio"@en, "Descripción en una línea"@es ;
-        rdfs:comment "A one-line biography of the person."@en, "Resúmen en una línea"@es ;
-        rdfs:domain foaf:Person ;
-        rdfs:range rdfs:Literal .
 
           
 :hasGender a rdf:Property, owl:ObjectProperty;
@@ -315,6 +332,54 @@ bio:olb rdf:type rdf:Property ,
               rdfs:subClassOf  foaf:Organization;
               rdfs:label       "International Organization"@en, "Organización internacional"@es;
               rdfs:comment     "An international organization, like UN, UNESCO, etc."@en, "Una organización internacional, como NU, UNESCO, etc."@es.
+
+:un a :InternationalOrganization;
+     rdfs:label "United Nations (UN)"@en, "Organización de las Naciones Unidas (ONU)"@es.
+
+:oas a :InternationalOrganization;
+     rdfs:label "Organization of American States (OAS)"@en, "Organización de Estados Americanos (OEA)"@es.
+     
+:fao a :InternationalOrganization;
+     rdfs:label "Food and Agriculture Organization (FAO)"@en, "Organización para la Alimentación y la Agricultura (FAO)"@es.
+
+:worldBank a :InternationalOrganization;
+     rdfs:label "World Bank"@en, "Banco Mundial"@es.
+     
+:eclacl a :InternationalOrganization;
+     rdfs:label "United Nations Economic Commission for Latin America and the Caribbean (ECLAC)"@en, "Comisión Económica para América Latina y el Caribe (CEPAL)"@es.
+
+:apec a :InternationalOrganization;
+     rdfs:label "Asia-Pacific Economic Cooperation (APEC)"@en, "Cooperación Económica Asia Pacífico (APEC)"@es.
+
+:unicef a :InternationalOrganization;
+     rdfs:label "United Nations Children's Fund (UNICEF)"@en, "Fondo de las Naciones Unidas para la Infancia (UNICEF)"@es.
+     
+:unesco a :InternationalOrganization;
+     rdfs:label "United Nations Educational, Scientific and Cultural Organization (UNESCO)"@en, "Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura (UNESCO)"@es.
+     
+:imf a :InternationalOrganization;
+     rdfs:label "International Monetary Fund (IMF)"@en, "Fondo Monetario Internacional (FMI)"@es.
+     
+:mercosur a :InternationalOrganization;
+     rdfs:label "Mercosur"@en, "Mercado Común del Sur (MERCOSUR)"@es.
+     
+:opec a :InternationalOrganization;
+     rdfs:label "Organization of Petroleum Exporting Countries (OPEC)"@en, "Organización de Países Exportadores de Petróleo"@es.
+     
+:nato a :InternationalOrganization;
+     rdfs:label "North Atlantic Treaty Organization ()NATO)"@en, "Organización del Tratado del Atlántico Norte (OTAN)"@es.
+     
+:ilo a :InternationalOrganization;
+     rdfs:label "International Labour Organization (ILO)"@en, "Organización Internacional del Trabajo (OIT)"@es.
+     
+:wto a :InternationalOrganization;
+     rdfs:label "World Trade Organization (WTO)"@en, "Organización Mundial de Comercio (OMC)"@es.
+     
+:who a :InternationalOrganization;
+     rdfs:label "World Health Organization (WHO)"@en, "Organización Mundial de la Salud (OMS)"@es.
+     
+:oecd a :InternationalOrganization;
+     rdfs:label "Organisation for Economic Co-operation and Development (OECD)"@en, "Organización para la Cooperación y el Desarrollo Económico (OCDE)"@es.
               
 :RestrictedAccessOrganization a owl:Class;
               rdfs:subClassOf  foaf:Organization;
@@ -443,14 +508,17 @@ bio:olb rdf:type rdf:Property ,
           
           
 ####################################### Connections #######################################               
-
+:SourcedEntity a owl:Class;
+               rdfs:label "Sourced Entity"@en, "Entidad con fuente"@es;
+               rdfs:comment "Abstract class  of any entity that has a source where its information was taken from"@en, "Clase abstracta de caulquier entidad cuya información tenga una fuente"@es.
+               
 bio:Relationship rdf:type owl:Class ;
                  rdfs:label "Agent Relationship"@en ;
                  rdfs:comment "A particular type of connection existing between people, groups or organizations related to or having dealings with each other."@en ;
                  rdfs:isDefinedBy <http://purl.org/vocab/bio/0.1/> .
 
 :Connection  a owl:Class;
-             rdfs:subClassOf bio:Relationship;
+             rdfs:subClassOf bio:Relationship, :SourcedEntity;
              rdfs:label "Generic connection"@en, "Conexión genérica"@es;
              rdfs:comment "A generic connection between two or more entities during a certain period of time"@en, "Una conexión genérica entre dos o más entidades durante un cierto período de tiempo"@es .
 
@@ -460,7 +528,7 @@ bio:Relationship rdf:type owl:Class ;
            rdfs:subPropertyOf dcterms:source;
              rdfs:label "Source"@en, "Fuente"@es;
            rdfs:comment "Source where the information about a connection was obtained"@en, "Fuente de donde se obtuvo la información acerca de una conexión"@es;
-           rdfs:domain :Connection;
+           rdfs:domain :SourcedEntity;
            rdfs:range xsd:anyUri .
            
 bio:participant rdf:type rdf:Property ,
@@ -741,7 +809,7 @@ bio:concludingEvent rdf:type rdf:Property ,
                         rdfs:domain :EconomicConnection;
                         rdfs:range xsd:anyUri.
               
-:workRole a rdf:Property, owl:ObjectProperty;
+:hasWorkRole a rdf:Property, owl:ObjectProperty;
           rdfs:label "Work role"@en, "Relación laboral"@es;
           rdfs:comment "Position or role of the person in this economic connection"@en, "Puesto o rol de la persona en esta connexión económica"@es;
           rdfs:domain :EconomicConnection;
@@ -749,6 +817,13 @@ bio:concludingEvent rdf:type rdf:Property ,
           
 :WorkRole a owl:Class, rdfs:Class;
           rdfs:label "Work role"@en, "Puesto de trabajo"@es.
+
+:hasEconomicOrganizationParticipant a rdf:Property, owl:ObjectProperty;
+          rdfs:label "Organization/Company involved"@en, "Organización/empresa relacionada"@es;
+          rdfs:comment "Organization or company associated with this economic connection"@en, "Organización o empresa relacionada con esta connexión económica"@es;
+          rdfs:domain :EconomicConnection;
+          rdfs:range foaf:Organization.
+
 
 :ceo a :WorkRole;
      rdfs:label "CEO"@en, "Gerente General"@es.
