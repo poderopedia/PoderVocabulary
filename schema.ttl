@@ -267,9 +267,31 @@ bio:olb rdf:type rdf:Property ,
 :hasAuntOrUncle a rdf:Property, owl:ObjectProperty;
            rdfs:label "Has Aunt or Uncle"@en, "Tío/a"@es;
            rdfs:comment "Describes relation where a person (object) is the sibling of one of the parents of this person"@en, "Describe la relación donde una persona (objeto) es el/la hermano/a de uno de los padres de esta persona"@es;
+           owl:inverseOf :hasNieceOrNephew;
            rdfs:domain foaf:Person;
            rdfs:range foaf:Person.
 
+:hasNieceOrNephew a rdf:Property, owl:ObjectProperty;
+           rdfs:label "Has niece or nephew"@en, "Sobrino/a"@es;
+           rdfs:comment "Describes relation where a person (object) is the child of one of the siblings of this person"@en, "Describe la relación donde una persona (objeto) es el/la hijo/a de uno de los hermano/as de esta persona"@es;
+           owl:inverseOf :hasAuntOrUncle;
+           rdfs:domain foaf:Person;
+           rdfs:range foaf:Person.
+
+:hasGrandparent a rdf:Property, owl:ObjectProperty;
+           rdfs:label "Has grandparent"@en, "Abuelo/a"@es;
+           rdfs:comment "Describes relation where a person (object) is the parent of the person's parent"@en, "Describe la relación donde una persona (objeto) es padre o madre del padre o madre de la persona"@es;
+           owl:inverseOf :hasGrandChild;
+           rdfs:domain foaf:Person;
+           rdfs:range foaf:Person.
+   
+:hasGrandChild a rdf:Property, owl:ObjectProperty;
+           rdfs:label "Has grandchild"@en, "Nieto/a"@es;
+           rdfs:comment "Describes relation where a person (object) is the child of the person's child"@en, "Describe la relación donde una persona (objeto) es hijo/a del hijo/a de la persona"@es;
+           owl:inverseOf :hasGrandparent;
+           rdfs:domain foaf:Person;
+           rdfs:range foaf:Person.
+           
 :hasCousin a rdf:Property, owl:ObjectProperty, owl:SymmetricProperty;
            rdfs:label "Has cousin"@en, "Primo/a"@es;
            rdfs:comment "Describes relation where a person (object) is the cousin (their parents are siblings) of this person"@en, "Describe la relación donde una persona (objeto) es primo o prima de esta persona"@es;
