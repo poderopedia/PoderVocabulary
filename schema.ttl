@@ -813,30 +813,71 @@ bio:concludingEvent rdf:type rdf:Property ,
             rdfs:range rdfs:Literal .
          
           
-## EconomicConnection
-:EconomicConnection a owl:Class;
+## WorkConnection
+:WorkConnection a owl:Class;
                     rdfs:subClassOf :Connection;
                     rdfs:label "Economic Connection"@en, "Conexión económica"@es;
                     rdfs:comment "The connection between an entity and an Educational Organization (university, school, etc)"@en, "La relación entre una persona y una organización académica (colegio, universidad, etc)"@es.              
 
-                     
-### EconomicConnection relations
+:WorkConnection a owl:Class;
+                    rdfs:subClassOf :Connection;
+                    rdfs:label "Economic Connection"@en, "Conexión económica"@es;
+                    rdfs:comment "The connection between an entity and an Educational Organization (university, school, etc)"@en, "La relación entre una persona y una organización académica (colegio, universidad, etc)"@es.              
+
+                    
+## CompanyConnection
+:CompanyConnection a owl:Class;
+                    rdfs:subClassOf :Connection;
+                    rdfs:label "Company Connection"@en, "Conexión entre compañías"@es;
+                    rdfs:comment "The connection between two companies"@en, "La relación entre dos compañías"@es.              
+
+:AcquisitionCompanyConnection a owl:Class;
+                       rdfs:subClassOf :CompanyConnection;
+                       rdfs:label "Company acquisition"@en, "Adquisición de empresa"@es.
+                       
+
+:buyerCompany a rdf:Property, owl:ObjectProperty;
+              rdfs:subPropertyOf bio:participant;
+              rdfs:label "Buyer"@en, "Comprador"@es;
+              rdfs:domain :AcquisitionCompanyConnection;
+              rdfs:range :Company .
+              
+:targetCompany a rdf:Property, owl:ObjectProperty;
+              rdfs:subPropertyOf bio:participant;
+              rdfs:label "Target company"@en, "Compañía target"@es;
+              rdfs:domain :AcquisitionCompanyConnection;
+              rdfs:range :Company .
+
+              
+:MergeCompanyConnection a owl:Class;
+                    rdfs:subClassOf :CompanyConnection;
+                    rdfs:label "Economic Connection"@en, "Conexión económica"@es;
+                    rdfs:comment "The connection between an entity and an Educational Organization (university, school, etc)"@en, "La relación entre una persona y una organización académica (colegio, universidad, etc)"@es.              
+
+
+:mergeCompany a rdf:Propertym, owl:ObjectProperty;
+              rdfs:subPropertyOf bio:participant;
+              rdfs:label "Merge company"@en, "Compañía fusionada"@es;
+              rdfs:domain :MergeCompanyConnection;
+              rdfs:range :Company .
+              
+### WorkConnection relations
                  
 
 :declarationOfPatrimony a rdf:Property, owl:DatatypeProperty;
                         rdfs:label "Declaration of Patrimony"@en, "Declaración de Patrimonio"@es;
-                        rdfs:domain :EconomicConnection;
+                        rdfs:domain :WorkConnection;
                         rdfs:range xsd:anyUri.
                         
 :declarationOfInterests a rdf:Property, owl:DatatypeProperty;
                         rdfs:label "Declaration of interests"@en, "Declaración de intereses"@es;
-                        rdfs:domain :EconomicConnection;
+                        rdfs:domain :WorkConnection;
                         rdfs:range xsd:anyUri.
               
 :hasWorkRole a rdf:Property, owl:ObjectProperty;
           rdfs:label "Work role"@en, "Relación laboral"@es;
           rdfs:comment "Position or role of the person in this economic connection"@en, "Puesto o rol de la persona en esta connexión económica"@es;
-          rdfs:domain :EconomicConnection;
+          rdfs:domain :WorkConnection;
           rdfs:range :WorkRole.
           
 :WorkRole a owl:Class, rdfs:Class;
@@ -845,7 +886,7 @@ bio:concludingEvent rdf:type rdf:Property ,
 :hasEconomicOrganizationParticipant a rdf:Property, owl:ObjectProperty;
           rdfs:label "Organization/Company involved"@en, "Organización/empresa relacionada"@es;
           rdfs:comment "Organization or company associated with this economic connection"@en, "Organización o empresa relacionada con esta connexión económica"@es;
-          rdfs:domain :EconomicConnection;
+          rdfs:domain :WorkConnection;
           rdfs:range foaf:Organization.
 
 
