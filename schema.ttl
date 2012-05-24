@@ -149,6 +149,7 @@ bio:IndividualEvent rdf:type owl:Class ;
                     rdfs:isDefinedBy <http://purl.org/vocab/bio/0.1/> .
 
 bio:Event rdf:type owl:Class ;
+          rdfs:subClassOf :SourcedEvent;
           rdfs:label "Event"@en, "Evento"@es ;
           rdfs:comment "An event is an occurrence that brings about a change in the state of affairs for one or more people and/or other agents. Events are assumed to occur over a period of time and may not have precise start and end points."@en,
                        "Suceso importante en la vida de una persona, grupo u organización"@es;
