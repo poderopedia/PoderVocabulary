@@ -511,6 +511,10 @@ bio:place rdf:type rdf:Property ;
           rdfs:domain foaf:Organization ;
           rdfs:range :FinancialInformation .
 
+:hasNumberOfEmployees a rdf:Property, owl:ObjectProperty;
+          rdfs:label "Number of employees"@en, "Número de empleados"@es;
+          rdfs:domain foaf:Organization ;
+          rdfs:range :FinancialInformation .
 
           
           
@@ -799,7 +803,10 @@ bio:concludingEvent rdf:type rdf:Property ,
             rdfs:domain :FinancialInformation;
             rdfs:range xsd:gYear .
                  
-
+:hasValue a rdf:Property, rdfs:DatatypeProperty;
+            rdfs:label "Value in a financial information"@en, "Valor en un reporte financiero"@es;
+            rdfs:domain :FinancialInformation;
+            rdfs:range xsd:decimal .
          
           
 ## EconomicConnection
