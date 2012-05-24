@@ -161,7 +161,14 @@ bio:Event rdf:type owl:Class ;
 :Biography a owl:Class;
            rdfs:subClassOf :SourcedEntity;
            rdfs:label "Generic biography"@en, "Biografía genérica"@es.
-           
+
+:hasUrl a rdfs:Property, owl:DatatypeProperty;
+        rdfs:label "Has URL"@en, "Página web"@es;
+        rdfs:subClassOf foaf:page;
+        rdfs:comment "Any URL related to this organization or person (including social media, corporate sites, etc.)"@en, "Cualquier URL relaciontada con esa organización o persona (incluyendo social media, sitios corporativos, etc)"@en;
+        rdfs:domain foaf:Agent;
+        rdfs:range xsd:anyURI.
+        
 :ShortBiography a owl:Class;
                 owl:disjointWith :LongBiography;
                 rdfs:subClassOf :Biography;
@@ -497,12 +504,12 @@ bio:place rdf:type rdf:Property ;
 :hasAnualProfit a rdf:Property, owl:ObjectProperty;
           rdfs:label "Anual profit"@en, "Utilidades anuales"@es;
           rdfs:domain foaf:Organization ;
-          rdfs:range :FinancialReport .
+          rdfs:range :FinancialInformation .
 
 :hasAnualRevenue a rdf:Property, owl:ObjectProperty;
           rdfs:label "Anual revenue"@en, "Ingresos anuales"@es;
           rdfs:domain foaf:Organization ;
-          rdfs:range :FinancialReport .
+          rdfs:range :FinancialInformation .
 
 
           
@@ -764,28 +771,34 @@ bio:concludingEvent rdf:type rdf:Property ,
         
 ##Entities
 
-#:hasTaxId a rdf:Property, owl:DatatypeProperty;
-#     rdfs:subPropertyOf dcterms:identifier;
-#     rdfs:label "Unique Tributary Role"@en, "Rol Único Tributario (RUT)"@es;
-#     rdfs:domain foaf:Agent ;
-#     rdfs:range rdfs:Literal .
+:hasTaxId a rdf:Property, owl:DatatypeProperty;
+     rdfs:subPropertyOf dcterms:identifier;
+     rdfs:label "Tax ID"@en, "Rol Único Tributario (RUT)"@es;
+     rdfs:comment "ID that identifies an organization for tax purposes"@en, "ID que identifica a una organización para efecto de los impuestos"@es;
+     rdfs:domain foaf:Organization ;
+     rdfs:range rdfs:Literal .
 #     
 #:hasAddress a rdf:Property, owl:DatatypeProperty;
 #     rdfs:label "Address"@en, "Dirección"@es;
 #     rdfs:domain foaf:Agent ;
 #     rdfs:range rdfs:Literal .              
-#:hasReportDate a rdf:Property;
-#            rdfs:label "Report date"@en, "Fecha del reporte"@es;
-#            rdfs:domain :FinancialReport;
-#            rdfs:range xsd:date .
 #
 #:hasReportAmount a rdf:Property;
 #            rdfs:label "Report amount"@en, "Cantidad reportada"@es;
-#            rdfs:domain :FinancialReport;
+#            rdfs:domain :FinancialInformation;
 #            rdfs:range xsd:date .            
 
 
+:FinancialInformation a owl:Class;
+                 rdfs:subClassOf :SourcedEntity;
+                 rdfs:label "Financial Report"@en, "Información financiera"@es;
+                 rdfs:comment "Any financial information related to an organization (e.g., anual profit)"@en, "Cualquier información financiera relacionada con una organización (ej., utilidades anuales)"@es.
 
+:hasFinancialInformationYear a rdf:Property, rdfs:DatatypeProperty;
+            rdfs:label "Date of financial information"@en, "Fecha de la información financiera"@es;
+            rdfs:domain :FinancialInformation;
+            rdfs:range xsd:gYear .
+                 
 
          
           
@@ -855,3 +868,284 @@ bio:concludingEvent rdf:type rdf:Property ,
 dcterms:source a rdf:Property, owl:DatatypeProperty;
                rdfs:label "Source"@en, "Fuente"@es;
                rdfs:comment "A related resource from which the described resource is derived."@en, "Un recurso relacionado de donde  resource from which the described resource is derived."@es.
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+
+:administradoras_de_fondos_de_pensiones
+    a :Sector ;
+    rdfs:label "Administradoras de Fondos de Pensiones" ;
+    skos:broader :seguridad_social .
+
+:administradoras_de_tarjetas_de_créditos
+    a :Sector ;
+    rdfs:label "Administradoras de Tarjetas de créditos" ;
+    skos:broader :bancos_y_entidades_financiera .
+
+:agroindustrial
+    a :Sector ;
+    rdfs:label "Agroindustrial" ;
+    skos:broader :agrícola .
+
+:agrícola
+    a :Sector ;
+    rdfs:label "Agrícola" ;
+    skos:broader <http://poderopedia.com/vocab/> .
+
+:automotriz
+    a :Sector ;
+    rdfs:label "Automotriz" .
+
+:bancos
+    a :Sector ;
+    rdfs:label "Bancos" ;
+    skos:broader :bancos_y_entidades_financiera .
+
+:bancos_y_entidades_financiera
+    a :Sector ;
+    rdfs:label "Bancos y entidades financiera" .
+
+:bebidas_y_alimentos
+    a :Sector ;
+    rdfs:label "Bebidas y alimentos" .
+
+:caja_de_compensación
+    a :Sector ;
+    rdfs:label "Caja de Compensación" ;
+    skos:broader :seguridad_social .
+
+:cementeras
+    a :Sector ;
+    rdfs:label "Cementeras" .
+
+:clínicas
+    a :Sector ;
+    rdfs:label "Clínicas" ;
+    skos:broader :salud .
+
+:combustibles
+    a :Sector ;
+    rdfs:label "Combustibles" .
+
+:comercio_internacional
+    a :Sector ;
+    rdfs:label "Comercio internacional" .
+
+:compañías_de_seguros
+    a :Sector ;
+    rdfs:label "Compañías de Seguros" ;
+    skos:broader :bancos_y_entidades_financiera, :seguridad_social .
+
+:construcción_e_inmobiliario
+    a :Sector ;
+    rdfs:label "Construcción e Inmobiliario" .
+
+:consultoras
+    a :Sector ;
+    rdfs:label "Consultoras" .
+
+:defensa
+    a :Sector ;
+    rdfs:label "Defensa" .
+
+:diversificado
+    a :Sector ;
+    rdfs:label "Diversificado" .
+
+:educación
+    a :Sector ;
+    rdfs:label "Educación" .
+
+:educación_primaria
+    a :Sector ;
+    rdfs:label "Educación primaria" ;
+    skos:broader :educación .
+
+:educación_secundaria
+    a :Sector ;
+    rdfs:label "Educación secundaria" ;
+    skos:broader :educación .
+
+:educación_superior
+    a :Sector ;
+    rdfs:label "Educación superior" ;
+    skos:broader :educación .
+
+:energía
+    a :Sector ;
+    rdfs:label "Energía" .
+
+:exportación
+    a :Sector ;
+    rdfs:label "Exportación" ;
+    skos:broader :comercio_internacional .
+
+:farmacias
+    a :Sector ;
+    rdfs:label "Farmacias" ;
+    skos:broader :retail .
+
+:financieras
+    a :Sector ;
+    rdfs:label "Financieras" ;
+    skos:broader :bancos_y_entidades_financiera .
+
+:forestal_y_papelero
+    a :Sector ;
+    rdfs:label "Forestal y Papelero" .
+
+:ganadero
+    a :Sector ;
+    rdfs:label "Ganadero" ;
+    skos:broader :agrícola .
+
+:gestión_cultural
+    a :Sector ;
+    rdfs:label "Gestión cultural" .
+
+:hogar_y_construcción
+    a :Sector ;
+    rdfs:label "Hogar y construcción" ;
+    skos:broader :retail .
+
+:hípico
+    a :Sector ;
+    rdfs:label "Hípico" .
+
+:importación
+    a :Sector ;
+    rdfs:label "Importación" ;
+    skos:broader :comercio_internacional .
+
+:industria_naviera
+    a :Sector ;
+    rdfs:label "Industria naviera" .
+
+:industrias_químicas
+    a :Sector ;
+    rdfs:label "Industrias químicas" .
+
+:instituciones_de_salud_previsional
+    a :Sector ;
+    rdfs:label "Instituciones de Salud Previsional" ;
+    skos:broader :seguridad_social .
+
+:laboratorios
+    a :Sector ;
+    rdfs:label "Laboratorios" ;
+    skos:broader :salud .
+
+:medios_de_comunicación
+    a :Sector ;
+    rdfs:label "Medios de comunicación" .
+
+:metalúrgico_y_siderúrgico
+    a :Sector ;
+    rdfs:label "Metalúrgico y Siderúrgico" .
+
+:minería
+    a :Sector ;
+    rdfs:label "Minería" .
+
+:pesquero
+    a :Sector ;
+    rdfs:label "Pesquero" .
+
+:petroquímico
+    a :Sector ;
+    rdfs:label "Petroquímico" .
+
+:publicidad
+    a :Sector ;
+    rdfs:label "Publicidad" .
+
+:retail
+    a :Sector ;
+    rdfs:label "Retail" .
+
+:salmonero
+    a :Sector ;
+    rdfs:label "Salmonero" ;
+    skos:broader :pesquero .
+
+:salud
+    a :Sector ;
+    rdfs:label "Salud" .
+
+:sanitario
+    a :Sector ;
+    rdfs:label "Sanitario" .
+
+:seguridad_social
+    a :Sector ;
+    rdfs:label "Seguridad social" .
+
+:sociedades_deportivas
+    a :Sector ;
+    rdfs:label "Sociedades deportivas" .
+
+:supermercados
+    a :Sector ;
+    rdfs:label "Supermercados" ;
+    skos:broader :retail .
+
+:tabaco
+    a :Sector ;
+    rdfs:label "Tabaco" .
+
+:tecnología
+    a :Sector ;
+    rdfs:label "Tecnología" .
+
+:telecomunicaciones
+    a :Sector ;
+    rdfs:label "Telecomunicaciones" .
+
+:textil
+    a :Sector ;
+    rdfs:label "Textil" .
+
+:tiendas_por_departamento
+    a :Sector ;
+    rdfs:label "Tiendas por departamento" ;
+    skos:broader :retail .
+
+:transporte
+    a :Sector ;
+    rdfs:label "Transporte" .
+
+:transporte_aéreo
+    a :Sector ;
+    rdfs:label "Transporte aéreo" ;
+    skos:broader :transporte .
+
+:transporte_marítimo
+    a :Sector ;
+    rdfs:label "Transporte marítimo" ;
+    skos:broader :transporte .
+
+:transporte_terrestre
+    a :Sector ;
+    rdfs:label "Transporte terrestre" ;
+    skos:broader :transporte .
+
+:turístico_y_hotelero
+    a :Sector ;
+    rdfs:label "Turístico y Hotelero" .
+
+:vitivinícola
+    a :Sector ;
+    rdfs:label "Vitivinícola" ;
+    skos:broader :agrícola .
+               
