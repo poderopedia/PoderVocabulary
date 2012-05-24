@@ -516,7 +516,10 @@ bio:place rdf:type rdf:Property ;
           rdfs:domain foaf:Organization ;
           rdfs:range :FinancialInformation .
 
-          
+:hasAnualReport a rdf:Property, owl:ObjectProperty;
+          rdfs:label "Anual report"@en, "Memorias"@es;
+          rdfs:domain foaf:Organization ;
+          rdfs:range :FinancialInformation .
           
 ####################################### Connections #######################################               
 :SourcedEntity a owl:Class;
@@ -806,7 +809,7 @@ bio:concludingEvent rdf:type rdf:Property ,
 :hasValue a rdf:Property, rdfs:DatatypeProperty;
             rdfs:label "Value in a financial information"@en, "Valor en un reporte financiero"@es;
             rdfs:domain :FinancialInformation;
-            rdfs:range xsd:decimal .
+            rdfs:range rdfs:Literal .
          
           
 ## EconomicConnection
