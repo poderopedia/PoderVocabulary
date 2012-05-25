@@ -422,7 +422,7 @@ bio:place rdf:type rdf:Property ;
                      
 ########## Relations for :NonGovernmentalOrganization
 :hasPhilantropySector a rdf:Property, owl:ObjectProperty;
-                     rdfs:label "Has Non Government Organization Sector"@en, "Tiene Sectores Org No Gubernamentales]"@es;
+                     rdfs:label "Has Philantropy Sector"@en, "Tiene área de filantropía"@es;
                      rdfs:comment "Sectors related to NGOs"@en, "Sectores relationados a ONGs"@es;
                      rdfs:domain :NonGovernmentalOrganization;
                      rdfs:range  :PhilantropySector .
