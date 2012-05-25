@@ -849,17 +849,17 @@ dcterms:source a rdf:Property, owl:DatatypeProperty;
 
 
 :hasSanctionDocumentation a rdf:Property, owl:ObjectProperty;
-                          rdfs:subPropertyOf :hasDocumentURL;
+                          rdfs:subPropertyOf :hasDocumentation;
                           rdfs:label "Documents about sanctions"@en, "Documentación acerca de sanciones"@es;
                           rdfs:comment "Documents describing legal sanctions related to this agent"@en, "Documentos que describen sanciones legales relacionadas con este agente"@es.
                            
 :hasOrganigramDocumentation a rdf:Property, owl:ObjectProperty;
-                          rdfs:subPropertyOf :hasDocumentURL;
+                          rdfs:subPropertyOf :hasDocumentation;
                           rdfs:label "Organigram Documentation"@en, "Documentación de organigrama"@es;
                            rdfs:comment "Documents describing the organigram this agent"@en, "Documentos que describen el organigrama este agente"@es.
 
 :hasOtherDocumentation a rdf:Property, owl:ObjectProperty;
-                       rdfs:subPropertyOf :hasDocumentURL;
+                       rdfs:subPropertyOf :hasDocumentation;
                        rdfs:label "Other documentation"@en, "Otra documentación"@es;
                        rdfs:comment "Miscelaneous document related to this agent"@en, "Documentos misceláneos relacionadas con este agente"@es.
                            
