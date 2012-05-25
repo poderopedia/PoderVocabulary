@@ -37,7 +37,7 @@
         a layout:LayoutParameterSet
     ] .
 
-:hasRut
+:hasTaxId
     layout:hasLayoutParameterSet [
         layout:position 15 ;
         layout:uriRelated foaf:Person ;
@@ -57,13 +57,25 @@
 #].
 #
 #
+
 :alias
     layout:hasLayoutParameterSet [
         layout:position 16 ;
         layout:uriRelated foaf:Person, vocab:Company ;
         a layout:LayoutParameterSet
+   ],
+   [
+        layout:display false;
+        layout:uriRelated foaf:Organization, :AcademicOrganization,  vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+        a layout:LayoutParameterSet
    ] .
 
+:hasAddress
+   layout:hasLayoutParameterSet [
+        layout:display false;
+        layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+        a layout:LayoutParameterSet
+   ] .
 #:hasAddress
 #    layout:hasLayoutParameterSet [
 #        layout:uriRelated foaf:Person, vocab:Company ;
@@ -631,8 +643,128 @@ foaf:firstName
 :hasMainSector 
      layout:hasLayoutParameterSet [
           a layout:LayoutParameterSet ;
-          layout:uriRelated vocab:NonGovernmentalOrganization;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
           layout:display true;
           layout:htmlElement "select";
           layout:position 96
+     ] .
+
+     
+:hasAlternativeOtherSector
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display true;
+          layout:position 95
+     ] .
+
+:hasOtherSector 
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display true;
+          layout:htmlElement "select";
+          layout:position 94
+     ] .
+
+:hasAlternativeOtherSector
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display true;
+          layout:position 93
+     ] .
+     
+:hasLogo
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display true;
+          layout:htmlElement "img";
+          layout:position 101
+     ] .
+     
+:hasAnualRevenue
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display false 
+     ] .
+     
+:hasAnualProfit
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display false 
+     ] .
+     
+:hasEnvironmentalImpactStudies
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display false 
+     ] .
+
+     
+:hasTickerSymbol
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display false 
+     ] .
+
+:hasEssentialFacts
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display false 
+     ] .
+     
+:hasRelevantProject
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display false 
+     ] .
+
+:hasEnvironmentalImpactStudies
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display false 
+     ] .
+ 
+:hasOrganigram    
+          layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display false 
+     ] .
+     
+:hasLegalConstitution
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display false 
+     ] .
+
+:subsidiaryCompanyOf
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display false 
+     ] .
+
+:commercialRepresentativesOf
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display false 
+     ] .
+
+:hasMap
+     layout:hasLayoutParameterSet [
+          a layout:LayoutParameterSet ;
+          layout:uriRelated foaf:Organization, :AcademicOrganization, vocab:Company, vocab:NonGovernmentalOrganization, vocab:RestrictedAccessOrganization, vocab:InternationalOrganization, vocab:ReligiousOrganization, vocab:ProgrammaticOrganization, vocab:PoliticalOrganization;
+          layout:display false 
      ] .

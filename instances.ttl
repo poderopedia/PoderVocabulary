@@ -1,0 +1,1382 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix bio:      <http://purl.org/vocab/bio/0.1/> .
+@prefix rel:      <http://purl.org/vocab/relationship/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix label: <http://purl.org/net/vocab/2004/03/label#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bcnbio: <http://datos.bcn.cl/ontologies/bcn-biographies#> .
+@prefix :         <http://poderopedia.com/vocab/> .
+
+
+
+## Gender
+
+:Male
+    a :Gender ;
+    rdfs:label "male"@en, "masculino"@es .
+
+:Female
+    a :Gender ;
+    rdfs:label "female"@en, "femenino"@es .
+    
+
+##Countries
+:Afghanistan
+    a :Country ;
+    rdfs:label "Afghanistan"@en .
+
+:Albania
+    a :Country ;
+    rdfs:label "Albania"@en .
+
+:Algeria
+    a :Country ;
+    rdfs:label "Algeria"@en .
+
+:American_Samoa
+    a :Country ;
+    rdfs:label "American Samoa"@en .
+
+:Andorra
+    a :Country ;
+    rdfs:label "Andorra"@en .
+
+:Angola
+    a :Country ;
+    rdfs:label "Angola"@en .
+
+:Anguilla
+    a :Country ;
+    rdfs:label "Anguilla"@en .
+
+:Antarctica
+    a :Country ;
+    rdfs:label "Antarctica"@en .
+
+:Antigua_and_Barbuda
+    a :Country ;
+    rdfs:label "Antigua and Barbuda"@en .
+
+:Argentina
+    a :Country ;
+    rdfs:label "Argentina"@en .
+
+:Armenia
+    a :Country ;
+    rdfs:label "Armenia"@en .
+
+:Aruba
+    a :Country ;
+    rdfs:label "Aruba"@en .
+
+:Australia
+    a :Country ;
+    rdfs:label "Australia"@en .
+
+:Austria
+    a :Country ;
+    rdfs:label "Austria"@en .
+
+:Azerbaijan
+    a :Country ;
+    rdfs:label "Azerbaijan"@en .
+
+:Bahamas
+    a :Country ;
+    rdfs:label "Bahamas"@en .
+
+:Bahrain
+    a :Country ;
+    rdfs:label "Bahrain"@en .
+
+:Bangladesh
+    a :Country ;
+    rdfs:label "Bangladesh"@en .
+
+:Barbados
+    a :Country ;
+    rdfs:label "Barbados"@en .
+
+:Belarus
+    a :Country ;
+    rdfs:label "Belarus"@en .
+
+:Belgium
+    a :Country ;
+    rdfs:label "Belgium"@en .
+
+:Belize
+    a :Country ;
+    rdfs:label "Belize"@en .
+
+:Benin
+    a :Country ;
+    rdfs:label "Benin"@en .
+
+:Bermuda
+    a :Country ;
+    rdfs:label "Bermuda"@en .
+
+:Bhutan
+    a :Country ;
+    rdfs:label "Bhutan"@en .
+
+:Bolivia
+    a :Country ;
+    rdfs:label "Bolivia"@en .
+
+:Bosnia_and_Herzegovina
+    a :Country ;
+    rdfs:label "Bosnia and Herzegovina"@en .
+
+:Botswana
+    a :Country ;
+    rdfs:label "Botswana"@en .
+
+:Bouvet_Island
+    a :Country ;
+    rdfs:label "Bouvet Island"@en .
+
+:Brazil
+    a :Country ;
+    rdfs:label "Brazil"@en .
+
+:British_Indian_Ocean_Territory
+    a :Country ;
+    rdfs:label "British Indian Ocean Territory"@en .
+
+:Brunei_Darussalam
+    a :Country ;
+    rdfs:label "Brunei Darussalam"@en .
+
+:Bulgaria
+    a :Country ;
+    rdfs:label "Bulgaria"@en .
+
+:Burkina_Faso
+    a :Country ;
+    rdfs:label "Burkina Faso"@en .
+
+:Burundi
+    a :Country ;
+    rdfs:label "Burundi"@en .
+
+:Cambodia
+    a :Country ;
+    rdfs:label "Cambodia"@en .
+
+:Cameroon
+    a :Country ;
+    rdfs:label "Cameroon"@en .
+
+:Canada
+    a :Country ;
+    rdfs:label "Canada"@en .
+
+:Cape_Verde
+    a :Country ;
+    rdfs:label "Cape Verde"@en .
+
+:Cayman_Islands
+    a :Country ;
+    rdfs:label "Cayman Islands"@en .
+
+:Central_African_Republic
+    a :Country ;
+    rdfs:label "Central African Republic"@en .
+
+:Chad
+    a :Country ;
+    rdfs:label "Chad"@en .
+
+:Chile
+    a :Country ;
+    rdfs:label "Chile"@en .
+
+:China
+    a :Country ;
+    rdfs:label "China"@en .
+
+:Christmas_Island
+    a :Country ;
+    rdfs:label "Christmas Island"@en .
+
+:Cocos_Islands
+    a :Country ;
+    rdfs:label "Cocos Islands"@en .
+
+:Colombia
+    a :Country ;
+    rdfs:label "Colombia"@en .
+
+:Comoros
+    a :Country ;
+    rdfs:label "Comoros"@en .
+
+:Congo
+    a :Country ;
+    rdfs:label "Congo"@en .
+
+:Cook_Islands
+    a :Country ;
+    rdfs:label "Cook Islands"@en .
+
+:Costa_Rica
+    a :Country ;
+    rdfs:label "Costa Rica"@en .
+
+:Croatia
+    a :Country ;
+    rdfs:label "Croatia"@en .
+
+:Cuba
+    a :Country ;
+    rdfs:label "Cuba"@en .
+
+:Cyprus
+    a :Country ;
+    rdfs:label "Cyprus"@en .
+
+:Czech_Republic
+    a :Country ;
+    rdfs:label "Czech Republic"@en .
+
+:Denmark
+    a :Country ;
+    rdfs:label "Denmark"@en .
+
+:Djibouti
+    a :Country ;
+    rdfs:label "Djibouti"@en .
+
+:Dominica
+    a :Country ;
+    rdfs:label "Dominica"@en .
+
+:Dominican_Republic
+    a :Country ;
+    rdfs:label "Dominican Republic"@en .
+
+:Ecuador
+    a :Country ;
+    rdfs:label "Ecuador"@en .
+
+:Egypt
+    a :Country ;
+    rdfs:label "Egypt"@en .
+
+:El_Salvador
+    a :Country ;
+    rdfs:label "El Salvador"@en .
+
+:Equatorial_Guinea
+    a :Country ;
+    rdfs:label "Equatorial Guinea"@en .
+
+:Eritrea
+    a :Country ;
+    rdfs:label "Eritrea"@en .
+
+:Estonia
+    a :Country ;
+    rdfs:label "Estonia"@en .
+
+:Ethiopia
+    a :Country ;
+    rdfs:label "Ethiopia"@en .
+
+:Falkland_Islands
+    a :Country ;
+    rdfs:label "Falkland Islands"@en .
+
+:Faroe_Islands
+    a :Country ;
+    rdfs:label "Faroe Islands"@en .
+
+:Fiji
+    a :Country ;
+    rdfs:label "Fiji"@en .
+
+:Finland
+    a :Country ;
+    rdfs:label "Finland"@en .
+
+:France
+    a :Country ;
+    rdfs:label "France"@en .
+
+:French_Guiana
+    a :Country ;
+    rdfs:label "French Guiana"@en .
+
+:French_Polynesia
+    a :Country ;
+    rdfs:label "French Polynesia"@en .
+
+:Gabon
+    a :Country ;
+    rdfs:label "Gabon"@en .
+
+:Gambia
+    a :Country ;
+    rdfs:label "Gambia"@en .
+
+:Georgia
+    a :Country ;
+    rdfs:label "Georgia"@en .
+
+:Germany
+    a :Country ;
+    rdfs:label "Germany"@en .
+
+:Ghana
+    a :Country ;
+    rdfs:label "Ghana"@en .
+
+:Gibraltar
+    a :Country ;
+    rdfs:label "Gibraltar"@en .
+
+:Greece
+    a :Country ;
+    rdfs:label "Greece"@en .
+
+:Greenland
+    a :Country ;
+    rdfs:label "Greenland"@en .
+
+:Grenada
+    a :Country ;
+    rdfs:label "Grenada"@en .
+
+:Guadeloupe
+    a :Country ;
+    rdfs:label "Guadeloupe"@en .
+
+:Guam
+    a :Country ;
+    rdfs:label "Guam"@en .
+
+:Guatemala
+    a :Country ;
+    rdfs:label "Guatemala"@en .
+
+:Guinea
+    a :Country ;
+    rdfs:label "Guinea"@en .
+
+:Guinea-Bissau
+    a :Country ;
+    rdfs:label "Guinea-Bissau"@en .
+
+:Guyana
+    a :Country ;
+    rdfs:label "Guyana"@en .
+
+:Haiti
+    a :Country ;
+    rdfs:label "Haiti"@en .
+
+:Heard_Island_and_McDonald_Islands
+    a :Country ;
+    rdfs:label "Heard Island and McDonald Islands"@en .
+
+:Honduras
+    a :Country ;
+    rdfs:label "Honduras"@en .
+
+:Hong_Kong
+    a :Country ;
+    rdfs:label "Hong Kong"@en .
+
+:Hungary
+    a :Country ;
+    rdfs:label "Hungary"@en .
+
+:Iceland
+    a :Country ;
+    rdfs:label "Iceland"@en .
+
+:India
+    a :Country ;
+    rdfs:label "India"@en .
+
+:Indonesia
+    a :Country ;
+    rdfs:label "Indonesia"@en .
+
+:Iran
+    a :Country ;
+    rdfs:label "Iran"@en .
+
+:Iraq
+    a :Country ;
+    rdfs:label "Iraq"@en .
+
+:Ireland
+    a :Country ;
+    rdfs:label "Ireland"@en .
+
+:Israel
+    a :Country ;
+    rdfs:label "Israel"@en .
+
+:Italy
+    a :Country ;
+    rdfs:label "Italy"@en .
+
+:Jamaica
+    a :Country ;
+    rdfs:label "Jamaica"@en .
+
+:Japan
+    a :Country ;
+    rdfs:label "Japan"@en .
+
+:Jordan
+    a :Country ;
+    rdfs:label "Jordan"@en .
+
+:Kazakhstan
+    a :Country ;
+    rdfs:label "Kazakhstan"@en .
+
+:Kenya
+    a :Country ;
+    rdfs:label "Kenya"@en .
+
+:Kiribati
+    a :Country ;
+    rdfs:label "Kiribati"@en .
+
+:Kuwait
+    a :Country ;
+    rdfs:label "Kuwait"@en .
+
+:Kyrgyzstan
+    a :Country ;
+    rdfs:label "Kyrgyzstan"@en .
+
+:Laos
+    a :Country ;
+    rdfs:label "Laos"@en .
+
+:Latvia
+    a :Country ;
+    rdfs:label "Latvia"@en .
+
+:Lebanon
+    a :Country ;
+    rdfs:label "Lebanon"@en .
+
+:Lesotho
+    a :Country ;
+    rdfs:label "Lesotho"@en .
+
+:Liberia
+    a :Country ;
+    rdfs:label "Liberia"@en .
+
+:Libya
+    a :Country ;
+    rdfs:label "Libya"@en .
+
+:Liechtenstein
+    a :Country ;
+    rdfs:label "Liechtenstein"@en .
+
+:Lithuania
+    a :Country ;
+    rdfs:label "Lithuania"@en .
+
+:Luxembourg
+    a :Country ;
+    rdfs:label "Luxembourg"@en .
+
+:Macao
+    a :Country ;
+    rdfs:label "Macao"@en .
+
+:Madagascar
+    a :Country ;
+    rdfs:label "Madagascar"@en .
+
+:Malawi
+    a :Country ;
+    rdfs:label "Malawi"@en .
+
+:Malaysia
+    a :Country ;
+    rdfs:label "Malaysia"@en .
+
+:Maldives
+    a :Country ;
+    rdfs:label "Maldives"@en .
+
+:Mali
+    a :Country ;
+    rdfs:label "Mali"@en .
+
+:Malta
+    a :Country ;
+    rdfs:label "Malta"@en .
+
+:Marshall_Islands
+    a :Country ;
+    rdfs:label "Marshall Islands"@en .
+
+:Martinique
+    a :Country ;
+    rdfs:label "Martinique"@en .
+
+:Mauritania
+    a :Country ;
+    rdfs:label "Mauritania"@en .
+
+:Mauritius
+    a :Country ;
+    rdfs:label "Mauritius"@en .
+
+:Mayotte
+    a :Country ;
+    rdfs:label "Mayotte"@en .
+
+:Mexico
+    a :Country ;
+    rdfs:label "Mexico"@en .
+
+:Micronesia
+    a :Country ;
+    rdfs:label "Micronesia"@en .
+
+:Moldova
+    a :Country ;
+    rdfs:label "Moldova"@en .
+
+:Monaco
+    a :Country ;
+    rdfs:label "Monaco"@en .
+
+:Mongolia
+    a :Country ;
+    rdfs:label "Mongolia"@en .
+
+:Montenegro
+    a :Country ;
+    rdfs:label "Montenegro"@en .
+
+:Montserrat
+    a :Country ;
+    rdfs:label "Montserrat"@en .
+
+:Morocco
+    a :Country ;
+    rdfs:label "Morocco"@en .
+
+:Mozambique
+    a :Country ;
+    rdfs:label "Mozambique"@en .
+
+:Myanmar
+    a :Country ;
+    rdfs:label "Myanmar"@en .
+
+:Namibia
+    a :Country ;
+    rdfs:label "Namibia"@en .
+
+:Nauru
+    a :Country ;
+    rdfs:label "Nauru"@en .
+
+:Nepal
+    a :Country ;
+    rdfs:label "Nepal"@en .
+
+:Netherlands
+    a :Country ;
+    rdfs:label "Netherlands"@en .
+
+:Netherlands_Antilles
+    a :Country ;
+    rdfs:label "Netherlands Antilles"@en .
+
+:New_Caledonia
+    a :Country ;
+    rdfs:label "New Caledonia"@en .
+
+:New_Zealand
+    a :Country ;
+    rdfs:label "New Zealand"@en .
+
+:Nicaragua
+    a :Country ;
+    rdfs:label "Nicaragua"@en .
+
+:Niger
+    a :Country ;
+    rdfs:label "Niger"@en .
+
+:Nigeria
+    a :Country ;
+    rdfs:label "Nigeria"@en .
+
+:Norfolk_Island
+    a :Country ;
+    rdfs:label "Norfolk Island"@en .
+
+:North_Korea
+    a :Country ;
+    rdfs:label "North Korea"@en .
+
+:Norway
+    a :Country ;
+    rdfs:label "Norway"@en .
+
+:Oman
+    a :Country ;
+    rdfs:label "Oman"@en .
+
+:Pakistan
+    a :Country ;
+    rdfs:label "Pakistan"@en .
+
+:Palau
+    a :Country ;
+    rdfs:label "Palau"@en .
+
+:Palestinian_Territory
+    a :Country ;
+    rdfs:label "Palestinian Territory"@en .
+
+:Panama
+    a :Country ;
+    rdfs:label "Panama"@en .
+
+:Papua_New_Guinea
+    a :Country ;
+    rdfs:label "Papua New Guinea"@en .
+
+:Paraguay
+    a :Country ;
+    rdfs:label "Paraguay"@en .
+
+:Peru
+    a :Country ;
+    rdfs:label "Peru"@en .
+
+:Philippines
+    a :Country ;
+    rdfs:label "Philippines"@en .
+
+:Pitcairn
+    a :Country ;
+    rdfs:label "Pitcairn"@en .
+
+:Poland
+    a :Country ;
+    rdfs:label "Poland"@en .
+
+:Portugal
+    a :Country ;
+    rdfs:label "Portugal"@en .
+
+:Puerto_Rico
+    a :Country ;
+    rdfs:label "Puerto Rico"@en .
+
+:Qatar
+    a :Country ;
+    rdfs:label "Qatar"@en .
+
+:Romania
+    a :Country ;
+    rdfs:label "Romania"@en .
+
+:Russian_Federation
+    a :Country ;
+    rdfs:label "Russian Federation"@en .
+
+:Rwanda
+    a :Country ;
+    rdfs:label "Rwanda"@en .
+
+:Saint_Helena
+    a :Country ;
+    rdfs:label "Saint Helena"@en .
+
+:Saint_Kitts_and_Nevis
+    a :Country ;
+    rdfs:label "Saint Kitts and Nevis"@en .
+
+:Saint_Lucia
+    a :Country ;
+    rdfs:label "Saint Lucia"@en .
+
+:Saint_Pierre_and_Miquelon
+    a :Country ;
+    rdfs:label "Saint Pierre and Miquelon"@en .
+
+:Saint_Vincent_and_the_Grenadines
+    a :Country ;
+    rdfs:label "Saint Vincent and the Grenadines"@en .
+
+:Samoa
+    a :Country ;
+    rdfs:label "Samoa"@en .
+
+:San_Marino
+    a :Country ;
+    rdfs:label "San Marino"@en .
+
+:Sao_Tome_and_Principe
+    a :Country ;
+    rdfs:label "Sao Tome and Principe"@en .
+
+:Saudi_Arabia
+    a :Country ;
+    rdfs:label "Saudi Arabia"@en .
+
+:Senegal
+    a :Country ;
+    rdfs:label "Senegal"@en .
+
+:Serbia
+    a :Country ;
+    rdfs:label "Serbia"@en .
+
+:Seychelles
+    a :Country ;
+    rdfs:label "Seychelles"@en .
+
+:Sierra_Leone
+    a :Country ;
+    rdfs:label "Sierra Leone"@en .
+
+:Singapore
+    a :Country ;
+    rdfs:label "Singapore"@en .
+
+:Slovakia
+    a :Country ;
+    rdfs:label "Slovakia"@en .
+
+:Slovenia
+    a :Country ;
+    rdfs:label "Slovenia"@en .
+
+:Solomon_Islands
+    a :Country ;
+    rdfs:label "Solomon Islands"@en .
+
+:Somalia
+    a :Country ;
+    rdfs:label "Somalia"@en .
+
+:South_Africa
+    a :Country ;
+    rdfs:label "South Africa"@en .
+
+:South_Georgia
+    a :Country ;
+    rdfs:label "South Georgia"@en .
+
+:South_Korea
+    a :Country ;
+    rdfs:label "South Korea"@en .
+
+:Spain
+    a :Country ;
+    rdfs:label "Spain"@en .
+
+:Sri_Lanka
+    a :Country ;
+    rdfs:label "Sri Lanka"@en .
+
+:Sudan
+    a :Country ;
+    rdfs:label "Sudan"@en .
+
+:Suriname
+    a :Country ;
+    rdfs:label "Suriname"@en .
+
+:Svalbard_and_Jan_Mayen
+    a :Country ;
+    rdfs:label "Svalbard and Jan Mayen"@en .
+
+:Swaziland
+    a :Country ;
+    rdfs:label "Swaziland"@en .
+
+:Sweden
+    a :Country ;
+    rdfs:label "Sweden"@en .
+
+:Switzerland
+    a :Country ;
+    rdfs:label "Switzerland"@en .
+
+:Syrian_Arab_Republic
+    a :Country ;
+    rdfs:label "Syrian Arab Republic"@en .
+
+:Taiwan
+    a :Country ;
+    rdfs:label "Taiwan"@en .
+
+:Tajikistan
+    a :Country ;
+    rdfs:label "Tajikistan"@en .
+
+:Tanzania
+    a :Country ;
+    rdfs:label "Tanzania"@en .
+
+:Thailand
+    a :Country ;
+    rdfs:label "Thailand"@en .
+
+:The_Former_Yugoslav_Republic_of_Macedonia
+    a :Country ;
+    rdfs:label "The Former Yugoslav Republic of Macedonia"@en .
+
+:Timor-Leste
+    a :Country ;
+    rdfs:label "Timor-Leste"@en .
+
+:Togo
+    a :Country ;
+    rdfs:label "Togo"@en .
+
+:Tokelau
+    a :Country ;
+    rdfs:label "Tokelau"@en .
+
+:Tonga
+    a :Country ;
+    rdfs:label "Tonga"@en .
+
+:Trinidad_and_Tobago
+    a :Country ;
+    rdfs:label "Trinidad and Tobago"@en .
+
+:Tunisia
+    a :Country ;
+    rdfs:label "Tunisia"@en .
+
+:Turkey
+    a :Country ;
+    rdfs:label "Turkey"@en .
+
+:Turkmenistan
+    a :Country ;
+    rdfs:label "Turkmenistan"@en .
+
+:Tuvalu
+    a :Country ;
+    rdfs:label "Tuvalu"@en .
+
+:Uganda
+    a :Country ;
+    rdfs:label "Uganda"@en .
+
+:Ukraine
+    a :Country ;
+    rdfs:label "Ukraine"@en .
+
+:United_Arab_Emirates
+    a :Country ;
+    rdfs:label "United Arab Emirates"@en .
+
+:United_Kingdom
+    a :Country ;
+    rdfs:label "United Kingdom"@en .
+
+:United_States
+    a :Country ;
+    rdfs:label "United States"@en .
+
+:United_States_Minor_Outlying_Islands
+    a :Country ;
+    rdfs:label "United States Minor Outlying Islands"@en .
+
+:Uruguay
+    a :Country ;
+    rdfs:label "Uruguay"@en .
+
+:Uzbekistan
+    a :Country ;
+    rdfs:label "Uzbekistan"@en .
+
+:Vanuatu
+    a :Country ;
+    rdfs:label "Vanuatu"@en .
+
+:Vatican_City
+    a :Country ;
+    rdfs:label "Vatican City"@en .
+
+:Venezuela
+    a :Country ;
+    rdfs:label "Venezuela"@en .
+
+:Vietnam
+    a :Country ;
+    rdfs:label "Vietnam"@en .
+
+:Wallis_and_Futuna
+    a :Country ;
+    rdfs:label "Wallis and Futuna"@en .
+
+:Western_Sahara
+    a :Country ;
+    rdfs:label "Western Sahara"@en .
+
+:Yemen
+    a :Country ;
+    rdfs:label "Yemen"@en .
+
+:Zambia
+    a :Country ;
+    rdfs:label "Zambia"@en .
+
+:Zimbabwe
+    a :Country ;
+    rdfs:label "Zimbabwe"@en .
+
+<http://poderopedia.com/instances/Congo,_Democratic_Republic_of_the>
+    a :Country ;
+    rdfs:label "Congo, Democratic Republic of the"@en .
+
+<http://poderopedia.com/instances/Cote_d'Ivoire>
+    a :Country ;
+    rdfs:label "Cote d'Ivoire"@en .
+
+<http://poderopedia.com/instances/Virgin_Islands,_British>
+    a :Country ;
+    rdfs:label "Virgin Islands, British"@en .
+
+<http://poderopedia.com/instances/Virgin_Islands,_U.S.>
+    a :Country ;
+    rdfs:label "Virgin Islands, U.S."@en .
+
+
+   
+
+#Sectores productivos               
+               
+
+:administradoras_de_fondos_de_pensiones
+    a :Sector ;
+    rdfs:label "Administradoras de Fondos de Pensiones" ;
+    skos:broader :seguridad_social .
+
+:administradoras_de_tarjetas_de_créditos
+    a :Sector ;
+    rdfs:label "Administradoras de Tarjetas de créditos" ;
+    skos:broader :bancos_y_entidades_financiera .
+
+:agroindustrial
+    a :Sector ;
+    rdfs:label "Agroindustrial" ;
+    skos:broader :agrícola .
+
+:agrícola
+    a :Sector ;
+    rdfs:label "Agrícola" ;
+    skos:broader <http://poderopedia.com/vocab/> .
+
+:automotriz
+    a :Sector ;
+    rdfs:label "Automotriz" .
+
+:bancos
+    a :Sector ;
+    rdfs:label "Bancos" ;
+    skos:broader :bancos_y_entidades_financiera .
+
+:bancos_y_entidades_financiera
+    a :Sector ;
+    rdfs:label "Bancos y entidades financiera" .
+
+:bebidas_y_alimentos
+    a :Sector ;
+    rdfs:label "Bebidas y alimentos" .
+
+:caja_de_compensación
+    a :Sector ;
+    rdfs:label "Caja de Compensación" ;
+    skos:broader :seguridad_social .
+
+:cementeras
+    a :Sector ;
+    rdfs:label "Cementeras" .
+
+:clínicas
+    a :Sector ;
+    rdfs:label "Clínicas" ;
+    skos:broader :salud .
+
+:combustibles
+    a :Sector ;
+    rdfs:label "Combustibles" .
+
+:comercio_internacional
+    a :Sector ;
+    rdfs:label "Comercio internacional" .
+
+:compañías_de_seguros
+    a :Sector ;
+    rdfs:label "Compañías de Seguros" ;
+    skos:broader :bancos_y_entidades_financiera, :seguridad_social .
+
+:construcción_e_inmobiliario
+    a :Sector ;
+    rdfs:label "Construcción e Inmobiliario" .
+
+:consultoras
+    a :Sector ;
+    rdfs:label "Consultoras" .
+
+:defensa
+    a :Sector ;
+    rdfs:label "Defensa" .
+
+:diversificado
+    a :Sector ;
+    rdfs:label "Diversificado" .
+
+:educación
+    a :Sector ;
+    rdfs:label "Educación" .
+
+:educación_primaria
+    a :Sector ;
+    rdfs:label "Educación primaria" ;
+    skos:broader :educación .
+
+:educación_secundaria
+    a :Sector ;
+    rdfs:label "Educación secundaria" ;
+    skos:broader :educación .
+
+:educación_superior
+    a :Sector ;
+    rdfs:label "Educación superior" ;
+    skos:broader :educación .
+
+:energía
+    a :Sector ;
+    rdfs:label "Energía" .
+
+:exportación
+    a :Sector ;
+    rdfs:label "Exportación" ;
+    skos:broader :comercio_internacional .
+
+:farmacias
+    a :Sector ;
+    rdfs:label "Farmacias" ;
+    skos:broader :retail .
+
+:financieras
+    a :Sector ;
+    rdfs:label "Financieras" ;
+    skos:broader :bancos_y_entidades_financiera .
+
+:forestal_y_papelero
+    a :Sector ;
+    rdfs:label "Forestal y Papelero" .
+
+:ganadero
+    a :Sector ;
+    rdfs:label "Ganadero" ;
+    skos:broader :agrícola .
+
+:gestión_cultural
+    a :Sector ;
+    rdfs:label "Gestión cultural" .
+
+:hogar_y_construcción
+    a :Sector ;
+    rdfs:label "Hogar y construcción" ;
+    skos:broader :retail .
+
+:hípico
+    a :Sector ;
+    rdfs:label "Hípico" .
+
+:importación
+    a :Sector ;
+    rdfs:label "Importación" ;
+    skos:broader :comercio_internacional .
+
+:industria_naviera
+    a :Sector ;
+    rdfs:label "Industria naviera" .
+
+:industrias_químicas
+    a :Sector ;
+    rdfs:label "Industrias químicas" .
+
+:instituciones_de_salud_previsional
+    a :Sector ;
+    rdfs:label "Instituciones de Salud Previsional" ;
+    skos:broader :seguridad_social .
+
+:laboratorios
+    a :Sector ;
+    rdfs:label "Laboratorios" ;
+    skos:broader :salud .
+
+:medios_de_comunicación
+    a :Sector ;
+    rdfs:label "Medios de comunicación" .
+
+:metalúrgico_y_siderúrgico
+    a :Sector ;
+    rdfs:label "Metalúrgico y Siderúrgico" .
+
+:minería
+    a :Sector ;
+    rdfs:label "Minería" .
+
+:pesquero
+    a :Sector ;
+    rdfs:label "Pesquero" .
+
+:petroquímico
+    a :Sector ;
+    rdfs:label "Petroquímico" .
+
+:publicidad
+    a :Sector ;
+    rdfs:label "Publicidad" .
+
+:retail
+    a :Sector ;
+    rdfs:label "Retail" .
+
+:salmonero
+    a :Sector ;
+    rdfs:label "Salmonero" ;
+    skos:broader :pesquero .
+
+:salud
+    a :Sector ;
+    rdfs:label "Salud" .
+
+:sanitario
+    a :Sector ;
+    rdfs:label "Sanitario" .
+
+:seguridad_social
+    a :Sector ;
+    rdfs:label "Seguridad social" .
+
+:sociedades_deportivas
+    a :Sector ;
+    rdfs:label "Sociedades deportivas" .
+
+:supermercados
+    a :Sector ;
+    rdfs:label "Supermercados" ;
+    skos:broader :retail .
+
+:tabaco
+    a :Sector ;
+    rdfs:label "Tabaco" .
+
+:tecnología
+    a :Sector ;
+    rdfs:label "Tecnología" .
+
+:telecomunicaciones
+    a :Sector ;
+    rdfs:label "Telecomunicaciones" .
+
+:textil
+    a :Sector ;
+    rdfs:label "Textil" .
+
+:tiendas_por_departamento
+    a :Sector ;
+    rdfs:label "Tiendas por departamento" ;
+    skos:broader :retail .
+
+:transporte
+    a :Sector ;
+    rdfs:label "Transporte" .
+
+:transporte_aéreo
+    a :Sector ;
+    rdfs:label "Transporte aéreo" ;
+    skos:broader :transporte .
+
+:transporte_marítimo
+    a :Sector ;
+    rdfs:label "Transporte marítimo" ;
+    skos:broader :transporte .
+
+:transporte_terrestre
+    a :Sector ;
+    rdfs:label "Transporte terrestre" ;
+    skos:broader :transporte .
+
+:turístico_y_hotelero
+    a :Sector ;
+    rdfs:label "Turístico y Hotelero" .
+
+:vitivinícola
+    a :Sector ;
+    rdfs:label "Vitivinícola" ;
+    skos:broader :agrícola .
+               
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+#Sectores de filantropía
+
+
+:childrenPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Children"@en, "Infancia"@es .
+
+:culturePhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Cultura"@es, "Culture"@en .
+
+:developmentAndInnovation
+    a :PhilantropySector ;
+    rdfs:label "Desarrollo e innovación"@es, "Development and innovation"@en .
+
+:educationPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Educación"@es, "Education"@en .
+
+:elderlyPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Adultos mayores"@es, "Old Age"@en .
+
+:environmentPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Environment"@en, "Medio ambiente"@es .
+
+:healthPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Health"@en, "Salud"@es .
+
+:humanRights
+    a :PhilantropySector ;
+    rdfs:label "Derechos humanos"@es, "Human rights"@en .
+
+:humanitarianAid
+    a :PhilantropySector ;
+    rdfs:label "Ayuda humanitaria"@es, "Humanitarian aid"@en .
+
+:immigrantsAndRefugees
+    a :PhilantropySector ;
+    rdfs:label "Immigrants and refugees"@en, "Inmigrantes y refugiados"@es .
+
+:indigenousPeoplePhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Indigenous people"@en, "Pueblos indígenas"@es .
+
+:politicsPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Politics"@en, "Política"@es .
+
+:publicHousingPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Public housing"@en, "Vivienda social"@es .
+
+:religionAndCharity
+    a :PhilantropySector ;
+    rdfs:label "Religion and charity"@en, "Religión y caridad"@es .
+
+:sportsPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Deportes"@es, "Sports"@en .
+
+:technologyPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Technology"@en, "Tecnología"@es .
+
+:womenPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Mujeres"@es, "Women"@en .
+
+:worldwidePhilantropy
+    a :PhilantropySector ;
+    rdfs:label "Filantropía mundial (actúan en varios sectores)"@es, "Worldwide Philantropy"@en .
+
+:youthPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Jóvenes"@es, "Youth"@en .
+    
+######International Organizations
+
+
+:un a :InternationalOrganization;
+     rdfs:label "United Nations (UN)"@en, "Organización de las Naciones Unidas (ONU)"@es.
+
+:oas a :InternationalOrganization;
+     rdfs:label "Organization of American States (OAS)"@en, "Organización de Estados Americanos (OEA)"@es.
+     
+:fao a :InternationalOrganization;
+     rdfs:label "Food and Agriculture Organization (FAO)"@en, "Organización para la Alimentación y la Agricultura (FAO)"@es.
+
+:worldBank a :InternationalOrganization;
+     rdfs:label "World Bank"@en, "Banco Mundial"@es.
+     
+:eclacl a :InternationalOrganization;
+     rdfs:label "United Nations Economic Commission for Latin America and the Caribbean (ECLAC)"@en, "Comisión Económica para América Latina y el Caribe (CEPAL)"@es.
+
+:apec a :InternationalOrganization;
+     rdfs:label "Asia-Pacific Economic Cooperation (APEC)"@en, "Cooperación Económica Asia Pacífico (APEC)"@es.
+
+:unicef a :InternationalOrganization;
+     rdfs:label "United Nations Children's Fund (UNICEF)"@en, "Fondo de las Naciones Unidas para la Infancia (UNICEF)"@es.
+     
+:unesco a :InternationalOrganization;
+     rdfs:label "United Nations Educational, Scientific and Cultural Organization (UNESCO)"@en, "Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura (UNESCO)"@es.
+     
+:imf a :InternationalOrganization;
+     rdfs:label "International Monetary Fund (IMF)"@en, "Fondo Monetario Internacional (FMI)"@es.
+     
+:mercosur a :InternationalOrganization;
+     rdfs:label "Mercosur"@en, "Mercado Común del Sur (MERCOSUR)"@es.
+     
+:opec a :InternationalOrganization;
+     rdfs:label "Organization of Petroleum Exporting Countries (OPEC)"@en, "Organización de Países Exportadores de Petróleo"@es.
+     
+:nato a :InternationalOrganization;
+     rdfs:label "North Atlantic Treaty Organization ()NATO)"@en, "Organización del Tratado del Atlántico Norte (OTAN)"@es.
+     
+:ilo a :InternationalOrganization;
+     rdfs:label "International Labour Organization (ILO)"@en, "Organización Internacional del Trabajo (OIT)"@es.
+     
+:wto a :InternationalOrganization;
+     rdfs:label "World Trade Organization (WTO)"@en, "Organización Mundial de Comercio (OMC)"@es.
+     
+:who a :InternationalOrganization;
+     rdfs:label "World Health Organization (WHO)"@en, "Organización Mundial de la Salud (OMS)"@es.
+     
+:oecd a :InternationalOrganization;
+     rdfs:label "Organisation for Economic Co-operation and Development (OECD)"@en, "Organización para la Cooperación y el Desarrollo Económico (OCDE)"@es.
+
