@@ -42,11 +42,11 @@ foaf:Organization a owl:Class;
             rdfs:label "Organization"@en, "Organización"@es;
             rdfs:subClassOf foaf:Agent.
 
-:depiction a rdf:Property, owl:DatatypeProperty ;
+:depiction a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "A depiction of some organization or person."@en, "Una representación visual de una persona u organización"@es ;
     rdfs:domain foaf:Agent ;
     rdfs:label "depiction"@en, "imagen"@es ;
-    rdfs:range xsd:anyURI .
+    rdfs:range foaf:Document .
     
 ### People
 
@@ -100,13 +100,6 @@ foaf:based_near
                      rdfs:comment "Country where the organization's headquarters are located"@en, "Ubicación de los headquarters"@es;
                      rdfs:domain foaf:Agent;
                      rdfs:range  :Country.
-                     
-:hasUrl a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "URL related to this agent."@en, "URL relacionada con este agente"@es ;
-    rdfs:domain foaf:Agent ;
-    rdfs:label "URL"@en, "URL"@es ;
-    rdfs:range xsd:anyURI .
-
 
 
 foaf:givenName
@@ -163,12 +156,12 @@ bio:Event rdf:type owl:Class ;
            rdfs:subClassOf :SourcedEntity;
            rdfs:label "Generic biography"@en, "Biografía genérica"@es.
 
-:hasUrl a rdfs:Property, owl:DatatypeProperty;
+:hasUrl a rdf:Property, owl:ObjectProperty;
         rdfs:label "Has URL"@en, "Página web"@es;
         rdfs:subClassOf foaf:page;
-        rdfs:comment "Any URL related to this organization or person (including social media, corporate sites, etc.)"@en, "Cualquier URL relaciontada con esa organización o persona (incluyendo social media, sitios corporativos, etc)"@en;
+        rdfs:comment "Any URL related to this organization or person (including social media, corporate sites, etc.)"@en, "Cualquier URL relaciontada con esa organización o persona (incluyendo social media, sitios corporativos, etc)"@es;
         rdfs:domain foaf:Agent;
-        rdfs:range xsd:anyURI.
+        rdfs:range foaf:Document.
         
 :ShortBiography a owl:Class;
                 owl:disjointWith :LongBiography;
@@ -421,20 +414,20 @@ bio:place rdf:type rdf:Property ;
 ########## Relations for :Organizations
 
                            
-:hasLogo  a rdf:Property, owl:DatatypeProperty;
+:hasLogo  a rdf:Property, owl:ObjectProperty;
                      rdfs:label "Logo"@en, "Logo"@es;
                      rdfs:comment "Logo of the organization"@en, "Logo de la organización"@es;
                      rdfs:domain foaf:Organization;
-                     rdfs:range  xsd:anyUri .
+                     rdfs:range  foaf:Image .
                      
 ########## Relations for :NonGovernmentalOrganization
-:hasNgoSector a rdf:Property, owl:ObjectProperty;
+:hasPhilantropySector a rdf:Property, owl:ObjectProperty;
                      rdfs:label "Has Non Government Organization Sector"@en, "Tiene Sectores Org No Gubernamentales]"@es;
                      rdfs:comment "Sectors related to NGOs"@en, "Sectores relationados a ONGs"@es;
                      rdfs:domain :NonGovernmentalOrganization;
-                     rdfs:range  :NgoSector .
+                     rdfs:range  :PhilantropySector .
 
-:hasAnotherNgoSector a rdf:Property, owl:DatatypeProperty;
+:hasAnotherPhilantropySector a rdf:Property, owl:DatatypeProperty;
                      rdfs:label "Has another Non Government Organization Sector"@en, "Tiene otro Sector Org No Gubernamentales]"@es;
                      rdfs:comment "Sectors related to NGOs not lister previously"@en, "Sectores relationados a ONGs no listados"@es;
                      rdfs:domain :NonGovernmentalOrganization;
@@ -475,32 +468,11 @@ bio:place rdf:type rdf:Property ;
           rdfs:range foaf:Document .
 
 
-:hasOrganigram a rdf:Property, owl:ObjectProperty;
-          rdfs:label "Organigram"@en, "Organigrama"@es;
-          rdfs:domain :Company ;
-          rdfs:range foaf:Document .
-
 :hasTickerSymbol a rdf:Property, owl:DatatypeProperty;
           rdfs:label "Ticker symbol"@en, "Ticket de bolsa"@es;
           rdfs:domain :Company ;
           rdfs:range rdfs:Literal .
 
-
-:hasEssentialFacts a rdf:Property, owl:ObjectProperty;
-          rdfs:label "Essential facts"@en, "Hechos esenciales"@es;
-          rdfs:domain :Company ;
-          rdfs:range foaf:Document .
-          
-:hasRelevantProject a rdf:Property, owl:DatatypeProperty;
-          rdfs:label "Relevant project"@en, "Proyecto relevante"@es;
-          rdfs:domain :Company ;
-          rdfs:range rdfs:Literal .    
-
-:hasEnvironmentalImpactStudies a rdf:Property, owl:ObjectProperty;
-          rdfs:label "Environmental Impact study"@en, "Estudio de impacto ambiental"@es;
-          rdfs:domain :Company ;
-          rdfs:range foaf:Document .
-          
      
 :hasAnualProfit a rdf:Property, owl:ObjectProperty;
           rdfs:label "Anual profit"@en, "Utilidades anuales"@es;
@@ -517,11 +489,7 @@ bio:place rdf:type rdf:Property ;
           rdfs:domain foaf:Organization ;
           rdfs:range :FinancialInformation .
 
-:hasAnualReport a rdf:Property, owl:ObjectProperty;
-          rdfs:label "Anual report"@en, "Memorias"@es;
-          rdfs:domain foaf:Organization ;
-          rdfs:range :FinancialInformation .
-          
+
 ####################################### Connections #######################################               
 :SourcedEntity a owl:Class;
                rdfs:label "Sourced Entity"@en, "Entidad con fuente"@es;
@@ -539,12 +507,12 @@ bio:Relationship rdf:type owl:Class ;
 
 ########## Relations for :Connection
 
-:hasSource a rdf:Property, owl:DatatypeProperty;
+:hasSource a rdf:Property, owl:ObjectProperty;
            rdfs:subPropertyOf dcterms:source;
              rdfs:label "Source"@en, "Fuente"@es;
            rdfs:comment "Source where the information about a connection was obtained"@en, "Fuente de donde se obtuvo la información acerca de una conexión"@es;
            rdfs:domain :SourcedEntity;
-           rdfs:range xsd:anyUri .
+           rdfs:range foaf:Document .
            
 bio:participant rdf:type rdf:Property ,
                          owl:ObjectProperty ;
@@ -864,15 +832,15 @@ bio:concludingEvent rdf:type rdf:Property ,
 ### WorkConnection relations
                  
 
-:declarationOfPatrimony a rdf:Property, owl:DatatypeProperty;
+:declarationOfPatrimony a rdf:Property, owl:ObjectProperty;
                         rdfs:label "Declaration of Patrimony"@en, "Declaración de Patrimonio"@es;
                         rdfs:domain :WorkConnection;
-                        rdfs:range xsd:anyUri.
+                        rdfs:range foaf:Document.
                         
-:declarationOfInterests a rdf:Property, owl:DatatypeProperty;
+:declarationOfInterests a rdf:Property, owl:ObjectProperty;
                         rdfs:label "Declaration of interests"@en, "Declaración de intereses"@es;
                         rdfs:domain :WorkConnection;
-                        rdfs:range xsd:anyUri.
+                        rdfs:range foaf:Document.
               
 :hasWorkRole a rdf:Property, owl:ObjectProperty;
           rdfs:label "Work role"@en, "Relación laboral"@es;
@@ -925,10 +893,49 @@ dcterms:source a rdf:Property, owl:DatatypeProperty;
                
                
                
-               
-               
-               
-               
+##########################################Documentation
+
+:hasDocumentation a rdf:Property, owl:ObjectProperty;
+                  rdfs:label "Has documentation"@en, "Tiene documentación"@es;
+                  rdfs:comment "Associates an agent with related documentation"@en, "Asocia un agente con documentación relacionada"@es;
+                  rdfs:domain foaf:Agent;
+                  rdfs:range :Documentation.
+                  
+:Documentation a owl:Class;
+               rdfs:label "Documentation"@en , "Documentación"@es;
+               rdfs:comment "Class that describes documents related to a person or organization, including its release date"@en, "Clase que describe documentos relacionados con una persona u organización, incluyendo su fecha de publicación"@es.
+
+:hasDocumentYearCoverage a rdf:Property, owl:DatatypeProperty;
+                        rdfs:subPropertyOf dcterms:coverage;
+                        rdfs:label "Covered Year"@en, "Año cubierto"@es;
+                        rdfs:comment "Year this document describes (e.g., Financial report 2010)"@en, "Año que es descrito en este documento (ej., Memorias 2010)";
+                        rdfs:domain :Documentation;
+                        rdfs:range xsd:gYear.
+
+:hasDocumentURL a rdf:Property, owl:ObjectProperty;
+               rdfs:label "Document URL"@en, "URL de documento"@es;
+               rdfs:comment "URL where the document is located"@en, "URL donde se encuentra el documento"@es;
+               rdfs:domain :Documentation;
+               rdfs:range foaf:Document.
+
+:hasDocumentationType a rdf:Property, owl:ObjectProperty;
+                      rdfs:label "Documentation type"@en, "Tipo de documentación"@es;
+                      rdfs:comments "Type of document"@en, "Tipo de documento"@es;
+                      rdfs:domain :Documentation;
+                      rdfs:range :DocumentationType.
+                      
+:DocumentationType a owl:Class;
+                   rdfs:label "Documentation type"@en, "Tipo de documentación"@es;
+                   rdfs:comment "Class of different types of documents that exist (financial reports, sanctions, etc)"@en, "Clase de los diferentes tipos de docuemntos que existen (reportes financiaeros, sanciones, etc)"@es.
+
+
+:sanctionDocumentationType a :DocumentationType;
+                           rdfs:label "Sanction"@en, "Sanción"@es;
+                           rdfs:comment "Documents describing legal sanctions related to this agent"@en, "Documentos que describen sanciones legales relacionadas con este agente"@es.
+                           
+                           
+                           
+#Sectores productivos               
                
                
                
@@ -1201,3 +1208,94 @@ dcterms:source a rdf:Property, owl:DatatypeProperty;
     rdfs:label "Vitivinícola" ;
     skos:broader :agrícola .
                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+#Sectores de filantropía
+
+
+:childrenPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Children"@en, "Infancia"@es .
+
+:culturePhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Cultura"@es, "Culture"@en .
+
+:developmentAndInnovation
+    a :PhilantropySector ;
+    rdfs:label "Desarrollo e innovación"@es, "Development and innovation"@en .
+
+:educationPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Educación"@es, "Education"@en .
+
+:elderlyPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Adultos mayores"@es, "Old Age"@en .
+
+:environmentPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Environment"@en, "Medio ambiente"@es .
+
+:healthPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Health"@en, "Salud"@es .
+
+:humanRights
+    a :PhilantropySector ;
+    rdfs:label "Derechos humanos"@es, "Human rights"@en .
+
+:humanitarianAid
+    a :PhilantropySector ;
+    rdfs:label "Ayuda humanitaria"@es, "Humanitarian aid"@en .
+
+:immigrantsAndRefugees
+    a :PhilantropySector ;
+    rdfs:label "Immigrants and refugees"@en, "Inmigrantes y refugiados"@es .
+
+:indigenousPeoplePhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Indigenous people"@en, "Pueblos indígenas"@es .
+
+:politicsPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Politics"@en, "Política"@es .
+
+:publicHousingPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Public housing"@en, "Vivienda social"@es .
+
+:religionAndCharity
+    a :PhilantropySector ;
+    rdfs:label "Religion and charity"@en, "Religión y caridad"@es .
+
+:sportsPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Deportes"@es, "Sports"@en .
+
+:technologyPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Technology"@en, "Tecnología"@es .
+
+:womenPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Mujeres"@es, "Women"@en .
+
+:worldwidePhilantropy
+    a :PhilantropySector ;
+    rdfs:label "Filantropía mundial (actúan en varios sectores)"@es, "Worldwide Philantropy"@en .
+
+:youthPhilantropicSector
+    a :PhilantropySector ;
+    rdfs:label "Jóvenes"@es, "Youth"@en .
+
+
