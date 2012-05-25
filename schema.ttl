@@ -875,8 +875,8 @@ dcterms:source a rdf:Property, owl:DatatypeProperty;
                  rdfs:domain foaf:Organization;
                  rdfs:range :NumericDatum.
                  
-                 
-              
-
-
+:hasNumberEmployees a rdf:Property, owl:ObjectProperty;
+                    rdfs:subPropertyOf :hasNumericDatum;
+                    rdfs:label "Number of Employees"@en, "Número de empleados"@es.
+                    
 
