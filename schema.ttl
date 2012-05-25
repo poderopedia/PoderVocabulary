@@ -333,54 +333,6 @@ bio:place rdf:type rdf:Property ;
               rdfs:subClassOf  foaf:Organization;
               rdfs:label       "International Organization"@en, "Organización internacional"@es;
               rdfs:comment     "An international organization, like UN, UNESCO, etc."@en, "Una organización internacional, como NU, UNESCO, etc."@es.
-
-:un a :InternationalOrganization;
-     rdfs:label "United Nations (UN)"@en, "Organización de las Naciones Unidas (ONU)"@es.
-
-:oas a :InternationalOrganization;
-     rdfs:label "Organization of American States (OAS)"@en, "Organización de Estados Americanos (OEA)"@es.
-     
-:fao a :InternationalOrganization;
-     rdfs:label "Food and Agriculture Organization (FAO)"@en, "Organización para la Alimentación y la Agricultura (FAO)"@es.
-
-:worldBank a :InternationalOrganization;
-     rdfs:label "World Bank"@en, "Banco Mundial"@es.
-     
-:eclacl a :InternationalOrganization;
-     rdfs:label "United Nations Economic Commission for Latin America and the Caribbean (ECLAC)"@en, "Comisión Económica para América Latina y el Caribe (CEPAL)"@es.
-
-:apec a :InternationalOrganization;
-     rdfs:label "Asia-Pacific Economic Cooperation (APEC)"@en, "Cooperación Económica Asia Pacífico (APEC)"@es.
-
-:unicef a :InternationalOrganization;
-     rdfs:label "United Nations Children's Fund (UNICEF)"@en, "Fondo de las Naciones Unidas para la Infancia (UNICEF)"@es.
-     
-:unesco a :InternationalOrganization;
-     rdfs:label "United Nations Educational, Scientific and Cultural Organization (UNESCO)"@en, "Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura (UNESCO)"@es.
-     
-:imf a :InternationalOrganization;
-     rdfs:label "International Monetary Fund (IMF)"@en, "Fondo Monetario Internacional (FMI)"@es.
-     
-:mercosur a :InternationalOrganization;
-     rdfs:label "Mercosur"@en, "Mercado Común del Sur (MERCOSUR)"@es.
-     
-:opec a :InternationalOrganization;
-     rdfs:label "Organization of Petroleum Exporting Countries (OPEC)"@en, "Organización de Países Exportadores de Petróleo"@es.
-     
-:nato a :InternationalOrganization;
-     rdfs:label "North Atlantic Treaty Organization ()NATO)"@en, "Organización del Tratado del Atlántico Norte (OTAN)"@es.
-     
-:ilo a :InternationalOrganization;
-     rdfs:label "International Labour Organization (ILO)"@en, "Organización Internacional del Trabajo (OIT)"@es.
-     
-:wto a :InternationalOrganization;
-     rdfs:label "World Trade Organization (WTO)"@en, "Organización Mundial de Comercio (OMC)"@es.
-     
-:who a :InternationalOrganization;
-     rdfs:label "World Health Organization (WHO)"@en, "Organización Mundial de la Salud (OMS)"@es.
-     
-:oecd a :InternationalOrganization;
-     rdfs:label "Organisation for Economic Co-operation and Development (OECD)"@en, "Organización para la Cooperación y el Desarrollo Económico (OCDE)"@es.
               
 :RestrictedAccessOrganization a owl:Class;
               rdfs:subClassOf  foaf:Organization;
@@ -577,27 +529,17 @@ bio:concludingEvent rdf:type rdf:Property ,
            rdfs:comment "Connection between two people that establishes a marriage, domestic partnership, civil union, sentimental relationship, etc."@en, "Connexión entre dos personas que establece un matrimonio, convivencia, unión civil, relación sentimental, etc."@es;
            rdfs:domain :SentimentalRelationshipConnection;
            rdfs:range foaf:Person .
-
-:hasSentimentalRelationshipType a rdf:Property, owl:ObjectProperty;
-                                 rdfs:label "Relationship type"@en, "Tipo de relación"@es;
-                                 rdfs:comment "Defines the type of sentimental relationship (marriage, civil union, etc.)"@en, "Define el tipo de relación sentimental"@es;
-                                 rdfs:domain :SentimentalRelationshipConnection;
-                                 rdfs:range :SentimentalRelationshipType .
-
-:SentimentalRelationshipType a owl:Class;
-                             rdfs:label "Sentimental relationship type"@en, "Tipo de relación sentimental"@es;
-                             rdfs:comment "Class of sentimental relationship types"@en, "Clase de los tipos de relaciones sentimentales"@es.
                              
-:marriage a :SentimentalRelationshipType;
+:Marriage rdfs:subClassOf :SentimentalRelationshipConnection;
           rdfs:label "Marriage"@en, "Matrimonio"@es .
           
-:civilUnion a :SentimentalRelationshipType;
+:CivilUnion rdfs:subClassOf :SentimentalRelationshipConnection;
           rdfs:label "Civil union"@en, "Unión civil"@es .
           
-:domesticPartnership a :SentimentalRelationshipType;
+:DomesticPartnership rdfs:subClassOf :SentimentalRelationshipConnection;
           rdfs:label "Domestic partnership"@en, "Pareja de hecho"@es .
           
-:dating a :SentimentalRelationshipType;
+:Dating rdfs:subClassOf :SentimentalRelationshipConnection;
           rdfs:label "Dating"@en, "Noviazgo"@es .
           
 
@@ -613,22 +555,13 @@ bio:concludingEvent rdf:type rdf:Property ,
                      rdfs:range foaf:Agent.
 
                      
-:hasSocialConnectionType a rdf:Property, owl:ObjectProperty;
-                     rdfs:label "Type of social connection"@en, "Tipo de conexión social"@es;
-                     rdfs:comment "Friends, acquintances, etc."@en, "Amigo, conocido, etc"@es ;
-                     rdfs:domain :SocialConnection ;
-                     rdfs:range :SocialConnectionType.
-                     
-:SocialConnectionType a owl:Class;
-                      rdfs:label "Class of types of social connection"@en, "Clase de tipos de conexión social"@es.
-
-:friendship a :socialConnectionType;
+:Friendship rdfs:subClassOf :SocialConnection;
             rdfs:label "Friendship"@en, "Amistad"@es.
             
-:acquaintance a :socialConnectionType;
+:Acquaintance rdfs:subClassOf :SocialConnection;
             rdfs:label "Acquaintance"@en, "Conocidos"@es.
 
-:classmate a :socialConnectionType;
+:Classmate rdfs:subClassOf :SocialConnection;
            rdfs:label "Classmate"@en, "Compañero de curso o clases"@es.
 
 ####################################### EducationalConnections #######################################               
@@ -723,27 +656,17 @@ bio:concludingEvent rdf:type rdf:Property ,
                      rdfs:domain :MembershipConnection;
                      rdfs:range foaf:Organization.
 
-:hasMembershipType a rdf:Property, owl:ObjectProperty;
-                   rdfs:label "Membership type"@en, "Tipo de membresía"@es;
-                   rdfs:comment "Identifies a certain role for this membership connection"@en, "Identifica un cierto rol para esta conneción de membresía"@es;
-                   rdfs:domain :MembershipConnection;
-                   rdfs:range :MembershipType .
-                   
-:MembershipType a owl:Class;
-                rdfs:label "Membership type"@en, "Tipo de membresía"@es;
-                rdfs:comment "Class of types of memberships of a person with an organization (member, financer, etc)"@en, "Clase de tipos de membresía de una persona con una organización (miembro, financista, etc.)"@es.
-
-:member a :MembershipType;
+:Member rdfs:subClassOf :MembershipConnection;
         rdfs:label "Member"@en, "Miembro"@es.
 
-:sympathizer a :MembershipType;
+:Sympathizer rdfs:subClassOf :MembershipConnection;
         rdfs:label "Sympathizer"@en, "Simpatizante"@es.
 
-:financier a :MembershipType;
-        rdfs:label "Financier"@en, "Financista"@es.
+:Financier rdfs:subClassOf :MembershipConnection;
+           rdfs:label "Financier"@en, "Financista"@es.
 
-:otherMemberType a :MembershipType;
-        rdfs:label "Other"@en, "Otro"@es.
+:OtherMember rdfs:subClassOf :MembershipConnection;
+                 rdfs:label "Other"@en, "Otro"@es.
         
 ##Entities
 
@@ -894,7 +817,17 @@ dcterms:source a rdf:Property, owl:DatatypeProperty;
                
                
 ##########################################Documentation
+:RelatedData a owl:Class;
+             rdfs:label "Related Data"@en , "Datos relacionados"@es;
+             rdfs:comment "Class that describes any type of data related to an organization including a relevant date"@en, "Clase que describe datos relacionados con una organización, incluyendo su fecha relevante"@es.
 
+:hasRelevantDate a rdf:Property, owl:DatatypeProperty;
+                        rdfs:subPropertyOf dcterms:coverage;
+                        rdfs:label "Relevant date"@en, "Fecha relevante"@es;
+                        rdfs:comment "Date related to this data (e.g., release date, last modification, etc.)"@en, "Fecha relevante a este dato (ej., fecha de publicación, última modificación, etc)"@es;
+                        rdfs:domain :RelatedData;
+                        rdfs:range xsd:date.
+                        
 :hasDocumentation a rdf:Property, owl:ObjectProperty;
                   rdfs:label "Has documentation"@en, "Tiene documentación"@es;
                   rdfs:comment "Associates an agent with related documentation"@en, "Asocia un agente con documentación relacionada"@es;
@@ -902,15 +835,11 @@ dcterms:source a rdf:Property, owl:DatatypeProperty;
                   rdfs:range :Documentation.
                   
 :Documentation a owl:Class;
+               rdfs:subClassOf :RelatedData; 
                rdfs:label "Documentation"@en , "Documentación"@es;
                rdfs:comment "Class that describes documents related to a person or organization, including its release date"@en, "Clase que describe documentos relacionados con una persona u organización, incluyendo su fecha de publicación"@es.
 
-:hasDocumentYearCoverage a rdf:Property, owl:DatatypeProperty;
-                        rdfs:subPropertyOf dcterms:coverage;
-                        rdfs:label "Covered Year"@en, "Año cubierto"@es;
-                        rdfs:comment "Year this document describes (e.g., Financial report 2010)"@en, "Año que es descrito en este documento (ej., Memorias 2010)";
-                        rdfs:domain :Documentation;
-                        rdfs:range xsd:gYear.
+
 
 :hasDocumentURL a rdf:Property, owl:ObjectProperty;
                rdfs:label "Document URL"@en, "URL de documento"@es;
@@ -918,384 +847,36 @@ dcterms:source a rdf:Property, owl:DatatypeProperty;
                rdfs:domain :Documentation;
                rdfs:range foaf:Document.
 
-:hasDocumentationType a rdf:Property, owl:ObjectProperty;
-                      rdfs:label "Documentation type"@en, "Tipo de documentación"@es;
-                      rdfs:comments "Type of document"@en, "Tipo de documento"@es;
-                      rdfs:domain :Documentation;
-                      rdfs:range :DocumentationType.
-                      
-:DocumentationType a owl:Class;
-                   rdfs:label "Documentation type"@en, "Tipo de documentación"@es;
-                   rdfs:comment "Class of different types of documents that exist (financial reports, sanctions, etc)"@en, "Clase de los diferentes tipos de docuemntos que existen (reportes financiaeros, sanciones, etc)"@es.
 
-
-:sanctionDocumentationType a :DocumentationType;
-                           rdfs:label "Sanction"@en, "Sanción"@es;
-                           rdfs:comment "Documents describing legal sanctions related to this agent"@en, "Documentos que describen sanciones legales relacionadas con este agente"@es.
+:hasSanctionDocumentation a rdf:Property, owl:ObjectProperty;
+                          rdfs:subPropertyOf :hasDocumentURL;
+                          rdfs:label "Documents about sanctions"@en, "Documentación acerca de sanciones"@es;
+                          rdfs:comment "Documents describing legal sanctions related to this agent"@en, "Documentos que describen sanciones legales relacionadas con este agente"@es.
                            
+:hasOrganigramDocumentation a rdf:Property, owl:ObjectProperty;
+                          rdfs:subPropertyOf :hasDocumentURL;
+                          rdfs:label "Organigram Documentation"@en, "Documentación de organigrama"@es;
+                           rdfs:comment "Documents describing the organigram this agent"@en, "Documentos que describen el organigrama este agente"@es.
+
+:hasOtherDocumentation a rdf:Property, owl:ObjectProperty;
+                       rdfs:subPropertyOf :hasDocumentURL;
+                       rdfs:label "Other documentation"@en, "Otra documentación"@es;
+                       rdfs:comment "Miscelaneous document related to this agent"@en, "Documentos misceláneos relacionadas con este agente"@es.
                            
-                           
-#Sectores productivos               
-               
-               
-               
-               
-               
+### Numeric Data
+
+:NumericDatum a owl:Class;
+              rdfs:subClassOf :RelatedData;
+              rdfs:label "Numeric datum"@en, "Dato numérico"@es;
+              rdfs:comment "Numeric datum for an organization for a certain year"@en, "Información numérica para una organización, para cierto año"@es.
+              
+:hasNumericDatum a rdf:Property, owl:ObjectProperty;
+                 rdfs:label "Has numerical datum"@en, "Tiene dato numérico"@es;
+                 rdfs:domain foaf:Organization;
+                 rdfs:range :NumericDatum.
+                 
+                 
+              
 
-:administradoras_de_fondos_de_pensiones
-    a :Sector ;
-    rdfs:label "Administradoras de Fondos de Pensiones" ;
-    skos:broader :seguridad_social .
-
-:administradoras_de_tarjetas_de_créditos
-    a :Sector ;
-    rdfs:label "Administradoras de Tarjetas de créditos" ;
-    skos:broader :bancos_y_entidades_financiera .
-
-:agroindustrial
-    a :Sector ;
-    rdfs:label "Agroindustrial" ;
-    skos:broader :agrícola .
-
-:agrícola
-    a :Sector ;
-    rdfs:label "Agrícola" ;
-    skos:broader <http://poderopedia.com/vocab/> .
-
-:automotriz
-    a :Sector ;
-    rdfs:label "Automotriz" .
-
-:bancos
-    a :Sector ;
-    rdfs:label "Bancos" ;
-    skos:broader :bancos_y_entidades_financiera .
-
-:bancos_y_entidades_financiera
-    a :Sector ;
-    rdfs:label "Bancos y entidades financiera" .
-
-:bebidas_y_alimentos
-    a :Sector ;
-    rdfs:label "Bebidas y alimentos" .
-
-:caja_de_compensación
-    a :Sector ;
-    rdfs:label "Caja de Compensación" ;
-    skos:broader :seguridad_social .
-
-:cementeras
-    a :Sector ;
-    rdfs:label "Cementeras" .
-
-:clínicas
-    a :Sector ;
-    rdfs:label "Clínicas" ;
-    skos:broader :salud .
-
-:combustibles
-    a :Sector ;
-    rdfs:label "Combustibles" .
-
-:comercio_internacional
-    a :Sector ;
-    rdfs:label "Comercio internacional" .
-
-:compañías_de_seguros
-    a :Sector ;
-    rdfs:label "Compañías de Seguros" ;
-    skos:broader :bancos_y_entidades_financiera, :seguridad_social .
-
-:construcción_e_inmobiliario
-    a :Sector ;
-    rdfs:label "Construcción e Inmobiliario" .
-
-:consultoras
-    a :Sector ;
-    rdfs:label "Consultoras" .
-
-:defensa
-    a :Sector ;
-    rdfs:label "Defensa" .
-
-:diversificado
-    a :Sector ;
-    rdfs:label "Diversificado" .
-
-:educación
-    a :Sector ;
-    rdfs:label "Educación" .
-
-:educación_primaria
-    a :Sector ;
-    rdfs:label "Educación primaria" ;
-    skos:broader :educación .
-
-:educación_secundaria
-    a :Sector ;
-    rdfs:label "Educación secundaria" ;
-    skos:broader :educación .
-
-:educación_superior
-    a :Sector ;
-    rdfs:label "Educación superior" ;
-    skos:broader :educación .
-
-:energía
-    a :Sector ;
-    rdfs:label "Energía" .
-
-:exportación
-    a :Sector ;
-    rdfs:label "Exportación" ;
-    skos:broader :comercio_internacional .
-
-:farmacias
-    a :Sector ;
-    rdfs:label "Farmacias" ;
-    skos:broader :retail .
-
-:financieras
-    a :Sector ;
-    rdfs:label "Financieras" ;
-    skos:broader :bancos_y_entidades_financiera .
-
-:forestal_y_papelero
-    a :Sector ;
-    rdfs:label "Forestal y Papelero" .
-
-:ganadero
-    a :Sector ;
-    rdfs:label "Ganadero" ;
-    skos:broader :agrícola .
-
-:gestión_cultural
-    a :Sector ;
-    rdfs:label "Gestión cultural" .
-
-:hogar_y_construcción
-    a :Sector ;
-    rdfs:label "Hogar y construcción" ;
-    skos:broader :retail .
-
-:hípico
-    a :Sector ;
-    rdfs:label "Hípico" .
-
-:importación
-    a :Sector ;
-    rdfs:label "Importación" ;
-    skos:broader :comercio_internacional .
-
-:industria_naviera
-    a :Sector ;
-    rdfs:label "Industria naviera" .
-
-:industrias_químicas
-    a :Sector ;
-    rdfs:label "Industrias químicas" .
-
-:instituciones_de_salud_previsional
-    a :Sector ;
-    rdfs:label "Instituciones de Salud Previsional" ;
-    skos:broader :seguridad_social .
-
-:laboratorios
-    a :Sector ;
-    rdfs:label "Laboratorios" ;
-    skos:broader :salud .
-
-:medios_de_comunicación
-    a :Sector ;
-    rdfs:label "Medios de comunicación" .
-
-:metalúrgico_y_siderúrgico
-    a :Sector ;
-    rdfs:label "Metalúrgico y Siderúrgico" .
-
-:minería
-    a :Sector ;
-    rdfs:label "Minería" .
-
-:pesquero
-    a :Sector ;
-    rdfs:label "Pesquero" .
-
-:petroquímico
-    a :Sector ;
-    rdfs:label "Petroquímico" .
-
-:publicidad
-    a :Sector ;
-    rdfs:label "Publicidad" .
-
-:retail
-    a :Sector ;
-    rdfs:label "Retail" .
-
-:salmonero
-    a :Sector ;
-    rdfs:label "Salmonero" ;
-    skos:broader :pesquero .
-
-:salud
-    a :Sector ;
-    rdfs:label "Salud" .
-
-:sanitario
-    a :Sector ;
-    rdfs:label "Sanitario" .
-
-:seguridad_social
-    a :Sector ;
-    rdfs:label "Seguridad social" .
-
-:sociedades_deportivas
-    a :Sector ;
-    rdfs:label "Sociedades deportivas" .
-
-:supermercados
-    a :Sector ;
-    rdfs:label "Supermercados" ;
-    skos:broader :retail .
-
-:tabaco
-    a :Sector ;
-    rdfs:label "Tabaco" .
-
-:tecnología
-    a :Sector ;
-    rdfs:label "Tecnología" .
-
-:telecomunicaciones
-    a :Sector ;
-    rdfs:label "Telecomunicaciones" .
-
-:textil
-    a :Sector ;
-    rdfs:label "Textil" .
-
-:tiendas_por_departamento
-    a :Sector ;
-    rdfs:label "Tiendas por departamento" ;
-    skos:broader :retail .
-
-:transporte
-    a :Sector ;
-    rdfs:label "Transporte" .
-
-:transporte_aéreo
-    a :Sector ;
-    rdfs:label "Transporte aéreo" ;
-    skos:broader :transporte .
-
-:transporte_marítimo
-    a :Sector ;
-    rdfs:label "Transporte marítimo" ;
-    skos:broader :transporte .
-
-:transporte_terrestre
-    a :Sector ;
-    rdfs:label "Transporte terrestre" ;
-    skos:broader :transporte .
-
-:turístico_y_hotelero
-    a :Sector ;
-    rdfs:label "Turístico y Hotelero" .
-
-:vitivinícola
-    a :Sector ;
-    rdfs:label "Vitivinícola" ;
-    skos:broader :agrícola .
-               
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-#Sectores de filantropía
-
-
-:childrenPhilantropicSector
-    a :PhilantropySector ;
-    rdfs:label "Children"@en, "Infancia"@es .
-
-:culturePhilantropicSector
-    a :PhilantropySector ;
-    rdfs:label "Cultura"@es, "Culture"@en .
-
-:developmentAndInnovation
-    a :PhilantropySector ;
-    rdfs:label "Desarrollo e innovación"@es, "Development and innovation"@en .
-
-:educationPhilantropicSector
-    a :PhilantropySector ;
-    rdfs:label "Educación"@es, "Education"@en .
-
-:elderlyPhilantropicSector
-    a :PhilantropySector ;
-    rdfs:label "Adultos mayores"@es, "Old Age"@en .
-
-:environmentPhilantropicSector
-    a :PhilantropySector ;
-    rdfs:label "Environment"@en, "Medio ambiente"@es .
-
-:healthPhilantropicSector
-    a :PhilantropySector ;
-    rdfs:label "Health"@en, "Salud"@es .
-
-:humanRights
-    a :PhilantropySector ;
-    rdfs:label "Derechos humanos"@es, "Human rights"@en .
-
-:humanitarianAid
-    a :PhilantropySector ;
-    rdfs:label "Ayuda humanitaria"@es, "Humanitarian aid"@en .
-
-:immigrantsAndRefugees
-    a :PhilantropySector ;
-    rdfs:label "Immigrants and refugees"@en, "Inmigrantes y refugiados"@es .
-
-:indigenousPeoplePhilantropicSector
-    a :PhilantropySector ;
-    rdfs:label "Indigenous people"@en, "Pueblos indígenas"@es .
-
-:politicsPhilantropicSector
-    a :PhilantropySector ;
-    rdfs:label "Politics"@en, "Política"@es .
-
-:publicHousingPhilantropicSector
-    a :PhilantropySector ;
-    rdfs:label "Public housing"@en, "Vivienda social"@es .
-
-:religionAndCharity
-    a :PhilantropySector ;
-    rdfs:label "Religion and charity"@en, "Religión y caridad"@es .
-
-:sportsPhilantropicSector
-    a :PhilantropySector ;
-    rdfs:label "Deportes"@es, "Sports"@en .
-
-:technologyPhilantropicSector
-    a :PhilantropySector ;
-    rdfs:label "Technology"@en, "Tecnología"@es .
-
-:womenPhilantropicSector
-    a :PhilantropySector ;
-    rdfs:label "Mujeres"@es, "Women"@en .
-
-:worldwidePhilantropy
-    a :PhilantropySector ;
-    rdfs:label "Filantropía mundial (actúan en varios sectores)"@es, "Worldwide Philantropy"@en .
-
-:youthPhilantropicSector
-    a :PhilantropySector ;
-    rdfs:label "Jóvenes"@es, "Youth"@en .
 
 
