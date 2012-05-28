@@ -426,20 +426,7 @@ bio:place rdf:type rdf:Property ;
           rdfs:range rdfs:Literal .
 
      
-:hasAnualProfit a rdf:Property, owl:ObjectProperty;
-          rdfs:label "Anual profit"@en, "Utilidades anuales"@es;
-          rdfs:domain foaf:Organization ;
-          rdfs:range :FinancialInformation .
 
-:hasAnualRevenue a rdf:Property, owl:ObjectProperty;
-          rdfs:label "Anual revenue"@en, "Ingresos anuales"@es;
-          rdfs:domain foaf:Organization ;
-          rdfs:range :FinancialInformation .
-
-:hasNumberOfEmployees a rdf:Property, owl:ObjectProperty;
-          rdfs:label "Number of employees"@en, "Número de empleados"@es;
-          rdfs:domain foaf:Organization ;
-          rdfs:range :FinancialInformation .
 
 
 ####################################### Connections #######################################               
@@ -530,16 +517,20 @@ bio:concludingEvent rdf:type rdf:Property ,
            rdfs:domain :SentimentalRelationshipConnection;
            rdfs:range foaf:Person .
                              
-:Marriage rdfs:subClassOf :SentimentalRelationshipConnection;
+:Marriage  a owl:Class;
+          rdfs:subClassOf :SentimentalRelationshipConnection;
           rdfs:label "Marriage"@en, "Matrimonio"@es .
           
-:CivilUnion rdfs:subClassOf :SentimentalRelationshipConnection;
+:CivilUnion a owl:Class;
+          rdfs:subClassOf :SentimentalRelationshipConnection;
           rdfs:label "Civil union"@en, "Unión civil"@es .
           
-:DomesticPartnership rdfs:subClassOf :SentimentalRelationshipConnection;
+:DomesticPartnership  a owl:Class;
+          rdfs:subClassOf :SentimentalRelationshipConnection;
           rdfs:label "Domestic partnership"@en, "Pareja de hecho"@es .
           
-:Dating rdfs:subClassOf :SentimentalRelationshipConnection;
+:Dating  a owl:Class;
+          rdfs:subClassOf :SentimentalRelationshipConnection;
           rdfs:label "Dating"@en, "Noviazgo"@es .
           
 
@@ -585,39 +576,19 @@ bio:concludingEvent rdf:type rdf:Property ,
          rdfs:domain :EducationalConnection ;
          rdfs:range :AcademicOrganization.
 
-:hasAcademicStatus a rdf:Property, owl:ObjectProperty;
-                   rdfs:label "Academic status"@en, "Estátus académico"@es;
-                   rdfs:comment "The current or final academic status of the person ('alumni', 'student', etc)"@en, "El estado académico actual o final de la persona (exalumno, estudiante, etc.)"@es;
-                   rdfs:domain :EducationalConnection;
-                   rdfs:range :EducationalStatus.
+:StudentEducationalConnection a owl:Class;
+                       rdfs:subClassOf :EducationalConnection;
+                       rdfs:label "Student"@en, "Estudiante"@es.
 
-:EducationalStatus a owl:Class, rdfs:Class;
-                   rdfs:label "Educational status"@en, "Estado educacional"@es;
-                   rdfs:comment "Academic status of a peson"@en, "Estado académico de una persona"@es.
-
-:student a :EducationalStatus;
-         rdfs:label "Student"@en, "Estudiante"@es.
-
-:alumni a :EducationalStatus;
-         rdfs:label "Alumni"@en, "Ex-alumno"@es.
+:AlumniEducationalConnection a owl:Class;
+                      rdfs:subClassOf :EducationalConnection;
+                      rdfs:label "Alumni"@en, "Ex-alumno"@es.
          
-:graduate a :EducationalStatus;
-         rdfs:label "Graduate"@en, "Titulado"@es.
+:GraduateEducationalConnection a owl:Class;
+                        rdfs:subClassOf :EducationalConnection;
+                        rdfs:label "Graduate"@en, "Titulado"@es.
          
-####################################### PoliticalConnections #######################################               
-       
-:PoliticalConnection a owl:Class;
-                     rdfs:subClassOf :MembershipConnection;
-                     rdfs:label "Political connection"@en, "Conexión política"@es;
-                     rdfs:comment "Connection between a political organization and other entities"@en, "Relación entre una organización política y otra entidad"@es .
 
-                          
-:politicalParticipant a rdf:Property, owl:ObjectProperty;
-             rdfs:subPropertyOf :organizationParticipant;
-             rdfs:label "Political Organizacion participant"@en, "Organización política participante"@es;
-             rdfs:comment "A political organization who is part of this connection"@en, "Una organización política que participa de esta conexión"@es;
-             rdfs:domain :PoliticalConnection;
-             rdfs:range :PoliticalOrganization.
 
  ####################################### AcademicConnections #######################################               
             
@@ -635,39 +606,52 @@ bio:concludingEvent rdf:type rdf:Property ,
                      rdfs:range :AcademicOrganization.             
 
                      
-####################################### MembershipConnections #######################################               
+####################################### AssociationConnections #######################################               
 
-:MembershipConnection a owl:Class;
+:AssociationConnection a owl:Class;
                      rdfs:subClassOf :Connection;
-                     rdfs:label "Membership Connection"@en, "Conexión de pertenencia"@es;
+                     rdfs:label "Association Connection"@en, "Conexión de asociación"@es;
                      rdfs:comment "The connection between an entity and a Organization (Opus Dei, a Think Tank) without been affiliated to it necessarily"@en, "La relación entre una entidad y una organización (Opus Dei, un Think Tank) sin necesariamente estar afiliado"@es.              
                      
 :personParticipant a rdf:Property, owl:ObjectProperty;
                      rdfs:subPropertyOf bio:participant ;
                      rdfs:label "Member person"@en, "Persona miembro"@es;
                      rdfs:comment "A a member of an organization"@en, "Un miembro de una organización"@es;
-                     rdfs:domain :MembershipConnection;
+                     rdfs:domain :AssociationConnection;
                      rdfs:range foaf:Person.  
 
 :organizationParticipant a rdf:Property, owl:ObjectProperty;
                      rdfs:subPropertyOf bio:participant ;
                      rdfs:label "Participant organization"@en, "Organización participante"@es;
                      rdfs:comment "An academic organization (school, university) who is part of this connection"@en, "Una organización académica (escuela, universidad) que participa de esta conexión"@es;
-                     rdfs:domain :MembershipConnection;
+                     rdfs:domain :AssociationConnection;
                      rdfs:range foaf:Organization.
 
-:Member rdfs:subClassOf :MembershipConnection;
-        rdfs:label "Member"@en, "Miembro"@es.
+:MembershipAssociationConnection rdfs:subClassOf :AssociationConnection;
+        rdfs:label "Member"@en, "Miembro"@es;
+        rdfs:comment "Official member of an organization (social club, religious group, etc.)"@en, "Miembro oficial de una organización (club social, grupo religioso, etc.)"@es.
 
-:Sympathizer rdfs:subClassOf :MembershipConnection;
+:SympathizerAssociationConnection rdfs:subClassOf :AssociationConnection;
         rdfs:label "Sympathizer"@en, "Simpatizante"@es.
 
-:Financier rdfs:subClassOf :MembershipConnection;
+:FinancierAssociationConnection rdfs:subClassOf :AssociationConnection;
            rdfs:label "Financier"@en, "Financista"@es.
 
-:OtherMember rdfs:subClassOf :MembershipConnection;
+:OtherAssociationConnection rdfs:subClassOf :AssociationConnection;
                  rdfs:label "Other"@en, "Otro"@es.
-        
+
+:PoliticalConnection a owl:Class;
+                     rdfs:subClassOf :AssociationConnection;
+                     rdfs:label "Political connection"@en, "Conexión política"@es;
+                     rdfs:comment "Connection between a political organization and other entities"@en, "Relación entre una organización política y otra entidad"@es .
+
+                          
+:politicalParticipant a rdf:Property, owl:ObjectProperty;
+             rdfs:subPropertyOf :organizationParticipant;
+             rdfs:label "Political Organizacion participant"@en, "Organización política participante"@es;
+             rdfs:comment "A political organization who is part of this connection"@en, "Una organización política que participa de esta conexión"@es;
+             rdfs:domain :PoliticalConnection;
+             rdfs:range :PoliticalOrganization.
 ##Entities
 
 :hasTaxId a rdf:Property, owl:DatatypeProperty;
