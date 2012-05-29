@@ -1,0 +1,111 @@
+body {
+  background: #FFF;
+}
+
+h1{
+  font-size: 24px;
+}
+
+h1,h2,body {
+  font-weight: normal;
+  vertical-align: top;
+  font-family: Helvetica Neue,Georgia, serif;
+  padding: 0;
+  margin: 0;
+  display: inline;
+  letter-spacing: -0.02em;
+}
+
+h3{
+  color: #005A9C;
+margin-top: 3px;
+          padding-bottom: 5px;
+          border-bottom: 1px solid navy;
+}
+.entity{
+  border: 1px solid;
+margin:20px;
+padding: 10px;
+}
+.backlink{ font-size: 70%; color: #555}
+ a,
+ a:hover,
+ a:visited {
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+a:hover{
+ text-decoration: none;
+}  
+.comment:before {
+          content: "Description";
+          font-family: sans-serif;
+          font-size: 1.6ex;
+          font-weight: bold;
+      }
+.comment {
+          margin-top: 1ex;
+          margin-bottom: 1ex;
+          padding-left: 1ex;
+          padding-right: 1ex;
+          padding-top: 1ex;
+          padding-bottom: 0.6ex;
+          border: 1px dashed #2f6fab;
+          background-color: #f9f9f9;
+      }
+.comment table {
+          background-color: #f9f9f9;
+      }
+dt{font-weight: bold;}
+
+table tr td {
+	padding: 2px;
+	border-color: gray;
+	background-color: white;
+}
+td{
+  max-width:550px;
+  word-wrap: break-word;
+}
+table{
+  width: 50%;
+}
+table.properties{
+  margin:30px;
+  width:80%;
+  border: 1px solid #98A0A6
+}
+.property-header{
+  background: #C7CBCE;
+  font-family: Courier, monospace;
+  font-size: 90%;
+  color: #3A4956;
+  padding:5px;
+  text-align:left;
+  border-spacing: 2px;
+}
+.property-cell{
+  padding:5px;
+  font-size: 90%;
+  border-spacing: 2px;
+}
+th{
+border-spacing: 2px;}
+.hlist {
+          border: 1px solid navy;
+          padding:5px;
+          background-color: #F4FFFF; 
+          margin:20px;
+      }
+
+      .hlist li {
+          display: inline;
+          display: inline-table;
+          list-style-type: none;
+          padding-right: 20px;
+          
+      }
+dt>a, dt>a:hover, dt>a:visited{font-weight:normal;}
+small{color: #999; font-weight: normal}
+small>a, small>a:hover, small>a:visited{font-weight:normal; color: #999}
