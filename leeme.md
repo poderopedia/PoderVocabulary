@@ -8,7 +8,7 @@ PoderVocabulary es un vocabulario enfocado en eventos noticiosos, donde es posib
 
 PoderVocabulary fue creado originalmente por Poderopedia (un proyecto de la Fundación Poderomedia, financiada por The Knight News Challenge), la cual busca promovoer mayor transparencia en Chile al identificar y visualizat las relaciones dentro de la elite chilena. Aunque en su origen fue diseñada para representar información acerca de líderes chilenos (a nivel político, empresarial, etc.), PoderVocabulary puede ser usada in otros contextos con modificaciones menores (o incluso sin modificaciones).
 
-PoderVocabulary es publicado con licencia GPL3 (mirar LICENCE para más detalles). Cualquiera puede hacer un fork de este proyecto y realizar modificaciones.
+PoderVocabulary es publicado con licencia GPL3 (mirar [LICENCE](https://github.com/poderopedia/PoderVocabulary/blob/master/LICENSE) para más detalles). Cualquiera puede hacer un fork de este proyecto y realizar modificaciones.
 
 #Obtener ayuda
 
