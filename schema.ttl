@@ -657,8 +657,8 @@ bio:concludingEvent rdf:type rdf:Property ,
 :hasTaxId a rdf:Property, owl:DatatypeProperty;
      rdfs:subPropertyOf dcterms:identifier;
      rdfs:label "Tax ID"@en, "Rol Único Tributario (RUT)"@es;
-     rdfs:comment "ID that identifies an organization for tax purposes"@en, "ID que identifica a una organización para efecto de los impuestos"@es;
-     rdfs:domain foaf:Organization ;
+     rdfs:comment "ID that identifies an organization or person for tax purposes"@en, "ID que identifica a una organización o persona para efecto de los impuestos"@es;
+     rdfs:domain foaf:Agent ;
      rdfs:range rdfs:Literal .
 #     
 #:hasAddress a rdf:Property, owl:DatatypeProperty;
