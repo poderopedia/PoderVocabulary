@@ -19,10 +19,10 @@
 :schema rdf:type owl:Ontology ;
         dcterms:title "PoderVocab: A vocabulary for Poderopedia"@en, "PoderVocab: Un vocabulario para Poderopedia"@es ;
         rdfs:label "PoderVocab: A vocabulary for Poderopedia"@en, "PoderVocab: Un vocabulario para Poderopedia"@es ;
-        dcterms:date "2012-05-17"^^xsd:date ;
+        dcterms:date "2012-07-15"^^xsd:date ;
         dcterms:abstract "This document describes a vocabulary to express information about people and their relations with Organizations, Companies, etc."@en,
                          "Este documento describe un vocabulario para expresar información acerca de personas, y sus relaciones con organizaciones y empresas"@es;
-        owl:versionInfo "0.8".
+        owl:versionInfo "1.01".
 
 
 
