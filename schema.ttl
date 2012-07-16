@@ -752,7 +752,7 @@ bio:concludingEvent rdf:type rdf:Property ,
           rdfs:domain :WorkConnection;
           rdfs:range :WorkRole.
           
-:WorkRole a owl:Class, rdfs:Class;
+:WorkRole a owl:Class;
           rdfs:label "Work role"@en, "Puesto de trabajo"@es.
 
 :hasEconomicOrganizationParticipant a rdf:Property, owl:ObjectProperty;
