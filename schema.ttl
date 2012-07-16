@@ -177,12 +177,12 @@ bio:Event rdf:type owl:Class ;
                 rdfs:label "Long biography"@en, "Biografía larga"@es;
                 rdfs:comment "Long description of a person, organization, etc"@en, "Descripción extendida de una persona, organización, etc"@es.
                
-:hasShortBiography a rdfs:Predicate, owl:ObjectProperty;
+:hasShortBiography a rdf:Property, owl:ObjectProperty;
                    rdfs:label "Short biography"@en, "Biografía corta"@es;
                    rdfs:domain foaf:Agent;
                    rdfs:range :ShortBiography .
                    
-:hasLongBiography a rdfs:Predicate, owl:ObjectProperty;
+:hasLongBiography a rdf:Property, owl:ObjectProperty;
                    rdfs:label "Long biography"@en, "Biografía larga"@es;
                    rdfs:domain foaf:Agent;
                    rdfs:range :LongBiography .
@@ -679,12 +679,12 @@ bio:concludingEvent rdf:type rdf:Property ,
                  rdfs:label "Financial Report"@en, "Información financiera"@es;
                  rdfs:comment "Any financial information related to an organization (e.g., anual profit)"@en, "Cualquier información financiera relacionada con una organización (ej., utilidades anuales)"@es.
 
-:hasFinancialInformationYear a rdf:Property, rdfs:DatatypeProperty;
+:hasFinancialInformationYear a rdf:Property, owl:DatatypeProperty;
             rdfs:label "Date of financial information"@en, "Fecha de la información financiera"@es;
             rdfs:domain :FinancialInformation;
             rdfs:range xsd:gYear .
                  
-:hasValue a rdf:Property, rdfs:DatatypeProperty;
+:hasValue a rdf:Property, owl:DatatypeProperty;
             rdfs:label "Value in a financial information"@en, "Valor en un reporte financiero"@es;
             rdfs:domain :FinancialInformation;
             rdfs:range rdfs:Literal .
