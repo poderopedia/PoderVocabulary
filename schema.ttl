@@ -727,7 +727,7 @@ bio:concludingEvent rdf:type rdf:Property ,
                     rdfs:comment "The connection between an entity and an Educational Organization (university, school, etc)"@en, "La relación entre una persona y una organización académica (colegio, universidad, etc)"@es.              
 
 
-:mergeCompany a rdf:Propertym, owl:ObjectProperty;
+:mergeCompany a rdf:Property, owl:ObjectProperty;
               rdfs:subPropertyOf bio:participant;
               rdfs:label "Merge company"@en, "Compañía fusionada"@es;
               rdfs:domain :MergeCompanyConnection;
